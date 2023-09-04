@@ -1,0 +1,526 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/index.html">
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Administración de Sistemas Operativos</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sistemas-operativos-en-red" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Administración de Sistemas Operativos" class="md-header__button md-logo" aria-label="Administración de Sistemas Operativos" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Administración de Sistemas Operativos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inicio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="" data-md-color-accent=""  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Administración de Sistemas Operativos" class="md-nav__button md-logo" aria-label="Administración de Sistemas Operativos" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    Administración de Sistemas Operativos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Inicio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        Inicio
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-voy-a-aprender" class="md-nav__link">
+    ¿Qué voy a aprender?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultados-de-aprendizaje" class="md-nav__link">
+    Resultados de aprendizaje
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidades-didacticas-temporalizacion" class="md-nav__link">
+    Unidades didácticas / Temporalización
+  </a>
+  
+    <nav class="md-nav" aria-label="Unidades didácticas / Temporalización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-evaluacion" class="md-nav__link">
+    Primera evaluación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-evaluacion" class="md-nav__link">
+    Segunda evaluación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluacion" class="md-nav__link">
+    Evaluación
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instrumentos-de-calificacion" class="md-nav__link">
+    Instrumentos de calificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instrumentos-de-evaluacion" class="md-nav__link">
+    Instrumentos de Evaluación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sistemas-operativos-en-red">Sistemas Operativos en Red<a class="headerlink" href="#sistemas-operativos-en-red" title="Permanent link">&para;</a></h1>
+<p>Aquí puedes encontrar los apuntes del módulo de <strong><em>Sistemas Operativos en Red</em></strong>, que se imparte en el segundo curso del ciclo formativo de grado medios de Sistemas Microinformáticos en Red.</p>
+<ul>
+<li>La duración del módulo es de <strong>120 horas lectivas</strong>, a razón de <strong>6 horas semanales</strong>, y se desarrolla a lo largo de los <strong>dos primeros trimestres del curso</strong>.</li>
+<li>Se ha planificado basándose en <strong>3 sesiones lectivas por semana</strong>, con <strong>2 horas de duración cada una de ellas</strong>.</li>
+</ul>
+<h2 id="que-voy-a-aprender">¿Qué voy a aprender?<a class="headerlink" href="#que-voy-a-aprender" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Administrar sistemas operativos de servidor, instalando y configurando el software, en condiciones de calidad para asegurar el funcionamiento del sistema.</li>
+<li>Administrar servicios de recursos compartidos (acceso a directorios, impresión, accesos remotos, entre otros) instalando y configurando el software, en condiciones de calidad.</li>
+<li>Administrar usuarios de acuerdo a las especificaciones de explotación para garantizar los accesos y la disponibilidad de los recursos del sistema.</li>
+<li>Gestionar los recursos de diferentes sistemas operativos (programando y verificando su cumplimiento).</li>
+</ul>
+<h2 id="resultados-de-aprendizaje">Resultados de aprendizaje<a class="headerlink" href="#resultados-de-aprendizaje" title="Permanent link">&para;</a></h2>
+<p>Un <em>Resultado de Aprendizaje</em> <strong>"es una declaración de lo que el estudiante se espera que conozca, comprenda y sea capaz de hacer al finalizar un periodo de aprendizaje".</strong> Los resultados de aprendizaje de ASO vienen definidos en el <a href="https://www.boe.es/eli/es/rd/2009/10/30/1629">RD 1629/2009.</a></p>
+<p>Los Resultados de Aprendizaje de ASO son:</p>
+<ol>
+<li>Administra el servicio de directorio interpretando especificaciones e integrándolo en una red.</li>
+<li>Administra procesos del sistema describiéndolos y aplicando criterios de seguridad y eficiencia.</li>
+<li>Gestiona la automatización de tareas del sistema, aplicando criterios de eficiencia y utilizando comandos y herramientas gráficas.</li>
+<li>Administra de forma remota el sistema operativo en red valorando su importancia y aplicando criterios de seguridad.</li>
+<li>Administra servidores de impresión describiendo sus funciones e integrándolos en una red.</li>
+<li>Integra sistemas operativos libres y propietarios, justificando y garantizando su interoperabilidad.</li>
+<li>Utiliza lenguajes de guiones en sistemas operativos, describiendo su aplicación y administrando servicios del sistema operativo.</li>
+</ol>
+<h2 id="unidades-didacticas-temporalizacion">Unidades didácticas / Temporalización<a class="headerlink" href="#unidades-didacticas-temporalizacion" title="Permanent link">&para;</a></h2>
+<p>A continuación se muestran las unidades didácticas y una estimación temporal de cada una de ellas, repartidas en cada evaluación con una duración aproximada de <strong>30 sesiones por evaluación</strong>.</p>
+<h3 id="primera-evaluacion">Primera evaluación<a class="headerlink" href="#primera-evaluacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>ShellScripting. (6 sesiones, 12 horas)</strong><ul>
+<li>ShellScripting, creación scripts, variables, parámetros, operadores.</li>
+<li>ShellScripting, Re-direcciones, tuberías.</li>
+<li>Control de flujo en Shell, vectores.</li>
+</ul>
+</li>
+<li><strong>PowerShell. (6 sesiones, 12 horas)</strong><ul>
+<li>PowerShell, creación scripts, variables, parámetros, operadores.</li>
+<li>PowerShell, Control de flujo, y vectores.</li>
+</ul>
+</li>
+<li><strong>Administración de Procesos del Sistema. (6 sesiones, 12 horas)</strong><ul>
+<li>Procesos. Tipos. Estados. Estructura. Transiciones, Hilos.</li>
+<li>Planificador, Tipos de algoritmos de planificación, Sincronización e interrupciones entre procesos.</li>
+<li>Gestión de procesos, demonios/servicios con Shell y Powershell.</li>
+</ul>
+</li>
+<li><strong>Servicios de Directorio Libres: LDAP. (6 sesiones, 12 horas)</strong><ul>
+<li>Servicios Directorio, LDAP, Autentificación usuarios (PAM, NSS).</li>
+<li>LDAP, modelo información, Esquema.</li>
+<li>LDAP, Configuración, herramientas de gestión.</li>
+</ul>
+</li>
+<li><strong>Servicios de Directorio Propietarios: Active Directory (6 sesiones, 12 horas).</strong><ul>
+<li>Active Directory, configuración básica Windows Server.</li>
+<li>Active Directory, Instalación AD, Creación estructura empresa.</li>
+<li>AD, Permisos, directivas de grupo, perfiles y relaciones de confianza.</li>
+</ul>
+</li>
+</ol>
+<h3 id="segunda-evaluacion">Segunda evaluación<a class="headerlink" href="#segunda-evaluacion" title="Permanent link">&para;</a></h3>
+<ol start="6">
+<li><strong>Integración de sistemas operativos en red. (12 sesiones, 24 horas).</strong><ul>
+<li>Escenarios heterogéneos, Protocolos para redes heterogéneas, servicios de recursos compartidos.</li>
+<li>NFS, Instalación, Permisos, Montaje automático de un cliente NFS, configuración de ficheros.</li>
+<li>NextCloud, Instalación, configuración de ficheros y permisos de usuario.</li>
+<li>SAMBA, fichero configuración, Creación directorio compartido, Integración de permisos.</li>
+<li>SAMBA, Administración de servicios con RSAT, perfiles de usuario y carpetas personales, cuotas.</li>
+</ul>
+</li>
+<li><strong>Información del sistema operativo (6 sesiones, 12 horas).</strong><ul>
+<li>Estructura directorios. Búsqueda de información del sistema. Rendimiento. Estadísticas.</li>
+<li>Planificación de Tareas, Programador de tareas, <code>crontab</code>.</li>
+<li>Servicio Monitorización, Nagios, PRTG, OpenNMS.</li>
+</ul>
+</li>
+<li><strong>Servicios de acceso y administración remota (6 sesiones, 12 horas).</strong> <ul>
+<li>Acceso remoto en modo texto <code>SSH</code>. Tunelización.</li>
+<li>Escritorio Remoto:  RDP y xRDP. Acceso remoto de equipos en el AD con PWSH.</li>
+<li>Herramientas gráficas externas, TeamViewer, AnyDesk y Apache Guacamole.</li>
+</ul>
+</li>
+<li><strong>Administración de Servidores de Impresión (6 sesiones, 12 horas).</strong><ul>
+<li>Sistemas de Impresión, Puertos y protocolos de impresión.</li>
+<li>Servidor de impresión en GNU/Linux, <code>CUPS</code>. Órdenes para la gestión de impresoras y trabajos.</li>
+<li>Administración de los Servicios de Impresión en Windows Server.</li>
+</ul>
+</li>
+</ol>
+<h2 id="evaluacion">Evaluación<a class="headerlink" href="#evaluacion" title="Permanent link">&para;</a></h2>
+<h3 id="instrumentos-de-calificacion">Instrumentos de calificación<a class="headerlink" href="#instrumentos-de-calificacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Instrumento de calificación 1 (IC1):</strong>: <em>escala de valores</em> comprendidas entre 0 y 3 puntos calificados de la siguiente forma:</p>
+<ul>
+<li><strong>0</strong>: No entregada.</li>
+<li><strong>1</strong>: Entregada pero solución errónea o incompleta.</li>
+<li><strong>2</strong>: Entregada y solución aceptable, aunque tiene algún apartado incompleto.</li>
+<li><strong>3</strong>: Entregada y solución correcta.</li>
+</ul>
+</li>
+<li>
+<p><strong>Instrumento de calificación 2 (IC2):</strong> <em>escala de valores</em> comprendidas entre 0 y 7 puntos calificados de la siguiente forma:</p>
+<ul>
+<li><strong>0</strong>: No entregada</li>
+<li><strong>1-3</strong>: Entregada pero solución errónea o incompleta</li>
+<li><strong>3-6</strong>: Entregada y solución aceptable, aunque tiene algún apartado incompleto.</li>
+<li><strong>7</strong>: Entregada y solución correcta.</li>
+</ul>
+</li>
+</ol>
+<h3 id="instrumentos-de-evaluacion">Instrumentos de Evaluación<a class="headerlink" href="#instrumentos-de-evaluacion" title="Permanent link">&para;</a></h3>
+<p>La nota de cada <strong>Resultado de Aprendizaje</strong> se calcula mediante la media ponderada de los puntos obtenidos, de los siguientes instrumentos de evaluación.</p>
+<ol>
+<li>
+<p><strong>Instrumento de Evaluación 1 (IE1). Trabajo en Clase/Actividades.</strong></p>
+<ol>
+<li>Se evalúan todas las actividades realizadas en clase y en casa.</li>
+<li>Las actividades se evalúan mediante tareas en el <code>moodle</code> aplicando el <strong>IC1</strong>.</li>
+</ol>
+</li>
+<li>
+<p><strong>Instrumentos de Evaluación 2 (IE2). Pruebas de Auditoría.</strong></p>
+<ol>
+<li>Cuestionario multi-opción (test) de 20 preguntas sobre la teoría de la unidad.</li>
+<li>Ejercicios prácticos sobre las actividades realizadas de la unidad.</li>
+</ol>
+</li>
+</ol>
+<div class="admonition not">
+<p class="admonition-title"><strong>Nota</strong>:</p>
+<p>Esta prueba se califica entre 0 y 30 puntos siguiendo las siguientes premisas:</p>
+</div>
+<ul>
+<li><strong>0-10</strong> puntos. Donde Cada dos contestaciones incorrectas contestadas resta una bien.</li>
+<li><strong>0-6</strong> puntos: dos ejercicios de <em>nivel medio-bajo</em>, 3 puntos cada uno de ellos aplicando <strong>IC1</strong>.</li>
+<li><strong>0-14</strong> puntos: dos ejercicios de <em>nivel medio-alto</em> aplicando <strong>IC2</strong></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022-2023 Fº Javier Hernández - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "navigation.indexes"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
