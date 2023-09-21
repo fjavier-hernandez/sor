@@ -6,23 +6,25 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Práctica guiada de instalación de NextCloud mediante Docker Docker por Francisco Javier Hernández Illán. Gestión de recursos compartidos en NextCloud utilizando Volúmenes persistentes.">
       
       
-        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/Unidades.html">
       
-      <link rel="icon" href="imagenes/favicon.ico">
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/NextCloudDockerSolucion.html">
+      
+      <link rel="icon" href="../imagenes/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Unidades - Sistemas Operativos en Red</title>
+        <title>Guía Instalación NextCloud con Docker - Sistemas Operativos en Red</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
         
       
       
@@ -39,7 +41,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#primera-evaluacion" class="md-skip">
+        <a href="#guia-instalacion-nextcloud-docker" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -94,9 +96,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="index.html" title="Sistemas Operativos en Red" class="md-header__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+    <a href="../index.html" title="Sistemas Operativos en Red" class="md-header__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
       
-  <img src="imagenes/SOR_logo.png" alt="logo">
+  <img src="../imagenes/SOR_logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unidades
+              Guía Instalación NextCloud con Docker
             
           </span>
         </div>
@@ -205,9 +207,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Sistemas Operativos en Red" class="md-nav__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+    <a href="../index.html" title="Sistemas Operativos en Red" class="md-nav__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
       
-  <img src="imagenes/SOR_logo.png" alt="logo">
+  <img src="../imagenes/SOR_logo.png" alt="logo">
 
     </a>
     Sistemas Operativos en Red
@@ -223,7 +225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         Inicio
       </a>
     </li>
@@ -238,7 +240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProgramacionAula.html" class="md-nav__link">
+      <a href="../ProgramacionAula.html" class="md-nav__link">
         Programación de Aula
       </a>
     </li>
@@ -279,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_INTRO_SOR/001_IntroSOR.html" class="md-nav__link">
+      <a href="001_IntroSOR.html" class="md-nav__link">
         1.1- Introducción SOR
       </a>
     </li>
@@ -293,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_INTRO_SOR/002_Virtualizaci%C3%B3n.html" class="md-nav__link">
+      <a href="002_Virtualizaci%C3%B3n.html" class="md-nav__link">
         1.2- Virtualización
       </a>
     </li>
@@ -307,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_INTRO_SOR/003_Docker.html" class="md-nav__link">
+      <a href="003_Docker.html" class="md-nav__link">
         1.3- Docker
       </a>
     </li>
@@ -321,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_INTRO_SOR/004_PracticaNextCloud.html" class="md-nav__link">
+      <a href="004_PracticaNextCloud.html" class="md-nav__link">
         1.4- Práctica NextCloud
       </a>
     </li>
@@ -350,55 +352,256 @@
                   
 
 
-  <h1>Unidades</h1>
-
-<h3 id="primera-evaluacion">Primera evaluación<a class="headerlink" href="#primera-evaluacion" title="Permanent link">&para;</a></h3>
+<h1 id="guia-instalacion-nextcloud-docker">GUÍA INSTALACIÓN NEXTCLOUD-DOCKER<a class="headerlink" href="#guia-instalacion-nextcloud-docker" title="Permanent link">&para;</a></h1>
+<h2 id="pt11_1-instalacion-docker">PT11_1 Instalación Docker<a class="headerlink" href="#pt11_1-instalacion-docker" title="Permanent link">&para;</a></h2>
+<p>Se realiza la instalación de Docker en una máquina virtual de Ubuntu 22.04 siguiendo el método <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">Install using the repository</a></p>
 <ol>
-<li><strong>Introducción SOR. Docker. NextCloud. (8 sesiones, 16 horas)</strong><ul>
-<li>Introducción a los sistemas operativos en red.</li>
-<li>Contenedores. Docker</li>
-<li>NextCloud.</li>
-</ul>
-</li>
-<li><strong>Introducción Samba. (8 sesiones, 16 horas)</strong><ul>
-<li>Instalación Samba.</li>
-<li>fichero configuración, Creación directorio compartido.</li>
-</ul>
-</li>
-<li><strong>Gestión Usuarios y grupos Samba. (8 sesiones, 16 horas)</strong><ul>
-<li>Perfiles de usuario y grupos.</li>
-<li>Integración de permisos.</li>
-</ul>
-</li>
-<li><strong>Gestión de recursos compartidos en Samba. (8 sesiones, 16 horas)</strong><ul>
-<li>Creación de de recursos compartidos.</li>
-<li>Monitorización de incidencias. </li>
-</ul>
-</li>
+<li>Se realiza un actualización y se instalan los paquetes necesarios para usar el repositorio sobre HTTPS:</li>
 </ol>
-<h3 id="segunda-evaluacion">Segunda evaluación<a class="headerlink" href="#segunda-evaluacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Código para la actualización de paquetes:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo apt-get update
+</code></pre></div>
+- Resultado:</p>
+<figure>
+  <img src="./imagenes/101.png"/>
+  <figcaption>Actualización repositorios</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ul>
+<li>Código para instalar los paquetes necesarios para usar el repositorio sobre HTTPS:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo apt-get install ca-certificates curl gnupg lsb-release
+</code></pre></div>
+- Resultado:</p>
+<figure>
+  <img src="./imagenes/102.png"/>
+  <figcaption>Instalación repositorios necesarios</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ol start="2">
+<li>Se añade la clave GPG oficial de Docker y el comando para configurar el repositorio:</li>
+</ol>
+<ul>
+<li>Código para los objetivos comentados en este punto:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo mkdir -p /etc/apt/keyrings
+<span class="linenos" data-linenos="2 "></span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+<span class="linenos" data-linenos="3 "></span><span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre></div>
+- Resultado:</p>
+<figure>
+  <img src="./imagenes/103.png"/>
+  <figcaption>Clave GPG y configuración repositorio</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ol start="3">
+<li>se realiza otra actualización:</li>
+</ol>
+<ul>
+<li>Código para la nueva actualización de paquetes, debido a la configuración realizada:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo apt-get update
+</code></pre></div>
+<ul>
+<li>Resultado:</li>
+</ul>
+<figure>
+  <img src="./imagenes/104.png"/>
+  <figcaption>Nueva actualización</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ol start="4">
+<li>Se Instala Docker Engine, containerd y Docker Compose:</li>
+</ol>
+<ul>
+<li>Código para la instalación de paquetes Docker:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+</code></pre></div>
+<ul>
+<li>Resultado:</li>
+</ul>
+<figure>
+  <img src="./imagenes/105.png"/>
+  <figcaption>Instalación Docker</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
 <ol start="5">
-<li><strong>Entornos de desarrollo virtualizados. Vagrant. (8 sesiones, 16 horas).</strong><ul>
-<li>Escenarios heterogéneos, Protocolos para redes heterogéneas, servicios de recursos compartidos.</li>
-<li>creación de entronos de desarrollo virtualizados mediante Vagrant.</li>
-</ul>
-</li>
-<li><strong>Directorio Activo en Windows Server (8 sesiones, 16 horas).</strong><ul>
-<li>Active Directory, configuración básica Windows Server.
-*Active Directory, Instalación AD, Creación estructura empresa.</li>
-<li>Servicio Monitorización en Windows Server.</li>
-</ul>
-</li>
-<li><strong>Administración de dominios en Windows Server (8 sesiones, 16 horas).</strong> <ul>
-<li>Creación de dominios.</li>
-<li>Administración de dominios.</li>
-</ul>
-</li>
-<li><strong>Gestión de recursos compartidos en Windows Server (8 sesiones, 16 horas).</strong><ul>
-<li>Permisos, directivas de grupo, perfiles y relaciones de confianza.</li>
-</ul>
-</li>
+<li>Comprobación que la instalación del motor Docker sea correcta ejecutando la imagen <strong>hello-world</strong>:</li>
 </ol>
+<ul>
+<li>Código para la comprobación de Docker, mediante la ejecución de un contenedor:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker run hello-world
+</code></pre></div>
+- Resultado:</p>
+<figure>
+  <img src="./imagenes/106.png"/>
+  <figcaption>Comprobación</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<h2 id="pt11_2-instalacion-contenedor-nextcloud-sin-volumen-persistente">PT11_2 Instalación contenedor NextCloud sin volumen persistente.<a class="headerlink" href="#pt11_2-instalacion-contenedor-nextcloud-sin-volumen-persistente" title="Permanent link">&para;</a></h2>
+<p>La instalación del contenedor se puede consultar en <a href="https://hub.docker.com/_/nextcloud">Imagen oficial NextCloud Docker Hub</a></p>
+<ol>
+<li>Se instala y ejecuta el contenedor:</li>
+</ol>
+<ul>
+<li>Código para la instalación NextCloud:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker run -d -p <span class="m">8080</span>:80 nextcloud
+</code></pre></div>
+<ul>
+<li>Resultado:</li>
+</ul>
+<figure>
+  <img src="./imagenes/107.png"/>
+  <figcaption>Instalación y ejecución del contenedor de NextCloud</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ol start="2">
+<li>Comprobación de instalación correcta del contenedor NextCloud:</li>
+</ol>
+<ul>
+<li>Se introduce en un navegador <strong>http://"IPmáquinaVirtual":8080</strong> debe aparecer el inicio de NextCloud para crear una cuenta de administrador, como se muestra en la siguiente figura:</li>
+</ul>
+<figure>
+  <img src="./imagenes/108.png"/>
+  <figcaption>Instalación de NextCloud</figcaption>
+</figure>
+
+<ul>
+<li>Probamos a subir un archivo para ver donde se guardan:</li>
+</ul>
+<figure>
+  <img src="./imagenes/109.png"/>
+  <figcaption>Subir archivo NextCloud</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ul>
+<li>Se comprueba en el GUI de NextCloud que esta subido:</li>
+</ul>
+<figure>
+  <img src="./imagenes/110.png"/>
+  <figcaption>Comprobación subido el archivo en el GUI de NextCloud</figcaption>
+</figure>
+
+<ul>
+<li>Se comprueba en el bash del contenedor de NextCloud que esta subido:</li>
+</ul>
+<figure>
+  <img src="./imagenes/111.png"/>
+  <figcaption>Comprobación subido el archivo en el contenedor de NextCloud</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ul>
+<li>Si borramos el contenedor y lo volvemos a crear se comprueba que se ha perdido el fichero:</li>
+</ul>
+<figure>
+  <img src="./imagenes/112.png"/>
+  <figcaption>Borrado del contenedor</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/113.png"/>
+  <figcaption>Comprobación del fichero borrado</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<h2 id="pt11_3-instalacion-contenedor-nextcloud-con-volumen-persistente-y-red-interna">PT11_3 Instalación contenedor NextCloud con volumen persistente y red interna<a class="headerlink" href="#pt11_3-instalacion-contenedor-nextcloud-con-volumen-persistente-y-red-interna" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Siguiendo los apuntes en el punto 3 se describen los volúmenes y la importancia de los mismos para salvaguardar los datos si el contenedor se corrompe, o incluso utilizarlo para un segundo contenedor de docker. El ejemplo 3.3 es una buena guía para realizar este punto.</p>
+</li>
+<li>
+<p>Por lo tanto el código a ejecutar para que el volumen se llame <strong>"volNextCloud"</strong> podría ser:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker run -d --name nextcloud --ip <span class="m">192</span>.168.20.2 --mount <span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>volNextCloud,target<span class="o">=</span>/var/www/html/data -p <span class="m">80</span>:80 nextcloud
+</code></pre></div>
+<figure>
+  <img src="./imagenes/114.png"/>
+  <figcaption>Creación NextCloud con Persistent Data y red interna</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<h3 id="comprobacion-nextcloud-con-volumen-persistente">Comprobación NextCloud con volumen persistente<a class="headerlink" href="#comprobacion-nextcloud-con-volumen-persistente" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Se sube un fichero como el caso anterior.</li>
+</ol>
+<figure>
+  <img src="./imagenes/115.png"/>
+  <figcaption>Subimos fichero</figcaption>
+</figure>
+
+<ol start="2">
+<li>Se comprueba que esta en el contenedor.</li>
+</ol>
+<figure>
+  <img src="./imagenes/116.png"/>
+  <figcaption>El archivo existe en el path del volumen</figcaption>
+</figure>
+
+<div style="page-break-before:always;"></div>
+
+<ol start="3">
+<li>Se borra el contenedor, se crea uno nuevo apuntando al volumen y se comprueba que el fichero perdura.</li>
+</ol>
+<figure>
+  <img src="./imagenes/117.png"/>
+  <figcaption>Comprobación fichero existe, después de borrar contenedor y volver a crear uno nuevo</figcaption>
+</figure>
+
+<h2 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Se observa en el código del apartado anterior en el mismo comando se ha estado introduciendo la IP del enunciado. Para que dicha IP se refleje en el contenedor además debe existir una red creada previamente y apuntar a ella. en los siguientes pasos se muestra.</li>
+</ul>
+<ol>
+<li>Crear red:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker network create --driver<span class="o">=</span>bridge --subnet<span class="o">=</span><span class="m">192</span>.168.20.0/24 nextCloudNet
+</code></pre></div>
+<ol start="2">
+<li>Referenciamos contenedor a la red creada.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker run -d --name nextcloud --network nextCloudNet --ip <span class="m">192</span>.168.20.2 --mount <span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>volNextCloud,target<span class="o">=</span>/var/www/html/data -p <span class="m">80</span>:80 nextcloud
+</code></pre></div>
+<div style="page-break-before:always;"></div>
+
+<ol start="3">
+<li>Confirmamos la IP.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker inspect -f <span class="s1">&#39;{{range.NetworkSettings.Networks}} {{.IPAddress}}{{end}}&#39;</span> CONTAINER_ID
+</code></pre></div>
+<h3 id="comprobacion-ip">Comprobación IP<a class="headerlink" href="#comprobacion-ip" title="Permanent link">&para;</a></h3>
+<ul>
+<li>En la siguiente figura se muestra la comprobación de la red y la IP del contenedor:</li>
+</ul>
+<figure>
+  <img src="./imagenes/119.png"/>
+  <figcaption>Contenedor en la IP del enunciado</figcaption>
+</figure>
 
 
   
@@ -523,10 +726,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "toc.integrate", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
     
     
