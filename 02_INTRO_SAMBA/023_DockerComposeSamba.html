@@ -584,7 +584,14 @@
 <p class="admonition-title">Contribución a los CEs (Criterios de Evaluación)</p>
 <p>Estas actividades contribuyen a los criterios de evaluación CE1, CE2, CE3, CE4, CE5, CE7 y CE9 del RA1 de SOR.</p>
 </div>
-<p>A partir del <code>docker-compose</code> adjunto realiza un video con los pasos realizados y un informe con los siguientes apartados:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Situación de Aprendizaje</p>
+<p>En la instalación de la carpeta compartida en el <strong>IES Severo Ochoa d'Elx</strong> uno de los profesores encargados de la revisión de la instalación propone si es posible realizar la instalación de una forma más rápida y sencilla, debido a los conocimientos en docker decides utilizar la herramienta <strong>Docker-Compose</strong>.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Tarea</p>
+<p>A partir del <code>docker-compose</code> adjunto realiza un video con los pasos a realizar a continuación.</p>
+</div>
 <h3 id="desde-el-servidor">Desde el servidor<a class="headerlink" href="#desde-el-servidor" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Crea un contenedor con el servicio de Samba mediante la guía adjunta. Adjunta captura con el contenedor corriendo.</li>
@@ -596,23 +603,44 @@
 <p>A continuación se da permisos de escritura y lectura a la carpeta compartida:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>chmod <span class="m">777</span> -R <span class="nv">$HOME</span>/docker/samba/compartido
 </code></pre></div>
-<p>Ahora se crea el fichero de configuración <code>docker-compose.yml</code> mediante la <a href="https://hub.docker.com/r/lordpedal/samba">imagen de docker</a> lanzando el siguiente comando:</p>
+<p>Ahora se crea el fichero de configuración <code>docker-compose.yml</code> mediante la <a href="https://hub.docker.com/r/dperson/samba">imagen de docker</a> lanzando el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="l l-Scalar l-Scalar-Plain">cat &lt;&lt; EOF &gt; $HOME/docker/samba/docker-compose.yml</span><span class="w"></span>
-<span class="linenos" data-linenos=" 2 "></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="w"></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span><span class="nt">samba</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lordpedal/samba</span><span class="w"></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Samba</span><span class="w"></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos=" 8 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;~/docker/samba/compartido:/lordpedal&#39;</span><span class="w"></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="10 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;137:137&quot;</span><span class="w"></span>
-<span class="linenos" data-linenos="11 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;138:138&quot;</span><span class="w"></span>
-<span class="linenos" data-linenos="12 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;139:139&quot;</span><span class="w"></span>
-<span class="linenos" data-linenos="13 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;445:445&quot;</span><span class="w"></span>
-<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="linenos" data-linenos="15 "></span><span class="l l-Scalar l-Scalar-Plain">EOF</span><span class="w"></span>
+<span class="linenos" data-linenos=" 2 "></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;3.4&#39;</span><span class="w"></span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nt">services</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="nt">samba</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">samba</span><span class="w"></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dperson/samba:latest</span><span class="w"></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Europe/Brussels&#39;</span><span class="w"></span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="11 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w"></span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="13 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;137:137/udp&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="14 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;138:138/udp&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="15 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;139:139/tcp&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="16 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;445:445/tcp&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nt">read_only</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="nt">tmpfs</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="19 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp</span><span class="w"></span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="24 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$HOME/docker/samba/compartido:/sordata:z</span><span class="w"></span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;-s</span><span class="nv"> </span><span class="s">&quot;Docker;/sordata&quot;</span><span class="nv"> </span><span class="s">-n&#39;</span><span class="w"></span>
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="28 "></span><span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="29 "></span><span class="l l-Scalar l-Scalar-Plain">EOF</span><span class="w"></span>
 </code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Aclaraciones</p>
+<ul>
+<li>La línea de <code>volumes</code> monta la carpeta creada inicialmente en el <code>/home</code> en la carpeta sordata en el contenedor.</li>
+<li><a href="https://stackoverflow.com/questions/35218194/what-is-z-flag-in-docker-containers-volumes-from-option">La opción z</a> le dice a Docker que el contenido del volumen se compartirá entre contenedores. </li>
+</ul>
+</div>
 <p>Principales parámetros a modificar para adaptarlos a nuestro sistema y configuración especifica:</p>
 <table>
 <thead>
@@ -623,7 +651,7 @@
 </thead>
 <tbody>
 <tr>
-<td>~/docker/samba/compartido:/lordpedal</td>
+<td>~/docker/samba/compartido:/sordata</td>
 <td>Definimos ruta donde alojamos los ficheros compartidos</td>
 </tr>
 <tr>
@@ -652,10 +680,14 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker-compose up -d
 </code></pre></div>
 <h3 id="desde-el-cliente">Desde el cliente<a class="headerlink" href="#desde-el-cliente" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Tarea</p>
+<p><strong>Explica en el video los siguientes apartados:</strong></p>
+</div>
 <ul>
-<li>Monta la carpeta compartida en un cliente (puedes utilizar el Lubuntu aportado). Adjunta capturas de los pasos a realizar.</li>
+<li>Monta la carpeta compartida en un cliente (puedes utilizar el Lubuntu aportado).</li>
 <li>Crea un archivo de texto de prueba, entra al contenedor o servidor y confirma que se ha creado.</li>
-<li>¿Qué pasa si paras y destruyes el contenedor?.</li>
+<li>¿Qué pasa si paras y destruyes el contenedor? ¿Por qué?.</li>
 </ul>
 <!-- !!! tip "Consejo"
     Montar la carpeta desde el raíz del servidor a cualquier carpeta. -->
