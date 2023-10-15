@@ -6,25 +6,23 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Práctica guiada de instalación de NextCloud mediante Docker Docker por Francisco Javier Hernández Illán. Gestión de recursos compartidos en NextCloud utilizando Volúmenes persistentes.">
       
       
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/AyudaASO/Practica14_samba.html">
       
-        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/004_PracticaNextCloud.html">
-      
-      <link rel="icon" href="../imagenes/favicon.ico">
+      <link rel="icon" href="../../imagenes/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Definición Práctica NextCloud - Sistemas Operativos en Red</title>
+        <title>AC62. Instalación y preparación Servidor Samba - Sistemas Operativos en Red</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
         
       
       
@@ -41,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -82,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nextcloud" class="md-skip">
+        <a href="#ac62-instalacion-y-preparacion-servidor-samba" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -96,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../index.html" title="Sistemas Operativos en Red" class="md-header__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+    <a href="../../index.html" title="Sistemas Operativos en Red" class="md-header__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
       
-  <img src="../imagenes/SOR_logo.png" alt="logo">
+  <img src="../../imagenes/SOR_logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Definición Práctica NextCloud
+              AC62. Instalación y preparación Servidor Samba
             
           </span>
         </div>
@@ -207,9 +205,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Sistemas Operativos en Red" class="md-nav__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+    <a href="../../index.html" title="Sistemas Operativos en Red" class="md-nav__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
       
-  <img src="../imagenes/SOR_logo.png" alt="logo">
+  <img src="../../imagenes/SOR_logo.png" alt="logo">
 
     </a>
     Sistemas Operativos en Red
@@ -225,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         Inicio
       </a>
     </li>
@@ -240,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProgramacionAula.html" class="md-nav__link">
+      <a href="../../ProgramacionAula.html" class="md-nav__link">
         Programación de Aula
       </a>
     </li>
@@ -253,14 +251,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -283,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="001_IntroSOR.html" class="md-nav__link">
+      <a href="../../01_INTRO_SOR/001_IntroSOR.html" class="md-nav__link">
         1.1- Introducción SOR
       </a>
     </li>
@@ -297,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="002_Virtualizaci%C3%B3n.html" class="md-nav__link">
+      <a href="../../01_INTRO_SOR/002_Virtualizaci%C3%B3n.html" class="md-nav__link">
         1.2- Virtualización
       </a>
     </li>
@@ -311,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="003_Docker.html" class="md-nav__link">
+      <a href="../../01_INTRO_SOR/003_Docker.html" class="md-nav__link">
         1.3- Docker
       </a>
     </li>
@@ -323,81 +319,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          1.4- Práctica NextCloud
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="004_PracticaNextCloud.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../01_INTRO_SOR/004_PracticaNextCloud.html" class="md-nav__link">
         1.4- Práctica NextCloud
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nextcloud" class="md-nav__link">
-    NextCloud
-  </a>
-  
-    <nav class="md-nav" aria-label="NextCloud">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristicas" class="md-nav__link">
-    Características
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#actividad-tipo-practicastrabajos-pt-ie2" class="md-nav__link">
-    Actividad tipo Prácticas/trabajos (PT, IE2).
-  </a>
-  
-    <nav class="md-nav" aria-label="Actividad tipo Prácticas/trabajos (PT, IE2).">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker" class="md-nav__link">
-    PT11. Instalación y configuración de NextCloud mediante Docker
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -443,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/021_IntroSamba.html" class="md-nav__link">
+      <a href="../021_IntroSamba.html" class="md-nav__link">
         2.1- Samba
       </a>
     </li>
@@ -457,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/022_InstalacionSamba.html" class="md-nav__link">
+      <a href="../022_InstalacionSamba.html" class="md-nav__link">
         2.2- Instalación y configuración inicial
       </a>
     </li>
@@ -471,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/023_DockerComposeSamba.html" class="md-nav__link">
+      <a href="../023_DockerComposeSamba.html" class="md-nav__link">
         2.3- Docker Compose con Samba
       </a>
     </li>
@@ -500,74 +426,68 @@
                   
 
 
-  <h1>1.4- Práctica NextCloud</h1>
-
-<figure style="float: right;">
-    <img src="imagenes/NextCloudLogo.png" width="200"/>
+<h1 id="ac62-instalacion-y-preparacion-servidor-samba">AC62. Instalación y preparación Servidor Samba<a class="headerlink" href="#ac62-instalacion-y-preparacion-servidor-samba" title="Permanent link">&para;</a></h1>
+<h2 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">sudo apt install samba</span><span class="w"></span>
+</code></pre></div>
+<h2 id="configuracion-de-carpetas-compartidas">Configuración de carpetas compartidas<a class="headerlink" href="#configuracion-de-carpetas-compartidas" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Editamos el fichero de configuración: <code>/etc/samba/smb.conf</code></p>
+</li>
+<li>
+<p>Al final del archivo de configuración añadiremos una nueva entrada con el <strong>directorio a compartir</strong>:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="p p-Indicator">[</span><span class="nv">ejercicio1</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">comment = Prueba Ejercicio 1</span><span class="w"></span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">path = /srv/samba/ejercicio1</span><span class="w"></span>
+<span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">browsable = yes</span><span class="w"></span>
+<span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">guest ok = yes</span><span class="w"></span>
+<span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">read only = yes</span><span class="w"></span>
+<span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">create mask = 0764</span><span class="w"></span>
+<span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">directory mask = 0764</span><span class="w"></span>
+</code></pre></div>
+<ol start="3">
+<li>Creamos el directorio que íbamos a compartir y cambiamos los permisos para que no de conflicto.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">sudo mkdir -p /srv/samba/ejercicio1</span><span class="w"></span>
+<span class="linenos" data-linenos="2 "></span><span class="l l-Scalar l-Scalar-Plain">sudo chmod 764 /srv/samba/ejercicio1/</span><span class="w"></span>
+</code></pre></div>
+<ol start="4">
+<li>Siempre que modifiquemos el fichero de configuración debemos reiniciar el servicio:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">sudo systemctl restart smbd</span><span class="w"></span>
+</code></pre></div>
+<h2 id="acceso-desde-cliente-windows">Acceso desde Cliente Windows<a class="headerlink" href="#acceso-desde-cliente-windows" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Abrimos un explorador de directorios.</li>
+<li>Seleccionamos Red (Network)</li>
+<li>Puede que tengamos que habilitar el descubrimiento de redes:</li>
+</ol>
+<figure>
+  <img src="./imagenes/07/072/004.png" width="650"/>
 </figure>
 
-<h2 id="nextcloud">NextCloud<a class="headerlink" href="#nextcloud" title="Permanent link">&para;</a></h2>
-<p><strong>Nextcloud</strong> hace referencia al conjunto de herramientas software de <strong>código abierto</strong> con arquitectura <strong>cliente-servidor</strong>, que permiten la creación de <strong>servicios de alojamiento de archivos</strong> en servidores privados.</p>
-<h3 id="caracteristicas">Características<a class="headerlink" href="#caracteristicas" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Los archivos Nextcloud <strong>son almacenados en estructuras de directorio convencionales</strong> y se pueden acceder a través del protocolo <strong>WebDAV</strong> si es necesario.</li>
-<li>Los archivos son <strong>encriptados</strong> en la transmisión y opcionalmente durante el almacenamiento.</li>
-<li>Los usuarios pueden manejar <strong>calendarios</strong> (CalDAV), <strong>contactos</strong> (CardDAV), <strong>tareas programadas</strong> y reproducir <strong>contenido multimedia</strong> (Ampache).</li>
-<li>Permite la administración de usuarios y grupos de usuarios (vía OpenID o LDAP) y definir permisos de acceso.</li>
-<li>Posibilidad de añadir aplicaciones (de un solo clic) y conexiones con <strong>Dropbox</strong>, <strong>Google Drive</strong> y <strong>Amazon S3</strong>.</li>
-<li>Disponibilidad de acceso a diferentes <strong>bases de datos</strong> mediante SQLite, MariaDB, MySQL, Oracle Database, y PostgreSQL.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p><strong>WebDAV</strong> es un grupo de trabajo del <strong>Internet Engineering Task Force (IETF)</strong>. El término significa <strong>"Autoría y versionado distribuidos por Web" (Web Distributed Authoring and Versioning)</strong>, y <strong>se refiere al protocolo</strong> (más precisamente, a la extensión del protocolo) que el grupo definió. Este protocolo proporciona funcionalidades para <strong>crear, cambiar y mover documentos en un servidor remoto</strong> (típicamente un servidor web).</p>
-</div>
-<h2 id="actividad-tipo-practicastrabajos-pt-ie2">Actividad tipo Prácticas/trabajos (PT, IE2).<a class="headerlink" href="#actividad-tipo-practicastrabajos-pt-ie2" title="Permanent link">&para;</a></h2>
-<h3 id="pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker">PT11. Instalación y configuración de NextCloud mediante Docker<a class="headerlink" href="#pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Siguiendo la <strong>situación de aprendizaje</strong>, estamos trabajando en el departamento TIC de NetOS y nos encargan un proyecto para instalar de una empresa líder en el sector hotelero un servicio que cubra la necesidad de compartir recursos (carpetas documentos, imágenes...), tanto entre las personas dentro de la empresa como con clientes fuera de ésta.</li>
-<li>Para hacernos valer dentro de la empresa indicamos que podemos instalar un servidor <strong>NextCloud</strong> en unos pocos minutos para solventar dicho problema.</li>
-<li>La empresa cuenta con un servidor con <strong>Ubuntu 22.04</strong> para instalar el servicio, por lo tanto decidimos hacer uso de <strong>docker</strong> para levantar el servicio <strong>NextCloud</strong> de una forma muy rápida y sencilla.</li>
-</ul>
-<h4 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Permanent link">&para;</a></h4>
-<ul>
-<li>El servicio docker se debe levantar en la red <strong>192.168.20.0/24</strong>.</li>
-<li>Debe tener la traducción estática del puerto <strong>80</strong> de la máquina anfitriona al puerto <strong>80</strong> del contenedor.</li>
-<li>Debe tener un volumen asociado llamado <strong>"volNextCloud"</strong>.</li>
-</ul>
-<h4 id="pruebas">Pruebas<a class="headerlink" href="#pruebas" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Sube un fichero de prueba, comprueba si está en la carpeta volumen creada. En caso de no estar:</li>
-<li>Prueba a subir un fichero a la plataforma NextCloud. Acto seguido dentro del contenedor busca en que directorio se ha guardado dicho fichero.</li>
-</ul>
-<h4 id="ayuda">Ayuda<a class="headerlink" href="#ayuda" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Página oficial para la Instalación en ubuntu en el siguiente enlace <a href="https://docs.docker.com/engine/install/ubuntu/">Instalación en Ubuntu Documentación</a></li>
-<li>Lee la documentación sobre la imagen NextCloud que hay en <a href="https://hub.docker.com/_/nextcloud">Dockerhub Nextcloud_Docker</a>.</li>
-</ul>
-<h4 id="guia">Guía<a class="headerlink" href="#guia" title="Permanent link">&para;</a></h4>
-<p>En este enlace puedes acceder a una guía para realizar la práctica: <a href="NextCloudDockerSolucion.html">GUÍA INSTALACIÓN NEXTCLOUD CON DOCKER</a></p>
-<h4 id="entrega">Entrega<a class="headerlink" href="#entrega" title="Permanent link">&para;</a></h4>
-<p>Se debe entregar en <strong>Aules</strong>:</p>
-<ul>
-<li><strong>Actividad P11_1</strong>: enlace al video de la instalación de Docker (3 puntos al RA1).</li>
-<li><strong>Actividad P11_2</strong>: enlace al video de la instalación de NextCloud (3 puntos al RA6).</li>
-<li><strong>Actividad P11_3</strong>: enlace al video de la gestión de recursos compartidos mediante volúmenes de Docker (3 puntos al RA4).</li>
-<li><strong>Actividad P11_4</strong>: entrega de pdf con la resolución de las preguntas de Comprensión de la práctica descritas anteriormente (3 puntos al RA4).</li>
-</ul>
-<h4 id="compresion">Compresión<a class="headerlink" href="#compresion" title="Permanent link">&para;</a></h4>
-<div class="admonition warning">
-<p class="admonition-title">advertencia</p>
-<p>Preguntas a responder en la actividad <strong>PT11_4</strong>:</p>
-</div>
-<ul>
-<li>Crea el contenedor Nextcloud ¿Al crear el contenedor se ha generado automáticamente algún volumen? ¿Cuál?</li>
-<li>Dentro del sistema anfitrión (lliurex/Windows) ¿Dónde está guardado el fichero subido previamente?</li>
-<li>¿Este contenedor es persistente? ¿Qué significa que el contenedor es persistente? ¿Cómo lo has comprobado?</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Excepción de instrumento de calificación, al dividir la práctica en apartados se calificará cada uno de ellos con <strong>IC1</strong>.</p>
-</div>
+<p>Como alternativa, en caso de no descubrir el equipo podemos abrir un explorador de directorio y colocar en la barra de direcciones <code>\\IP_Servidor</code></p>
+<figure>
+  <img src="./imagenes/07/072/005.png" width="650"/>
+</figure>
+
+<h2 id="cuestiones-sobre-la-practica">Cuestiones sobre la práctica<a class="headerlink" href="#cuestiones-sobre-la-practica" title="Permanent link">&para;</a></h2>
+<p>Razona todas las respuestas, en caso de que la respuesta sea debido a unos permisos indica que permisos tiene y donde han sido determinados.</p>
+<ol>
+<li>Sigue todos los pasos del manual (apartado anterior) para conseguir compartir ficheros. Adjunta una captura de la sección del fichero de configuración de samba donde se muestre la configuración del recurso compartido.</li>
+<li><strong>Desde el servidor</strong>, crea un fichero hola.txt en la carpeta <code>/srv/samba/ejercicio1</code>.</li>
+<li><strong>Desde el cliente windows</strong> accede al servidor mediante un explorador de directorios e intenta abrir el documento ¿Existe algún problema para ello? Razona tu respuesta.</li>
+<li>Seguidamente modifica el fichero e intenta guardarlo. ¿Qué ocurre? ¿Por qué?</li>
+<li>Ahora, desde el cliente Windows, intenta crear un fichero. ¿Te deja? ¿Puedes leer y escribir en él? ¿Por qué?</li>
+<li><strong>Desde el servidor,</strong> modifica los permisos de <code>/srv/samba/ejercicio1/hola.txt</code> para que tenga los siguientes permisos rwxr—rwx, ahora desde el cliente Windows prueba a modificar el contenido de dicho fichero. ¿Qué ocurre y por qué? Si no te deja escribir y guardar los cambios, indica que deberías cambiar para que puedas hacerlo.</li>
+<li>Crea una carpeta en el servidor <code>/srv/samba/ejercicio2</code>. Comparte dicha carpeta, añadiendo una nueva entrada en el fichero de configuración de samba. La carpeta debe ser navegable, se debe poder acceder sin credenciales, debe tener permisos  de lectura/escritura y además los ficheros creados por los clientes podrán ser modificados, leídos y ejecutados por cualquiera. Por otro lado, los directorios creados por los clientes solo podrán ser modificados por el usuario propietario, mientras que el resto de usuarios/grupos no tendrán ningún permiso. Muestra la configuración realizada.</li>
+<li>Desde un cliente Windows (como usuario propietario) intenta acceder a la carpeta ejercicio2 y crear un documento llamado “miTesoro.txt”. Acto seguido, vuelve al servidor e intenta modificar el fichero (<strong>SIN SER SUDO</strong>) ¿Existe algún problema? ¿Por qué?</li>
+<li>Ahora desde el cliente (Windows) crea un directorio llamado “Mairon”. Vuelve al servidor e intenta crear un fichero “Sauron.txt” dentro de Mairon (<strong>SIN SER SUDO</strong>). ¿Qué ocurre? ¿Qué permisos tiene la carpeta “Mairon”?.</li>
+</ol>
+<!-- 10. Busca en Internet que significa la etiqueta [global] al comienzo del fichero de configuración de samba `/etc/samba/smb.conf` -->
 
 
   
@@ -590,42 +510,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Pie" >
-      
-        
-        <a href="003_Docker.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 1.3- Docker" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              1.3- Docker
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../02_INTRO_SAMBA/021_IntroSamba.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 2.1- Samba" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              2.1- Samba
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -728,10 +612,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "toc.integrate", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
     
     
