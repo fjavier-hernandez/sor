@@ -653,7 +653,8 @@
 <span class="linenos" data-linenos="3 "></span><span class="l l-Scalar l-Scalar-Plain">path = /media/compartido/user1</span><span class="w"></span>
 <span class="linenos" data-linenos="4 "></span><span class="l l-Scalar l-Scalar-Plain">guest ok = Yes</span><span class="w"></span>
 <span class="linenos" data-linenos="5 "></span><span class="l l-Scalar l-Scalar-Plain">read only = Yes</span><span class="w"></span>
-<span class="linenos" data-linenos="6 "></span><span class="l l-Scalar l-Scalar-Plain">write list = @Ceos, administrador, user1 directory mask = 0755</span><span class="w"></span>
+<span class="linenos" data-linenos="6 "></span><span class="l l-Scalar l-Scalar-Plain">write list = @Ceos, administrador, user1</span><span class="w"> </span>
+<span class="linenos" data-linenos="7 "></span><span class="l l-Scalar l-Scalar-Plain">directory mask = 0755</span><span class="w"></span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title"><strong>NOTA</strong></p>
@@ -738,7 +739,7 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>systemctl restart smbd
 </code></pre></div>
 <ul>
-<li>Por último, <strong>para acceder al recurso desde el cliente se realizará</strong> a través de cualquier navegador de archivos usando el protocolo <strong>smb</strong> especificando el usuario, la dirección del recurso y su nombre del siguiente modo:</li>
+<li>Por último, <strong>para acceder al recurso desde el cliente se realizará</strong> a través de cualquier navegador o explorador de archivos de archivos usando el protocolo <strong>smb</strong> especificando el usuario, la dirección del recurso y su nombre del siguiente modo:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>smb://usuario1@servidorubuntu/compartido1
 </code></pre></div>
