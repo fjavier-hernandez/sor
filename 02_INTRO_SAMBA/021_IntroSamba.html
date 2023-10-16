@@ -797,7 +797,8 @@
 <div class="admonition warning">
 <p class="admonition-title">advertencia</p>
 <ul>
-<li>Puede ocurrir que exista contradicción entre los permisos del sistema Unix y los permisos del recurso compartido en samba, por ejemplo, podemos tener una carpeta compartida llamada almacen-software con permisos Unix de lectura, escritura y ejecución para todos, en cambio si en el archivo de configuración de samba, dicho recurso tiene el parámetro read only = yes, no será posible realizar cambios ya que está compartido con permiso de 'solo lectura'. - Cuando los permisos Unix se contradicen con los permisos samba, <strong>el permiso efectivo es el más restrictivo de los dos</strong>.</li>
+<li>Puede ocurrir que exista contradicción entre los permisos del sistema Unix y los permisos del recurso compartido en samba, por ejemplo, podemos tener una carpeta compartida llamada almacen-software con permisos Unix de lectura, escritura y ejecución para todos, en cambio si en el archivo de configuración de samba, <strong>dicho recurso tiene el parámetro read only = yes, no será posible realizar cambios ya que está compartido con permiso de 'solo lectura'</strong>. </li>
+<li>Cuando los permisos Unix se contradicen con los permisos samba, <strong>el permiso efectivo es el más restrictivo de los dos</strong>.</li>
 </ul>
 </div>
 <h2 id="referencia">Referencia<a class="headerlink" href="#referencia" title="Permanent link">&para;</a></h2>
