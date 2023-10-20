@@ -598,7 +598,8 @@
 </div>
 <h3 id="desde-el-servidor">Desde el servidor<a class="headerlink" href="#desde-el-servidor" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Crea un contenedor con el servicio de Samba mediante la guía adjunta. Adjunta captura con el contenedor corriendo.</li>
+<li>Crea un contenedor con el servicio de Samba mediante la guía adjunta.</li>
+<li>Comprueba que el contenedor corriendo.</li>
 </ul>
 <p>Se va a realizar unos pasos previos para preparar el entorno. En primer lugar creamos las carpetas donde alojar el proyecto:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir -p <span class="nv">$HOME</span>/docker/samba/compartido <span class="o">&amp;&amp;</span> <span class="se">\</span>
@@ -632,7 +633,7 @@
 <span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 <span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
 <span class="linenos" data-linenos="24 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$HOME/docker/samba/compartido:/sordata:z</span><span class="w"></span>
-<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;-s</span><span class="nv"> </span><span class="s">&quot;Docker;/sordata&quot;</span><span class="nv"> </span><span class="s">-n&#39;</span><span class="w"></span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;-s</span><span class="nv"> </span><span class="s">&quot;DockerSambaCompartida;/sordata&quot;</span><span class="nv"> </span><span class="s">-n&#39;</span><span class="w"></span>
 <span class="linenos" data-linenos="26 "></span>
 <span class="linenos" data-linenos="27 "></span><span class="nt">networks</span><span class="p">:</span><span class="w"></span>
 <span class="linenos" data-linenos="28 "></span><span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"></span>
@@ -689,7 +690,7 @@
 <p><strong>Explica en el video los siguientes apartados:</strong></p>
 </div>
 <ul>
-<li>Accede a la carpeta compartida en un cliente mediante un explorador de archivos en Lubuntu y en Win11.</li>
+<li>Accede a la carpeta compartida en un cliente puede ser tu propio Host.</li>
 <li>Crea un archivo de texto de prueba, entra al contenedor o servidor y confirma que se ha creado.</li>
 <li>¿Qué pasa si paras y destruyes el contenedor? ¿Por qué?.</li>
 </ul>
