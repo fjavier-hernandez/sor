@@ -499,7 +499,9 @@
 
 
 <h1 id="docker-compose-samba">Docker Compose Samba<a class="headerlink" href="#docker-compose-samba" title="Permanent link">&para;</a></h1>
-<p>En la UT1 se realizo la instalación de docker y sus herramientas más destacables entre ellas estaba <strong>Docker-Compose</strong>. En esta sección se detalla esta herramienta de docker para aplicarla a una imagen de Samba.</p>
+<p>En la <strong>UT1</strong> se realizó la instalación de docker y creación de contenedores de la imagen de <strong>NextCloud</strong>. En los últimos comandos de las prácticas realizadas, se necesitaban una gran cantidad de argumentos para la configuración del contenedor en una red y aplicar un volumen al mismo. Este hecho repercutía en una sintaxis demasiado extensa de dichos comandos.</p>
+<p>Para una gestión mejorada de los comandos extensos de <code>docker run</code> destaca una herramienta de Docker denominada <strong>Docker-Compose</strong>, la cual ayuda a definir, ejecutar y conectar aplicaciones de múltiples contenedores, mediante un archivo <strong>YAML</strong>.</p>
+<p>En esta sección se detalla esta herramienta de docker para aplicarla a una imagen de <strong>Samba</strong>.</p>
 <h2 id="docker-compose">Docker-compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h2>
 <div class="admonition summary">
 <p class="admonition-title">Flujo de trabajo</p>
@@ -507,10 +509,10 @@
 </div>
 <ul>
 <li>
-<p><strong>Docker-compose</strong> es otro proyecto open source que permite definir aplicaciones muilti-contenedor de una manera sencilla y declarativa.</p>
+<p><strong>Docker-compose</strong> es otro proyecto open source que permite definir aplicaciones multi-contenedor de una manera sencilla y declarativa.</p>
 </li>
 <li>
-<p>Es una alternativa más cómoda al uso de los comandos docker run y docker build, que resultan un tanto tediosos cuando trabajamos con aplicaciones de varios componentes.</p>
+<p>Es una alternativa más cómoda al uso de los comandos docker run, que resultan un tanto tediosos cuando trabajamos con aplicaciones de varios componentes.</p>
 </li>
 <li>
 <p>Se define un fichero <code>docker-compose.yml</code> que se puede observar en el ejemplo realizado en la práctica en el último apartado.</p>
