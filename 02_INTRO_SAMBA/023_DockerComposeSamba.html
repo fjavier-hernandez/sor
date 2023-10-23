@@ -524,7 +524,7 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>A continuación se muestra un ejemplo para la realización de la práctica de ampliación: <a href="https://docs.docker.com/samples/wordpress/">Instalación Wordpress</a></p>
+<p>A continuación se muestra un ejemplo para la realización de la práctica de ampliación: <a href="https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/wordpress/">Instalación Wordpress</a></p>
 </div>
 <ol>
 <li><strong>Primer Paso</strong>: instalación de Docker-compose.</li>
@@ -537,44 +537,45 @@
 <ol start="2">
 <li><strong>Segundo paso</strong>: Crear directorio del proyecto y dentro el archivo <code>yaml</code>.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir my_wordpress
-<span class="linenos" data-linenos="2 "></span>touch docker-compose.yml
-<span class="linenos" data-linenos="3 "></span>nano docker-compose.yml
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir -p <span class="nv">$HOME</span>/my_wordpress <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="linenos" data-linenos="2 "></span><span class="nb">cd</span> <span class="nv">$HOME</span>/my_wordpress
 </code></pre></div>
 <ol start="3">
-<li><strong>Tercer paso</strong>: se edita el <code>yaml</code>.</li>
+<li><strong>Tercer paso</strong>: se crea y edita el <code>yaml</code>.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span><span class="w"></span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span><span class="w"></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/mysql</span><span class="w"></span>
-<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="10 "></span><span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">somewordpress</span><span class="w"></span>
-<span class="linenos" data-linenos="11 "></span><span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
-<span class="linenos" data-linenos="12 "></span><span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
-<span class="linenos" data-linenos="13 "></span><span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="w">  </span><span class="nt">wordpress</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="17 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span><span class="w"></span>
-<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress:latest</span><span class="w"></span>
-<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="20 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress_data:/var/www/html</span><span class="w"></span>
-<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="22 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:80&quot;</span><span class="w"></span>
-<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
-<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="25 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db:3306</span><span class="w"></span>
-<span class="linenos" data-linenos="26 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
-<span class="linenos" data-linenos="27 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
-<span class="linenos" data-linenos="28 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
-<span class="linenos" data-linenos="29 "></span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="linenos" data-linenos="30 "></span><span class="w">  </span><span class="nt">db_data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
-<span class="linenos" data-linenos="31 "></span><span class="w">  </span><span class="nt">wordpress_data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="l l-Scalar l-Scalar-Plain">cat &lt;&lt; EOF &gt; $HOME/docker/samba/docker-compose.yml</span><span class="w"></span>
+<span class="linenos" data-linenos=" 2 "></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nt">services</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span><span class="w"></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/mysql</span><span class="w"></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="11 "></span><span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">somewordpress</span><span class="w"></span>
+<span class="linenos" data-linenos="12 "></span><span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
+<span class="linenos" data-linenos="13 "></span><span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
+<span class="linenos" data-linenos="14 "></span><span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span><span class="w">  </span><span class="nt">wordpress</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="18 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span><span class="w"></span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress:latest</span><span class="w"></span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="21 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress_data:/var/www/html</span><span class="w"></span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="23 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:80&quot;</span><span class="w"></span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="26 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db:3306</span><span class="w"></span>
+<span class="linenos" data-linenos="27 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
+<span class="linenos" data-linenos="28 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
+<span class="linenos" data-linenos="29 "></span><span class="w">      </span><span class="nt">WORDPRESS_DB_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
+<span class="linenos" data-linenos="30 "></span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="linenos" data-linenos="31 "></span><span class="w">  </span><span class="nt">db_data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="linenos" data-linenos="32 "></span><span class="w">  </span><span class="nt">wordpress_data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="linenos" data-linenos="33 "></span><span class="l l-Scalar l-Scalar-Plain">EOF</span><span class="w"></span>
 </code></pre></div>
 <ol start="4">
 <li><strong>Cuarto paso</strong>: en la carpeta creada del proyecto se ejecuta el comando de <code>docker-compose up -d</code></li>
@@ -588,11 +589,11 @@
 <h2 id="pt22-samba-mediante-docker-compose">PT22. Samba mediante Docker compose<a class="headerlink" href="#pt22-samba-mediante-docker-compose" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Contribución a los CEs (Criterios de Evaluación)</p>
-<p>Estas actividades contribuyen a los criterios de evaluación CE1, CE2, CE3, CE4, CE5, CE7 y CE9 del RA1 de SOR.</p>
+<p>Estas actividades contribuyen a los criterios de evaluación CE61, CE62, CE63, CE64, CE65, CE9 del RA6 de SOR.</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Situación de Aprendizaje</p>
-<p>En la instalación de la carpeta compartida en el <strong>IES Severo Ochoa d'Elx</strong> uno de los profesores encargados de la revisión de la instalación propone si es posible realizar la instalación de una forma más rápida y sencilla, debido a los conocimientos en docker decides utilizar la herramienta <strong>Docker-Compose</strong>.</p>
+<p>En la instalación de la carpeta compartida en el <strong>IES Severo Ochoa d'Elx</strong> de la <strong>PT22</strong>, uno de los profesores encargados de la revisión de la instalación solicita si es posible realizar la instalación de una forma más rápida y sencilla, debido a los conocimientos en docker decides utilizar la herramienta <strong>Docker-Compose</strong>.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Tarea</p>
