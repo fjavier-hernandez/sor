@@ -6,18 +6,18 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introducción del servicio Samba por Francisco Javier Hernández Illán. Explicación inicial de Samba. Descripción de la configuración de partida en ubuntu server.">
+        <meta name="description" content="Configuración Secciones y Usuarios en Samba de Francisco Javier Hernández Illán.">
       
       
       
-        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/021_IntroSamba.html">
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/03_USERS_SAMBA/031_SambaSecUsers.html">
       
       <link rel="icon" href="../imagenes/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Introducción Samba - Sistemas Operativos en Red</title>
+        <title>Secciones y Usuarios en Samba - Sistemas Operativos en Red</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion" class="md-skip">
+        <a href="#secciones-y-usuarios-en-samba" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducción Samba
+              Secciones y Usuarios en Samba
             
           </span>
         </div>
@@ -343,14 +343,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -371,113 +369,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2.1- Samba
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="021_IntroSamba.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02_INTRO_SAMBA/021_IntroSamba.html" class="md-nav__link">
         2.1- Samba
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#caracteristicas" class="md-nav__link">
-    Características
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introduccion-a-la-configuracion-del-servicio-samba-en-ubuntu" class="md-nav__link">
-    Introducción a la configuración del servicio SAMBA en Ubuntu
-  </a>
-  
-    <nav class="md-nav" aria-label="Introducción a la configuración del servicio SAMBA en Ubuntu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creacion-directorio-compartido" class="md-nav__link">
-    Creación Directorio Compartido
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integracion-de-permisos" class="md-nav__link">
-    Integración de permisos
-  </a>
-  
-    <nav class="md-nav" aria-label="Integración de permisos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#permisos-unix" class="md-nav__link">
-    Permisos Unix
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permisos-windows" class="md-nav__link">
-    Permisos Windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permisos-samba" class="md-nav__link">
-    Permisos Samba
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referencia" class="md-nav__link">
-    Referencia
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -489,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="022_InstalacionSamba.html" class="md-nav__link">
+      <a href="../02_INTRO_SAMBA/022_InstalacionSamba.html" class="md-nav__link">
         2.2- Instalación y configuración inicial
       </a>
     </li>
@@ -503,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="023_DockerComposeSamba.html" class="md-nav__link">
+      <a href="../02_INTRO_SAMBA/023_DockerComposeSamba.html" class="md-nav__link">
         2.3- Docker Compose con Samba
       </a>
     </li>
@@ -523,12 +419,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -549,11 +447,113 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../03_USERS_SAMBA/031_SambaSecUsers.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          3.1- Secciones y Usuarios Samba
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="031_SambaSecUsers.html" class="md-nav__link md-nav__link--active">
         3.1- Secciones y Usuarios Samba
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#secciones" class="md-nav__link">
+    Secciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Secciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    Parámetros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuarios" class="md-nav__link">
+    Usuarios
+  </a>
+  
+    <nav class="md-nav" aria-label="Usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-un-usuario-de-samba-con-smbpasswd" class="md-nav__link">
+    Creación de un usuario de samba con smbpasswd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-un-usuario-de-samba" class="md-nav__link">
+    Eliminar un usuario de samba
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-usuario-invitado" class="md-nav__link">
+    El usuario Invitado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restriccion-por-usuarios" class="md-nav__link">
+    Restricción por usuarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autentificacion-en-samba-a-traves-de-usuarios" class="md-nav__link">
+    Autentificación en Samba a través de usuarios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_USERS_SAMBA/032_CreacionUsersSamba.html" class="md-nav__link">
+      <a href="032_CreacionUsersSamba.html" class="md-nav__link">
         3.2- Creación de Usuarios y grupos en Samba
       </a>
     </li>
@@ -579,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_USERS_SAMBA/033_GestionUsersSamba.html" class="md-nav__link">
+      <a href="033_GestionUsersSamba.html" class="md-nav__link">
         3.3- Gestión de Usuarios y grupos en Samba
       </a>
     </li>
@@ -608,63 +608,32 @@
                   
 
 
-<figure>
-    <img src="imagenes/001.png"/>
-</figure>
-<figure>
-    <img src="imagenes/002.png"/>
-</figure>
-
-<h1 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h1>
-<div class="admonition tip">
-<p class="admonition-title"><strong>Conocimiento previo</strong></p>
+<h1 id="secciones-y-usuarios-en-samba">Secciones y Usuarios en SAMBA<a class="headerlink" href="#secciones-y-usuarios-en-samba" title="Permanent link">&para;</a></h1>
+<h2 id="secciones">Secciones<a class="headerlink" href="#secciones" title="Permanent link">&para;</a></h2>
+<p>Aunque en la UT anterior ya se comentaron parámetros de algunas de las secciones del archivo de configuración de <strong>Samba</strong>, es importante desarrollar más en profundidad las diferentes opciones que nos brinda <strong>Samba</strong> a través de dichas secciones.</p>
+<p>Dentro del fichero de configuración <code>/etc/samba/smb.conf</code> encontramos diversas secciones, entre las que se destacan tres:</p>
 <ul>
-<li><strong>SMB (Server Message Block)</strong> protocolo de red que <strong>permite compartir archivos, impresoras, etcétera,</strong> entre nodos de una red de computadoras que usan el <strong>sistema operativo Microsoft Windows</strong>. </li>
-<li>Este protocolo pertenece a la <strong>capa de aplicación</strong> en el modelo TCP/IP y fue renombrado posteriormente a <strong>CIFS (Common Internet File System)</strong>.</li>
-</ul>
-</div>
-<p><strong>Samba</strong> es una implementación libre del protocolo <strong>SMB</strong> para sistemas de tipo UNIX, para el cual se destaca:</p>
-<ul>
-<li>Se basa en un conjunto de aplicaciones de <strong>GNU/Linux</strong> cuyo principal objetivo es conectar computadoras con diferentes sistemas operativos como pueden ser <strong>GNU/Linux, Mac OS X o Unix</strong> para actuar como <strong>servidores o clientes</strong> de los diferentes servicios de compartición de recursos.</li>
-<li>También permite validar usuarios haciendo de <strong>Controlador Principal de Dominio (PDC)</strong>, como miembro de dominio e incluso como un dominio <strong>Active Directory</strong> para redes basadas en Windows; aparte de ser capaz de servir colas de impresión, directorios compartidos y autentificar con su propio archivo de usuarios.</li>
-</ul>
-<h2 id="caracteristicas">Características<a class="headerlink" href="#caracteristicas" title="Permanent link">&para;</a></h2>
-<p>Entre los sistemas tipo <strong>Unix</strong> en los que se puede ejecutar <strong>Samba</strong>, están las distribuciones:</p>
-<ul>
-<li><strong>GNU/Linux</strong>. </li>
-<li><strong>Solaris</strong>.</li>
-<li>Las diferentes variantes <strong>BSD</strong> entre las que podemos encontrar el <strong>Mac OS X Server</strong> de Apple.</li>
-</ul>
-<p>Como se ha comentado <strong>Samba</strong> es una implementación de <strong>servicios y protocolos</strong>, entre los que destacan: </p>
-<ul>
-<li><a href="https://es.wikipedia.org/wiki/NetBIOS">NetBIOS</a> sobre TCP/IP (NetBT). </li>
-<li><a href="https://es.wikipedia.org/wiki/Server_Message_Block">SMB (Server Message Block)</a>.</li>
-<li><a href="https://en.wikipedia.org/wiki/Microsoft_RPC">DCE/RPC</a> o más concretamente, <strong>MSRPC</strong>. </li>
-<li>El servidor <a href="https://es.wikipedia.org/wiki/Windows_Internet_Naming_Service">WINS</a> también conocido como el servidor de nombres de <strong>NetBIOS</strong>. </li>
-<li>La suite de <strong>protocolos del dominio NT</strong> o <a href="https://es.wikipedia.org/wiki/NTLM">NTLM</a>, para autentificación. </li>
-<li>La base de datos del gestor de cuentas seguras <a href="https://learn.microsoft.com/es-es/windows/security/threat-protection/auditing/audit-sam">SAM</a>. </li>
-<li>El servicio <a href="https://es.wikipedia.org/wiki/Servicio_de_Subsistema_de_Autoridad_de_Seguridad_Local">Local Security Authority LSA</a> o autoridad de seguridad local.</li>
-<li>Recientemente el Logon de entrada de Active Directory, que incluye una versión modificada de <a href="https://es.wikipedia.org/wiki/Kerberos#:~:text=Kerberos%20pronunciación%20en%20inglés%3A%20%2F,identidad%20mutuamente%20de%20manera%20segura.">Kerberos</a> </li>
-<li>Y una versión modificada de <a href="https://es.wikipedia.org/wiki/Protocolo_ligero_de_acceso_a_directorios#:~:text=El%20protocolo%20ligero%20de%20acceso,en%20un%20entorno%20de%20red.">LDAP</a>. </li>
+<li><code>[global]</code>: Es la sección principal que nos permite configurar los parámetros generales del servicio. Las opciones especificadas aquí afectan a cualquier recurso compartido. </li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Advertencia</p>
-<p>Todos estos servicios y protocolos son frecuentemente referidos de un modo incorrecto como <strong>NetBIOS</strong> o <strong>SMB</strong>.</p>
+<p>A tener en cuenta, si una misma opción se declara en la sección global y en otra sección, por ejemplo una carpeta compartida con el nombre <code>ejercicio1</code>, tendrá mayor peso la de la sección más específica, es decir, la especificada en la sección llamada <code>ejercicio1</code>.</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Propina</p>
-<p>A partir de la <strong>versión 4.10.0 de samba</strong> se ofrece soporte completo para <strong>Python 3</strong> y aunque mantiene compatibilidad con <strong>Python 2</strong>, esta debe ser configurada de manera explícita,​ sin embargo, a futuro, dicho soporte a <strong>Python 2</strong> será retirado.</p>
-</div>
-<h2 id="introduccion-a-la-configuracion-del-servicio-samba-en-ubuntu">Introducción a la configuración del servicio SAMBA en Ubuntu<a class="headerlink" href="#introduccion-a-la-configuracion-del-servicio-samba-en-ubuntu" title="Permanent link">&para;</a></h2>
-<p>Toda la configuración de <em>Samba</em> se encuentra en el fichero <code>/etc/samba/smb.conf</code> &#8594; <a href="http://manpages.ubuntu.com/manpages/bionic/man5/smb.conf.5.html">DOCUMENTACIÓN OFICIAL</a> .</p>
-<div class="admonition note">
-<p class="admonition-title"><strong>NOTA</strong></p>
-<p>Existen multitud de opciones pero tan solo se analizarán las imprescindibles para la compartición de recursos. Las líneas que comiencen con <code>#</code> o <code>;</code> están comentadas y el servicio no las tendrá en cuenta. </p>
-</div>
-<p><strong>Este fichero tiene varios apartados, con opciones que se comentarán a continuación:</strong></p>
 <ul>
-<li><code>[global]</code> cuyas opciones generales son:</li>
+<li><code>[homes]</code>: Esta sección permite compartir las carpetas home de cada usuario, para que cada usuario pueda acceder a su carpeta home por la red. </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">consejo</p>
+<p>Se puede indicar las opciones para el <code>/home</code> de los usuarios existentes en el servidor. De tal forma que podríamos acceder a nuestro <code>/home</code> desde cualquier máquina del grupo de trabajo de la siguiente forma: <code>\\IP_SERVIDOR\usuario</code> &#8594; (file://IP_SERVIDOR/usuario)</p>
+</div>
+<ul>
+<li><code>[printers]</code>: Permite compartir impresoras en red.</li>
+</ul>
+<h3 id="parametros">Parámetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
+<p>Puesto que editando el archivo <code>smb.conf</code> se pueden configurar más de 300 parámetros, dando lugar a miles de configuraciones, esta guía se limitará a analizar los parámetros más relevantes</p>
+<ol>
+<li>En la sección <code>[global]</code> se especifican las siguientes opciones generales:</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -695,194 +664,208 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li><code>[autentication]</code>, donde se destaca <strong>server role</strong>, el cual indica la forma en la que va a trabajar el servidor <strong>Samba</strong>:</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>standalone server</strong></td>
-<td>Modo por defecto, actúa como un servidor de ficheros y directorios compartidos pero no como servidor de dominio.</td>
-</tr>
-<tr>
-<td><strong>member server</strong></td>
-<td>similar al anterior con la diferencia que añadimos al equipo a un dominio ya existente y por tanto su funcionamiento se verá afectado por las reglas de éste. Esta opción requiere añadir las líneas <strong>security=ADM</strong>, para indicar que el control de acceso lo gestionará el  controlador de dominio, y <strong>realm =NOMBREDOMINIO.COM</strong> para indicar el nombre de dominio al que pertenece el servidor. Además, hay que comentar la línea <strong>workgroup</strong> ya que no pertenecemos a un grupo de trabajo.</td>
-</tr>
-<tr>
-<td><strong>AD domain controler</strong></td>
-<td>actúa como un controlador de dominio.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="creacion-directorio-compartido">Creación Directorio Compartido<a class="headerlink" href="#creacion-directorio-compartido" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Para crear un directorio compartido es necesario añadir una nueva sección del siguiente modo:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="p p-Indicator">[</span><span class="nv">compartidoUser1</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="linenos" data-linenos="2 "></span><span class="l l-Scalar l-Scalar-Plain">comment = Carpeta compartida</span><span class="w"> </span>
-<span class="linenos" data-linenos="3 "></span><span class="l l-Scalar l-Scalar-Plain">path = /media/compartido/user1</span><span class="w"></span>
-<span class="linenos" data-linenos="4 "></span><span class="l l-Scalar l-Scalar-Plain">guest ok = Yes</span><span class="w"></span>
-<span class="linenos" data-linenos="5 "></span><span class="l l-Scalar l-Scalar-Plain">read only = Yes</span><span class="w"></span>
-<span class="linenos" data-linenos="6 "></span><span class="l l-Scalar l-Scalar-Plain">write list = @Ceos, administrador, user1</span><span class="w"> </span>
-<span class="linenos" data-linenos="7 "></span><span class="l l-Scalar l-Scalar-Plain">directory mask = 0755</span><span class="w"></span>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo [global]</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    <span class="o">[</span>global<span class="o">]</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="c1"># Seguridad por usuarios</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nv">security</span> <span class="o">=</span> user
+<span class="linenos" data-linenos=" 4 "></span>    <span class="c1"># Grupo de trabajo &#39;Aula5&#39;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nv">workgroup</span> <span class="o">=</span> Aula5 
+<span class="linenos" data-linenos=" 6 "></span>    <span class="c1"># Las contraseñas se deberán enviar encriptadas </span>
+<span class="linenos" data-linenos=" 7 "></span>    encrypt <span class="nv">passwords</span> <span class="o">=</span> yes
+<span class="linenos" data-linenos=" 8 "></span>    <span class="c1"># Samba será servidor wins</span>
+<span class="linenos" data-linenos=" 9 "></span>    wins <span class="nv">support</span> <span class="o">=</span> yes
+<span class="linenos" data-linenos="10 "></span>    <span class="c1"># Nivel y longitud máxima del archivo de registro</span>
+<span class="linenos" data-linenos="11 "></span>    log <span class="nv">level</span> <span class="o">=</span> <span class="m">1</span> 
+<span class="linenos" data-linenos="12 "></span>    max log <span class="nv">size</span> <span class="o">=</span> <span class="m">1000</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="c1"># Por defecto, lectura y escritura</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nb">read</span> <span class="nv">only</span> <span class="o">=</span> no
+<span class="linenos" data-linenos="15 "></span>    <span class="c1"># Se comparten también las impresoras</span>
+<span class="linenos" data-linenos="16 "></span>    load <span class="nv">printers</span> <span class="o">=</span> yes
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title"><strong>NOTA</strong></p>
 <ul>
-<li>Estas  líneas  crean  un  recurso  compartido  con  el  nombre <strong>compartidoUser1</strong>  en  el  directorio <strong>/media/compartido/user1</strong> de solo lectura, con acceso de invitado, los usuarios <strong>administrador</strong> y <strong>user1</strong> pueden escribir  y el grupo <strong>@Ceos</strong> también. </li>
-<li>Además, se aplicará una máscara de permisos automática de <strong>0755</strong> a los ficheros y carpetas que se creen en este recurso.</li>
+<li>Más ejemplos:</li>
 </ul>
+<p><code>hosts allow/deny</code>: Permite restringir el acceso por IP:</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo1</p>
+<p><strong>Permitir Redes</strong><br />
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">hosts allow = 192.168.2.0/24 192.168.3.0/24</span><span class="w"></span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo2</p>
+<p><strong>Permitir IP específica</strong><br />
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">hosts allow = 192.168.2.5 192.168.3.100 192.168.3.200</span><span class="w"></span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo1</p>
+<p><strong>Permitir acceso a todos los hosts que comiencen por 192.168.</strong><br />
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">hosts allow = 192.168.</span><span class="w"></span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo1</p>
+<p><strong>Deniega acceso a todos los hosts que comiencen por 10.</strong><br />
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">hosts deny = 10.</span><span class="w"></span>
+</code></pre></div></p>
 </div>
 <ul>
-<li>Las opciones más relevantes son:</li>
+<li>Su funcionamiento es de arriba abajo, como las listas de acceso. Es decir, si tenemos:</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>[X]:</strong></td>
-<td>Nombre del recurso a compartir, normalmente un directorio.</td>
-</tr>
-<tr>
-<td><strong>Comment:</strong></td>
-<td>Comentario que describe el directorio que se está compartiendo.</td>
-</tr>
-<tr>
-<td><strong>Path:</strong></td>
-<td>Es la carpeta que se quiere compartir. Puede ser cualquier carpeta del servidor, no obstante, por estándar las carpetas compartidas de un servidor suelen encontrarse dentro del directorio /srv.</td>
-</tr>
-<tr>
-<td><strong>guest ok</strong></td>
-<td>Permite el acceso como usuario invitado. Su valor puede ser <strong>Yes</strong> o <strong>No</strong>.</td>
-</tr>
-<tr>
-<td><strong>public</strong></td>
-<td>Equivalente del parámetro <strong>guest ok</strong>.</td>
-</tr>
-<tr>
-<td><strong>browseable</strong></td>
-<td>Permitirá mostrar este recurso en las listas de recursos compartidos. Su valor puede ser <strong>Yes</strong> o <strong>No</strong>.</td>
-</tr>
-<tr>
-<td><strong>writable</strong></td>
-<td>Permitirá la escritura. Su valor puede ser <strong>Yes</strong> o <strong>No</strong>.</td>
-</tr>
-<tr>
-<td><strong>valid users</strong></td>
-<td>Especifica qué usuarios o grupos pueden acceder al recurso compartido. Mirar valores en la Nota a continuación de esta tabla.</td>
-</tr>
-<tr>
-<td><strong>write list</strong></td>
-<td>Usuarios o grupos pueden acceder con permiso de escritura.</td>
-</tr>
-<tr>
-<td><strong>admin users</strong></td>
-<td>Usuarios o grupos pueden acceder con permisos administrativos.</td>
-</tr>
-<tr>
-<td><strong>Create Mask:</strong></td>
-<td>Indica los permisos de los <strong>ficheros creados por los clientes</strong>. Por defecto 0744 (todos los permisos para usuario propietario y solo permiso de lectura para grupo y otros usuarios).</td>
-</tr>
-<tr>
-<td><strong>directory mask</strong></td>
-<td>Define que permisos en el sistema tendrán los subdirectorios creados dentro del recurso.</td>
-</tr>
-</tbody>
-</table>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">hosts allow = 127.0.0.1 192.168.2.0/24 192.168.3.0/24</span><span class="w"></span>
+<span class="linenos" data-linenos="2 "></span><span class="l l-Scalar l-Scalar-Plain">hosts deny = 127.0.0.1 192.168.2.0/24 192.168.3.0/24</span><span class="w"></span>
+</code></pre></div>
+<p><strong>El que cuenta es el primero que coincida, por tanto sí permitiría el acceso.</strong></p>
+<ol start="2">
+<li>En la sección <code>[homes]</code> se muestra el siguiente ejemplo:</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    <span class="o">[</span>homes<span class="o">]</span> 
+<span class="linenos" data-linenos="2 "></span>    <span class="c1"># Comentario</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nv">comment</span> <span class="o">=</span> Carpetas home 
+<span class="linenos" data-linenos="4 "></span>    <span class="c1"># No explorables</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="nv">browsable</span> <span class="o">=</span> no 
+<span class="linenos" data-linenos="6 "></span>    <span class="c1"># Máscara de creación de archivos (rxw------)</span>
+<span class="linenos" data-linenos="7 "></span>    create <span class="nv">mask</span> <span class="o">=</span> <span class="m">0700</span> 
+<span class="linenos" data-linenos="8 "></span>    <span class="c1"># Máscara de creación de carpetas</span>
+<span class="linenos" data-linenos="9 "></span>    directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">0700</span>
+</code></pre></div>
+<ol start="3">
+<li>En la sección <code>[printers]</code> se muestra el siguiente ejemplo:</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    <span class="o">[</span>printers<span class="o">]</span> 
+<span class="linenos" data-linenos="2 "></span>    <span class="nv">path</span> <span class="o">=</span> /var/tmp 
+<span class="linenos" data-linenos="3 "></span>    <span class="nv">printable</span> <span class="o">=</span> yes
+<span class="linenos" data-linenos="4 "></span>    min print <span class="nv">space</span> <span class="o">=</span> <span class="m">2000</span>
+</code></pre></div>
+<h2 id="usuarios">Usuarios<a class="headerlink" href="#usuarios" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Para que esa administración sea posible, <strong>Samba</strong> dispone de su propia base de datos de <code>usuarios samba</code> pero como los usuarios utilizan otros recursos del servidor como carpetas e impresoras, es necesario que estén creados en el sistema Unix.</p>
+</li>
+<li>
+<p>Resumiendo, podemos decir que <strong>para poder ser usuario de samba, es necesario disponer de una cuenta de usuario en Unix y de una cuenta de usuario en samba</strong>.</p>
+</li>
+</ul>
 <div class="admonition tip">
-<p class="admonition-title"><strong>Especificación de los valores de <code>valid users</code></strong></p>
+<p class="admonition-title">Gestión usuarios</p>
 <ul>
-<li><strong>nombres de usuarios</strong> separados por comas</li>
-<li><strong>nombres de grupo</strong> precedidos por una <em>@</em></li>
-<li><strong>%S</strong> indica que solo el usuario cuyo nombre sea igual al de ese directorio, tiene acceso (útil para las carpetas personales de usuario)</li>
+<li>La gestión de usuarios de samba se puede realizar de dos formas: </li>
+<li>con el comando <code>smbpasswd</code>. Con dicho comando, entre otras cosas podremos crear y eliminar usuarios, cambiar su contraseña, etc.</li>
+<li>A través de los comandos <strong>samba-tool user</strong> y <strong>samba-tool group</strong>.</li>
 </ul>
 </div>
-<div class="admonition warning">
-<p class="admonition-title"><strong>Advertencia</strong></p>
-<p>Una vez añadido el recurso, es necesario reiniciar el servicio para que se apliquen los cambios</p>
+<ul>
+<li>Inicialmente se van a realizar con la primera opción.</li>
+</ul>
+<h3 id="creacion-de-un-usuario-de-samba-con-smbpasswd">Creación de un usuario de samba con smbpasswd<a class="headerlink" href="#creacion-de-un-usuario-de-samba-con-smbpasswd" title="Permanent link">&para;</a></h3>
+<p>Para crear un usuario de samba se puede utilizar el comando <code>smbpasswd</code>, pero antes debemos haber creado el usuario en Unix.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>systemctl restart smbd
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># Creación del usuario pepe</span>
+<span class="linenos" data-linenos="2 "></span>sudo useradd pepe
+<span class="linenos" data-linenos="3 "></span><span class="c1"># Si se desea que pepe pueda disfrutar de los servicios samba, debemos crear a pepe como usuario de samba ejecutando el siguiente comando:</span>
+<span class="linenos" data-linenos="4 "></span>sudo smbpasswd -a pepe
+<span class="linenos" data-linenos="5 "></span><span class="c1"># Con la opción -a indicamos que añada al usuario. </span>
+<span class="linenos" data-linenos="6 "></span><span class="c1"># Acto seguido nos preguntará dos veces la contraseña que deseamos poner al usuario. Lo razonable es que sea la misma contraseña que tiene el usuario en Unix. </span>
 </code></pre></div>
-<ul>
-<li>Por último, <strong>para acceder al recurso desde el cliente se realizará</strong> a través de cualquier navegador o explorador de archivos de archivos usando el protocolo <strong>smb</strong> especificando el usuario, la dirección del recurso y su nombre del siguiente modo:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>smb://usuario1@servidorubuntu/compartido1
+<h3 id="eliminar-un-usuario-de-samba">Eliminar un usuario de samba<a class="headerlink" href="#eliminar-un-usuario-de-samba" title="Permanent link">&para;</a></h3>
+<p>Para eliminar un usuario de samba debemos ejecutar <code>smbpasswd</code> con la opción <code>-x</code>, </p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># Eliminar un usuario de samba</span>
+<span class="linenos" data-linenos="2 "></span>sudo smbpasswd -x pepe
+<span class="linenos" data-linenos="3 "></span><span class="c1"># Inmediatamente el usuario habrá desaparecido de la base de datos de &#39;usuarios samba&#39; aunque seguirá siendo un usuario de Unix.</span>
 </code></pre></div>
-<h2 id="integracion-de-permisos">Integración de permisos<a class="headerlink" href="#integracion-de-permisos" title="Permanent link">&para;</a></h2>
-<p>La gestión de permisos de usuarios y grupos es sustancialmente diferente en Sistemas Unix y en Sistemas Microsoft Windows. A continuación se describen las diferencias.</p>
-<h3 id="permisos-unix">Permisos Unix<a class="headerlink" href="#permisos-unix" title="Permanent link">&para;</a></h3>
+<ol start="3">
+<li>Otras opciones de <code>smbpasswd</code></li>
+</ol>
 <ul>
-<li>En los <strong><em>Sistemas Unix</em></strong>, la gestión de los permisos que los usuarios y los grupos de usuarios tienen sobre los archivos se realiza mediante un sencillo esquema de <strong>tres tipos de permisos (lectura, escritura y ejecución)</strong> aplicables a tres tipos de usuarios <strong>(propietario, grupo propietario y resto)</strong>, los cuales se denominan trios de permisos. </li>
+<li><code>-d</code>: Deshabilitar un usuario</li>
+<li><code>-e</code>: Habilitar un usuario.</li>
+<li><code>-m</code>: Indica que es una cuenta de máquina (equipo)</li>
+<li><code>-n</code>: Usuario sin password.</li>
 </ul>
-<p>En la siguiente figura se puede observar su funcionamiento:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La última opción Necesita parámetro null passwords = yes en sección 'global' del archivo de configuración de samba</p>
+</div>
+<h3 id="el-usuario-invitado">El usuario Invitado<a class="headerlink" href="#el-usuario-invitado" title="Permanent link">&para;</a></h3>
+<p>Cuando accedemos como “<strong>invitado</strong>” (guest ok) por defecto accedemos como el usuario <code>nobody:nogroup</code>. Esto se puede modificar usando el siguiente parámetro:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>force <span class="nv">user</span> <span class="o">=</span> javi
+<span class="linenos" data-linenos="2 "></span>force <span class="nv">group</span> <span class="o">=</span> alumnos
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Opción</p>
+<p>De esta forma cuando accedamos al sistema como invitado accederemos como el usuario <code>javi</code> que tiene el grupo principal alumnos.</p>
+</div>
+<h3 id="restriccion-por-usuarios">Restricción por usuarios<a class="headerlink" href="#restriccion-por-usuarios" title="Permanent link">&para;</a></h3>
+<p>En caso de que no permitamos el acceso de invitados (guest ok = no) el servidor nos solicitará nuestras credenciales:</p>
 <figure>
-  <img src="./imagenes/004B.png" width="650"/>
+  <img src="./imagenes/001.png" width="450"/>
 </figure>
 
-<div class="admonition tip">
-<p class="admonition-title">Ventajas</p>
 <ul>
-<li>Este sencillo esquema se desarrolló en los <strong>años 70</strong> y <strong>aún hoy resulta adecuado</strong> para la gran mayoría de los sistemas en red que podamos encontrar en cualquier tipo de organización, desde pequeñas redes a las más grandes.</li>
-<li>Es cierto que tiene algunas limitaciones pero la ventaja de ser sencillo hace que su <strong>administración sea fácil y su rendimiento muy elevado.</strong></li>
+<li>Por otra parte se puede restringir los usuarios que pueden tener acceso a un recurso:</li>
 </ul>
-</div>
-<h3 id="permisos-windows">Permisos Windows<a class="headerlink" href="#permisos-windows" title="Permanent link">&para;</a></h3>
-<ul>
-<li>En los <strong><em>Sistemas Microsoft Windows</em></strong>, la gestión de los permisos que los usuarios y los grupos de usuarios tienen sobre los archivos, se realiza mediante un complejo esquema de listas de control de acceso <strong>ACLs (Access Control Lists)</strong> para cada carpeta y cada archivo. </li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Ventajas</p>
-<ul>
-<li>El sistema de ACLs tiene la <strong>ventaja de ser mucho más flexible que el sistema Unix ya que se pueden establecer más tipos de permisos</strong>, establecer permisos solo a algunos usuarios y algunos grupos, denegar permisos, etc..., pero como hemos comentado anteriormente, <strong>en la mayoría de los casos, con las prestaciones del Sistema Unix es suficiente</strong>.</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Desventajas</p>
-<p>En el lado contrario, el sistema de <strong>ACLs es más complejo de administrar</strong> y más lento ya que antes de acceder a las carpetas o archivos, el sistema debe comprobar listas mientras que en <strong>Unix</strong> hace una operación lógica de los bits que especifican los permisos lo cual <strong>es muchísimo más rápido</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>valid <span class="nv">users</span> <span class="o">=</span> javi pepe jorge
+<span class="linenos" data-linenos="2 "></span>invalid <span class="nv">users</span> <span class="o">=</span> root @profesores @root
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El <code>“@”</code> indica que se hace referencia a un grupo. Por tanto ningún usuario perteneciente al grupo root o de profesores puede acceder.</p>
 </div>
 <ul>
-<li>En particular el acceso a una carpeta se determina por dos tipos de permisos:</li>
+<li>Además se pueden crear usuarios administradores.</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title"><strong>Tipos de permisos para Samba</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>admin <span class="nv">users</span> <span class="o">=</span> javi
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title"><strong>NOTA:</strong></p>
+<p>Los usuarios dentro de esta lista actuarán como <code>root</code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><strong>NOTA:</strong></p>
+<p>Si un usuario está en el listado de “valid users” y en el de “invalid users” se le deniega el acceso.</p>
+</div>
+<h3 id="autentificacion-en-samba-a-traves-de-usuarios">Autentificación en Samba a través de usuarios<a class="headerlink" href="#autentificacion-en-samba-a-traves-de-usuarios" title="Permanent link">&para;</a></h3>
+<p>Para autentificarse en <code>Samba</code> a través de usuarios se deben cumplir 2 requisitos:</p>
+<ol>
+<li>El usuario debe existir en el sistema <code>/etc/passwd</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo useradd -s /bin/true “usuario”
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title"><strong>Nota</strong></p>
+<p>De esta forma no se crea el <code>/home</code> del usuario y no se permite el acceso al sistema si no es a través de <strong>Samba</strong>. Es decir, el usuario no se podría conectar a través de <code>ssh</code> o localmente.</p>
+</div>
+<ol start="2">
+<li>El usuario debe existir en el servicio de samba. Para listar los usuarios se utiliza el comando <code>pbedit -L</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo smbpasswd –a “usuario”
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title"><strong>NOTA:</strong></p>
+<p>La contraseña es recomendable que sea diferente a la usada en el sistema.</p>
+</div>
 <ul>
-<li>De <strong>recurso compartido</strong> definidos tan solo a <strong>carpetas</strong>.</li>
-<li>De red o <strong>NTFS (New Technology File System)</strong> definidos tanto en <strong>carpetas</strong> como en <strong>archivos</strong>.</li>
+<li><strong>Listar usuarios dados de alta en SAMBA:</strong></li>
 </ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Advertencia</p>
-<p>Los permisos de <strong>recurso compartido</strong> suelen utilizarse para administrar equipos con sistemas de archivos <strong>FAT32</strong> (<em>File Allocation Table</em>) o posterior, <strong>por lo que quedan desterrados en sistemas operativos de red</strong> y por tanto se usan los permisos de red <strong>NTFS</strong>. </p>
-</div>
-<h3 id="permisos-samba">Permisos Samba<a class="headerlink" href="#permisos-samba" title="Permanent link">&para;</a></h3>
-<p><strong>Samba</strong> tiene también implementado el sistema de <strong>ACLs</strong> y se gestiona utilizando el comando <code>smbcacls</code>, no obstante, <strong>la recomendación es utilizar el sistema de gestión de permisos de Unix</strong>.</p>
-<div class="admonition tip">
-<p class="admonition-title">consejo</p>
-<p>Para realizar una gestión eficaz de usuarios, grupos y permisos, <strong>se recomienda utilizar los permisos de Unix que permiten asignar permisos de lectura, escritura y ejecución</strong> al usuario propietario del archivo, al grupo propietario del archivo y al resto de usuarios del sistema.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">advertencia</p>
-<ul>
-<li>Puede ocurrir que exista contradicción entre los permisos del sistema Unix y los permisos del recurso compartido en samba, por ejemplo, podemos tener una carpeta compartida llamada almacen-software con permisos Unix de lectura, escritura y ejecución para todos, en cambio si en el archivo de configuración de samba, <strong>dicho recurso tiene el parámetro read only = yes, no será posible realizar cambios ya que está compartido con permiso de 'solo lectura'</strong>. </li>
-<li>Cuando los permisos Unix se contradicen con los permisos samba, <strong>el permiso efectivo es el más restrictivo de los dos</strong>.</li>
-</ul>
-</div>
-<h2 id="referencia">Referencia<a class="headerlink" href="#referencia" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Wikipedia Oficial de Samba</p>
-<p>Se recomienda leer la documentación oficial del servicio en <a href="https://wiki.samba.org/index.php/Main_Page">ENLACE WIKI SAMBA</a></p>
-</div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pdbedit -L
+</code></pre></div>
+<!-- smb encrypt = required
+client min protocol = SMB2
+client max protocol = SMB3 -->
 
 
   
@@ -910,7 +893,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pie" >
       
         
-        <a href="../01_INTRO_SOR/004_PracticaNextCloud.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 1.4- Práctica NextCloud" rel="prev">
+        <a href="../02_INTRO_SAMBA/023_DockerComposeSamba.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2.3- Docker Compose con Samba" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -919,20 +902,20 @@
               <span class="md-footer__direction">
                 Anterior
               </span>
-              1.4- Práctica NextCloud
+              2.3- Docker Compose con Samba
             </div>
           </div>
         </a>
       
       
         
-        <a href="022_InstalacionSamba.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 2.2- Instalación y configuración inicial" rel="next">
+        <a href="032_CreacionUsersSamba.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 3.2- Creación de Usuarios y grupos en Samba" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              2.2- Instalación y configuración inicial
+              3.2- Creación de Usuarios y grupos en Samba
             </div>
           </div>
           <div class="md-footer__button md-icon">
