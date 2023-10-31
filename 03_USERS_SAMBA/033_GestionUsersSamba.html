@@ -596,7 +596,7 @@
 <li>Haz que todos los <code>/homes</code> de los usuarios sean navegables, que cualquiera pueda acceder sin credenciales y que solo tengan permisos de lectura. Recuerda que también deberás tener en cuenta los permisos dentro del servidor Linux. Haz captura de la configuración realizada en <code>smb.conf</code> y del explorador de Windows accediendo a tu <code>/home</code> de Ubuntu.</li>
 <li>Cambia en el servidor, en la sección [homes], la opción read only a no. Haz una captura de los permisos de tu carpeta <code>/home</code>. Prueba a crear un fichero desde Windows. ¿Qué sucede y por qué?</li>
 <li>Indica la configuración del servicio más adecuada si quisiera permitir únicamente los equipos de la red 172.16.0.0/16 (Supuesta IP de las máquinas de la organización, configurada en la RED NAT por defecto). ¿Sigues teniendo acceso desde el cliente? ¿Por qué?</li>
-<li>Ahora cambia la restricción para permitir acceso únicamente a los hosts de la red en la que te encuentres.</li>
+<li>Ahora genera secciones con las carpetas generadas para <strong>BerbeWild S.A.</strong> y realiza los permisos necesarios para que solo accedan los usuarios de los grupos correspondientes.</li>
 </ol>
 <h3 id="usuarios-samba">Usuarios SAMBA<a class="headerlink" href="#usuarios-samba" title="Permanent link">&para;</a></h3>
 <ol start="5">
@@ -605,6 +605,7 @@
 <li>Cierra la sesión actual en el servidor (exit) e intenta iniciar sesión con el usuario “leonardo” ¿Qué sucede y por qué?</li>
 <li>Edita en el servidor la sección [homes] con “force user = root”. Reinicia el servicio. Intenta crear, desde el cliente de Windows, "logueandote" como <strong>leonardo</strong> un documento en el escritorio del <code>/home</code> compartido. ¿Te permite crearlo? ¿Por qué? ¿Qué permisos y usuario propietario tiene el fichero creado? Adjunta capturas a las explicaciones.</li>
 <li>Cambia la configuración en el servidor de la carpeta “<code>/home/leonardo/serviciotecnico</code>” para que no permita el acceso de invitados y solo permita al usuario <strong>“leonardo”</strong>. Muestra la configuración. Intenta acceder desde el cliente Windows con las credenciales de tu usuario ¿Qué sucede? Adjunta capturas de pantalla.</li>
+<li>Comprueba el acceso y no acceso de los usuarios de <strong>BerbeWild S.A.</strong> a los diferentes directorios creados.</li>
 </ol>
 
 
