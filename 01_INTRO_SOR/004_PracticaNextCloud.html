@@ -385,16 +385,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#actividad-tipo-practicastrabajos-pt-ie2" class="md-nav__link">
-    Actividad tipo Prácticas/trabajos (PT, IE2).
+  <a href="#pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker" class="md-nav__link">
+    PT11. Instalación y configuración de NextCloud mediante Docker
   </a>
   
-    <nav class="md-nav" aria-label="Actividad tipo Prácticas/trabajos (PT, IE2).">
+    <nav class="md-nav" aria-label="PT11. Instalación y configuración de NextCloud mediante Docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker" class="md-nav__link">
-    PT11. Instalación y configuración de NextCloud mediante Docker
+  <a href="#comprension" class="md-nav__link">
+    Comprensión
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ayuda" class="md-nav__link">
+    Ayuda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guia" class="md-nav__link">
+    Guía
   </a>
   
 </li>
@@ -707,40 +721,41 @@
 <p class="admonition-title">Nota</p>
 <p><strong>WebDAV</strong> es un grupo de trabajo del <strong>Internet Engineering Task Force (IETF)</strong>. El término significa <strong>"Autoría y versionado distribuidos por Web" (Web Distributed Authoring and Versioning)</strong>, y <strong>se refiere al protocolo</strong> (más precisamente, a la extensión del protocolo) que el grupo definió. Este protocolo proporciona funcionalidades para <strong>crear, cambiar y mover documentos en un servidor remoto</strong> (típicamente un servidor web).</p>
 </div>
-<h2 id="actividad-tipo-practicastrabajos-pt-ie2">Actividad tipo Prácticas/trabajos (PT, IE2).<a class="headerlink" href="#actividad-tipo-practicastrabajos-pt-ie2" title="Permanent link">&para;</a></h2>
-<h3 id="pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker">PT11. Instalación y configuración de NextCloud mediante Docker<a class="headerlink" href="#pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker" title="Permanent link">&para;</a></h3>
+<h2 id="pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker">PT11. Instalación y configuración de NextCloud mediante Docker<a class="headerlink" href="#pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title"><strong>Contribución a los CEs (Criterios de Evaluación)</strong></p>
+<p>Las actividades de esta práctica contribuyen a los criterios de evaluación del <strong>RA1: CE1, CE2, CE6, CE8 y CE9</strong>, del <strong>RA4: CE2 y CE5</strong>, y del <strong>RA6: CE1, CE2, CE3, CE4, CE5, CE6 y CE9</strong> de SOR.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title"><strong>Situación de Aprendizaje</strong></p>
 <ul>
 <li>Siguiendo la <strong>situación de aprendizaje</strong>, estamos trabajando en el departamento TIC de NetOS y nos encargan un proyecto para instalar de una empresa líder en el sector hotelero un servicio que cubra la necesidad de compartir recursos (carpetas documentos, imágenes...), tanto entre las personas dentro de la empresa como con clientes fuera de ésta.</li>
 <li>Para hacernos valer dentro de la empresa indicamos que podemos instalar un servidor <strong>NextCloud</strong> en unos pocos minutos para solventar dicho problema.</li>
 <li>La empresa cuenta con un servidor con <strong>Ubuntu 22.04</strong> para instalar el servicio, por lo tanto decidimos hacer uso de <strong>docker</strong> para levantar el servicio <strong>NextCloud</strong> de una forma muy rápida y sencilla.</li>
 </ul>
-<h4 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Permanent link">&para;</a></h4>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Premisas</strong></p>
 <ul>
 <li>El servicio docker se debe levantar en la red <strong>192.168.20.0/24</strong>.</li>
 <li>Debe tener la traducción estática del puerto <strong>80</strong> de la máquina anfitriona al puerto <strong>80</strong> del contenedor.</li>
 <li>Debe tener un volumen asociado llamado <strong>"volNextCloud"</strong>.</li>
 </ul>
-<h4 id="pruebas">Pruebas<a class="headerlink" href="#pruebas" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Sube un fichero de prueba, comprueba si está en la carpeta volumen creada. En caso de no estar:</li>
-<li>Prueba a subir un fichero a la plataforma NextCloud. Acto seguido dentro del contenedor busca en que directorio se ha guardado dicho fichero.</li>
-</ul>
-<h4 id="ayuda">Ayuda<a class="headerlink" href="#ayuda" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Página oficial para la Instalación en ubuntu en el siguiente enlace <a href="https://docs.docker.com/engine/install/ubuntu/">Instalación en Ubuntu Documentación</a></li>
-<li>Lee la documentación sobre la imagen NextCloud que hay en <a href="https://hub.docker.com/_/nextcloud">Dockerhub Nextcloud_Docker</a>.</li>
-</ul>
-<h4 id="guia">Guía<a class="headerlink" href="#guia" title="Permanent link">&para;</a></h4>
-<p>En este enlace puedes acceder a una guía para realizar la práctica: <a href="NextCloudDockerSolucion.html">GUÍA INSTALACIÓN NEXTCLOUD CON DOCKER</a></p>
-<h4 id="entrega">Entrega<a class="headerlink" href="#entrega" title="Permanent link">&para;</a></h4>
-<p>Se debe entregar en <strong>Aules</strong>:</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title"><strong>Tareas</strong></p>
 <ul>
 <li><strong>Actividad P11_1</strong>: enlace al video de la instalación de Docker (3 puntos al RA1).</li>
 <li><strong>Actividad P11_2</strong>: enlace al video de la instalación de NextCloud (3 puntos al RA6).</li>
 <li><strong>Actividad P11_3</strong>: enlace al video de la gestión de recursos compartidos mediante volúmenes de Docker (3 puntos al RA4).</li>
-<li><strong>Actividad P11_4</strong>: entrega de pdf con la resolución de las preguntas de Comprensión de la práctica descritas anteriormente (3 puntos al RA4).</li>
+<li><strong>Actividad P11_4</strong>: entrega de pdf con la resolución de las preguntas de Comprensión descritas en el siguiente subapartado. (3 puntos al RA4).</li>
 </ul>
-<h4 id="compresion">Compresión<a class="headerlink" href="#compresion" title="Permanent link">&para;</a></h4>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Excepción de instrumento de calificación, al dividir la práctica en apartados se calificará cada uno de ellos con <strong>IC1</strong>.</p>
+</div>
+<h3 id="comprension">Comprensión<a class="headerlink" href="#comprension" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">advertencia</p>
 <p>Preguntas a responder en la actividad <strong>PT11_4</strong>:</p>
@@ -750,10 +765,13 @@
 <li>Dentro del sistema anfitrión (lliurex/Windows) ¿Dónde está guardado el fichero subido previamente?</li>
 <li>¿Este contenedor es persistente? ¿Qué significa que el contenedor es persistente? ¿Cómo lo has comprobado?</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Excepción de instrumento de calificación, al dividir la práctica en apartados se calificará cada uno de ellos con <strong>IC1</strong>.</p>
-</div>
+<h3 id="ayuda">Ayuda<a class="headerlink" href="#ayuda" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Página oficial para la Instalación en ubuntu en el siguiente enlace <a href="https://docs.docker.com/engine/install/ubuntu/">Instalación en Ubuntu Documentación</a></li>
+<li>Lee la documentación sobre la imagen NextCloud que hay en <a href="https://hub.docker.com/_/nextcloud">Dockerhub Nextcloud_Docker</a>.</li>
+</ul>
+<h3 id="guia">Guía<a class="headerlink" href="#guia" title="Permanent link">&para;</a></h3>
+<p>En este enlace puedes acceder a una guía para realizar la práctica: <a href="NextCloudDockerSolucion.html">GUÍA INSTALACIÓN NEXTCLOUD CON DOCKER</a></p>
 
 
   

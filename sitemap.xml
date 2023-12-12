@@ -2,127 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/index.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/ProgramacionAula.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/ResumenUD.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/Unidades.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/001_IntroSOR.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/002_Virtualizaci%C3%B3n.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/003_Docker.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/004_PracticaNextCloud.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/NextCloudDockerSolucion.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/ayudaASO/041_Introduccion_SDyLDAP.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/ayudaASO/068_DockerIntroNextCloud.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/index.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/021_IntroSamba.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/022_InstalacionSamba.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/023_DockerComposeSamba.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/AyudaASO/062_IntroSamba.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/AyudaASO/069_HerramientasDocker.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/AyudaASO/Practica14_samba.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/03_USERS_SAMBA/031_SambaSecUsers.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/03_USERS_SAMBA/032_CreacionUsersSamba.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/03_USERS_SAMBA/033_GestionUsersSamba.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/041_Introduccion_SambaDC.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/042_InstallConfigSambaDC.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/043_GestionRecursosSambaDC.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/AyudaASO/064_SambaDC.html</loc>
-         <lastmod>2023-12-05</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
