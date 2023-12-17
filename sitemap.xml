@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/005_RefuerzoAmpliacion.html</loc>
+         <lastmod>2023-12-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/NextCloudDockerSolucion.html</loc>
          <lastmod>2023-12-17</lastmod>
          <changefreq>daily</changefreq>
@@ -132,6 +137,11 @@
     </url>
     <url>
          <loc>https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/AyudaASO/064_SambaDC.html</loc>
+         <lastmod>2023-12-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fjavier-hernandez/sor/AyudaASO/ProgramacionAula.html</loc>
          <lastmod>2023-12-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
