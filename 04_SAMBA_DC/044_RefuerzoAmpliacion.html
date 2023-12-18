@@ -6,18 +6,18 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Prácticas de refuerzo y ampliación por Francisco Javier Hernández Illán. Gestión usuarios y grupos Samba.">
+        <meta name="description" content="Prácticas de refuerzo y ampliación por Francisco Javier Hernández Illán. Gestión de recursos con Samba DC.">
       
       
       
-        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/03_USERS_SAMBA/034_RefuerzoAmpliacion.html">
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/044_RefuerzoAmpliacion.html">
       
       <link rel="icon" href="../imagenes/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Refuerzo y Ampliación UT3 Gestión Usuarios y grupos Samba - Sistemas Operativos en Red</title>
+        <title>Refuerzo y Ampliación UT3 Gestión de recursos con Samba DC - Sistemas Operativos en Red</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Refuerzo y Ampliación UT3 Gestión Usuarios y grupos Samba
+              Refuerzo y Ampliación UT3 Gestión de recursos con Samba DC
             
           </span>
         </div>
@@ -499,14 +499,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
@@ -539,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="031_SambaSecUsers.html" class="md-nav__link">
+      <a href="../03_USERS_SAMBA/031_SambaSecUsers.html" class="md-nav__link">
         3.1- Secciones y Usuarios Samba
       </a>
     </li>
@@ -553,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="032_CreacionUsersSamba.html" class="md-nav__link">
+      <a href="../03_USERS_SAMBA/032_CreacionUsersSamba.html" class="md-nav__link">
         3.2- Creación de Usuarios y grupos en Samba
       </a>
     </li>
@@ -567,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="033_GestionUsersSamba.html" class="md-nav__link">
+      <a href="../03_USERS_SAMBA/033_GestionUsersSamba.html" class="md-nav__link">
         3.3- Gestión de Usuarios y grupos en Samba
       </a>
     </li>
@@ -579,85 +577,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Refuerzo y Ampliación
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="034_RefuerzoAmpliacion.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03_USERS_SAMBA/034_RefuerzoAmpliacion.html" class="md-nav__link">
         Refuerzo y Ampliación
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#refuerzo" class="md-nav__link">
-    Refuerzo
-  </a>
-  
-    <nav class="md-nav" aria-label="Refuerzo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pt33-configuracion-usuarios-y-grupos" class="md-nav__link">
-    PT33. Configuración Usuarios y grupos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ampliacion" class="md-nav__link">
-    Ampliación
-  </a>
-  
-    <nav class="md-nav" aria-label="Ampliación">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pt_34-creacion-usuarios-shellscripting" class="md-nav__link">
-    PT_34 Creación usuarios Shellscripting
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -675,12 +599,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -713,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_SAMBA_DC/041_Introduccion_SambaDC.html" class="md-nav__link">
+      <a href="041_Introduccion_SambaDC.html" class="md-nav__link">
         4.1- Introducción Samba DC
       </a>
     </li>
@@ -727,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_SAMBA_DC/042_InstallConfigSambaDC.html" class="md-nav__link">
+      <a href="042_InstallConfigSambaDC.html" class="md-nav__link">
         4.2- Instalación y Configuración Samba DC
       </a>
     </li>
@@ -741,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_SAMBA_DC/043_GestionRecursosSambaDC.html" class="md-nav__link">
+      <a href="043_GestionRecursosSambaDC.html" class="md-nav__link">
         4.3- Gestión de recursos compartidos en Samba DC
       </a>
     </li>
@@ -753,11 +679,85 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../04_SAMBA_DC/044_RefuerzoAmpliacion.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Refuerzo y Ampliación
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="044_RefuerzoAmpliacion.html" class="md-nav__link md-nav__link--active">
         Refuerzo y Ampliación
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#refuerzo" class="md-nav__link">
+    Refuerzo
+  </a>
+  
+    <nav class="md-nav" aria-label="Refuerzo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pt42-samba-dc-directorios" class="md-nav__link">
+    PT42. Samba DC directorios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliacion" class="md-nav__link">
+    Ampliación
+  </a>
+  
+    <nav class="md-nav" aria-label="Ampliación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pt43-samba-dc-con-docker-compose" class="md-nav__link">
+    PT43. Samba DC con Docker Compose
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -785,44 +785,32 @@
 
 
 <h1 id="refuerzo-y-ampliacion">Refuerzo y Ampliación<a class="headerlink" href="#refuerzo-y-ampliacion" title="Permanent link">&para;</a></h1>
-<p>A continuación se definen las actividades de refuerzo y ampliación de la UT3</p>
+<p>A continuación se definen las actividades de refuerzo y ampliación de la UT4</p>
 <h2 id="refuerzo">Refuerzo<a class="headerlink" href="#refuerzo" title="Permanent link">&para;</a></h2>
-<h3 id="pt33-configuracion-usuarios-y-grupos">PT33. Configuración Usuarios y grupos<a class="headerlink" href="#pt33-configuracion-usuarios-y-grupos" title="Permanent link">&para;</a></h3>
+<h3 id="pt42-samba-dc-directorios">PT42. Samba DC directorios<a class="headerlink" href="#pt42-samba-dc-directorios" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Contribución a los CEs (Criterios de Evaluación)</p>
-<p>Estas actividades contribuyen a los criterios de evaluación CE1, CE2, CE3, CE4, CE5, CE6, CE7, y CE8 del RA2 de SOR.</p>
+<p>Estas actividades contribuyen a los criterios de evaluación CE1, CE2, CE3, CE6 y CE7 del RA4 de SOR.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Tareas</p>
+<p>A partir de la guía adjunta en la práctica PT41 realiza la organización y configuración de los los directorios de los departamentos (4 al menos) de una empresa ficticia mediante Samba DC, realiza una serie de restricciones entre al menos dos usuarios de la empresa. Realiza un vídeo con los pasos realizados.</p>
+</div>
+<h2 id="ampliacion">Ampliación<a class="headerlink" href="#ampliacion" title="Permanent link">&para;</a></h2>
+<h3 id="pt43-samba-dc-con-docker-compose">PT43. Samba DC con Docker Compose<a class="headerlink" href="#pt43-samba-dc-con-docker-compose" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Contribución a los CEs (Criterios de Evaluación)</p>
+<p>Estas actividades contribuyen a los criterios de evaluación CE61, CE62, CE63, CE64, CE65, CE9 del RA6 de SOR.</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title"><strong>Situación de Aprendizaje</strong></p>
 <ul>
-<li>desde la misma <strong>situación de aprendizaje</strong>, de PT31 se debe tener en cuenta la creación de un departamento más en la empresa, en concreto el de marketing realiza:</li>
+<li>Tu coordinadora en NetOS te solicita que realices un docker compose para la instalación de Samba DC de una forma rápida y eficiente</li>
 </ul>
 </div>
 <div class="admonition question">
-<p class="admonition-title"><strong>Tareas</strong></p>
-<p>Genera dos usuarios con permisos totales en el directorio de dicho departamento.</p>
-</div>
-<h2 id="ampliacion">Ampliación<a class="headerlink" href="#ampliacion" title="Permanent link">&para;</a></h2>
-<h3 id="pt_34-creacion-usuarios-shellscripting">PT_34 Creación usuarios Shellscripting<a class="headerlink" href="#pt_34-creacion-usuarios-shellscripting" title="Permanent link">&para;</a></h3>
-<!-- 
-!!! note "**Nota**"
-    Esta actividad tiene un valor de **+3 puntos**, en el total del curso sumará **0'3 más a la nota final** y tiene carácter de ampliación. -->
-
-<div class="admonition info">
-<p class="admonition-title"><strong>Contribución a los CEs (Criterios de Evaluación)</strong></p>
-<p>Estas actividades contribuyen a los criterios de evaluación CE1, CE2, CE3, CE4, CE5, CE6, CE7, y CE8 del RA2 de SOR.</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title"><strong>Enunciado</strong></p>
-<p>En <strong>NetOS</strong> ha gustado la forma en la que has solucionado el proyecto de <strong>BerbeWild S.A.</strong> y piensan que sería oportuno generar una forma de generalizar el proceso.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title"><strong>Tareas</strong></p>
-<p>Tu coordinadora del departamento de TIC te pide que realices un <strong>script</strong> que generé los directorios, usuarios y grupos (en el sistema y en el servicios Samba) para cualquier empresa.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title"><strong>Ayuda</strong></p>
-<p>Te puedes ayudar en los siguientes apuntes <a href="https://fjavier-hernandez.github.io/aso/01_ShellScripting/011_ShellScript_Intro.html">UT1 ShellScripting</a></p>
+<p class="admonition-title">Tareas</p>
+<p>Realiza un archivo yaml con el <strong>Docker compose de Samba DC</strong>.</p>
 </div>
 
 
@@ -851,7 +839,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pie" >
       
         
-        <a href="033_GestionUsersSamba.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 3.3- Gestión de Usuarios y grupos en Samba" rel="prev">
+        <a href="043_GestionRecursosSambaDC.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 4.3- Gestión de recursos compartidos en Samba DC" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -860,26 +848,11 @@
               <span class="md-footer__direction">
                 Anterior
               </span>
-              3.3- Gestión de Usuarios y grupos en Samba
+              4.3- Gestión de recursos compartidos en Samba DC
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../04_SAMBA_DC/041_Introduccion_SambaDC.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 4.1- Introducción Samba DC" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              4.1- Introducción Samba DC
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

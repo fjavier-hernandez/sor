@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/044_RefuerzoAmpliacion.html</loc>
+         <lastmod>2023-12-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/AyudaASO/064_SambaDC.html</loc>
          <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
