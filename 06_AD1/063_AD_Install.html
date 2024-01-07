@@ -959,34 +959,40 @@
 </figure>
 
 <ul>
-<li>Nos aparecerá el asistente para comenzar con la creación del dominio:</li>
+<li>Aparece el asistente para comenzar con la creación del dominio:</li>
 </ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/002.png" width="900"/>
   <figcaption>Creación de un dominio II.</figcaption>
 </figure>
 
-<p>Seleccionaremos una <strong>instalación basada en características y roles</strong>. También podemos hacer una instalación a través de
-servicios de acceso remoto, pero en nuestro caso realizaremos la instalación en local.</p>
+<ul>
+<li>Se selecciona una <strong>instalación basada en características y roles</strong>.</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/003.png" width="900"/>
   <figcaption>Creación de un dominio III.</figcaption>
 </figure>
 
-<p>Una vez seleccionada la <strong>instalación basada en roles</strong>, seleccionaremos nuestro servidor que será donde vamos a instalar
-nuestro Active Directory:</p>
+<ul>
+<li>Una vez seleccionada la <strong>instalación basada en roles</strong>, se selecciona el servidor que será donde vamos a instalar nuestro <strong>Active Directory</strong>:</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/004.png" width="900"/>
   <figcaption>Creación de un dominio IV.</figcaption>
 </figure>
 
-<p>Seleccionaremos el rol <strong>Servicios de Dominio de Active Directory</strong>:</p>
+<ul>
+<li>Se selecciona el rol <strong>Servicios de Dominio de Active Directory</strong>:</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/005.png" width="900"/>
   <figcaption>Creación de un dominio V.</figcaption>
 </figure>
 
-<p>Y nos aparecerá marcado el rol tal y como muestra la siguiente figura:</p>
+<ul>
+<li>Aparecerá marcado el rol tal y como muestra la siguiente figura:</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/006.png" width="900"/>
   <figcaption>Creación de un dominio VI.</figcaption>
@@ -997,55 +1003,60 @@ nuestro Active Directory:</p>
   <figcaption>Creación de un dominio VII.</figcaption>
 </figure>
 
-<p>Y procedemos a realizar la instalación. Cuando se agrega un nuevo rol, podemos hacer clic en la opción de reiniciar en caso
-de que fuera necesario. En caso que el rol o la característica no fuera necesario un reinicio, no lo haría.</p>
+<ul>
+<li>Se procede a realizar la instalación. Cuando se agrega un nuevo rol, podemos hacer clic en la opción de reiniciar en caso de que fuera necesario. En caso que el rol o la característica no fuera necesario un reinicio, no lo haría.</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/008.png" width="900"/>
   <figcaption>Creación de un dominio VIII.</figcaption>
 </figure>
 
-<p>Un vez instalado, el asistente nos dice que es necesario realizar una configuración. En este caso hay que promover nuestro
-servidor a un servidor de controlador de dominio. Así que haremos clic en la opción de <strong>promover servidor a controlador de
-dominio</strong> :</p>
+<p>Un vez instalado, el asistente muestra que es necesario realizar una configuración. En este caso hay que promover el servidor a un servidor de controlador de dominio. Así que se hace clic en la opción de <strong>promover servidor a controlador de dominio</strong> :</p>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/009.png" width="900"/>
   <figcaption>Creación de un dominio IX.</figcaption>
 </figure>
 
-<p>Ejecutamos el asistente, y las primeras pantallas nos ofrecen información útil para la creación del dominio.</p>
 <ul>
-<li><strong>Seleccionamos Agregar un nuevo bosque</strong>.</li>
+<li>
+<p>Se ejecuta el asistente, y las primeras pantallas ofrecen información útil para la creación del dominio.</p>
+</li>
+<li>
+<p><strong>Se selecciona Agregar un nuevo bosque</strong>.</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title"><strong>Nota</strong></p>
-<p>Un conjunto de dominios agrupados lógicamente conforman un árbol de dominios y un conjunto de árboles de dominio agrupados lógicamente conforman un bosque. <strong>En nuestro caso pondremos el dominio SOR.LOCAL en lugar de CEFIRE2019.LOCAL como indica en la imagen</strong>:</p>
+<p>Un conjunto de dominios agrupados lógicamente conforman un árbol de dominios y un conjunto de árboles de dominio agrupados lógicamente conforman un bosque. En este caso se especifica el dominio <strong>sor.com</strong> en lugar de <strong>CEFIRE2019.LOCAL</strong> como indica en la imagen:</p>
 </div>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/010.png" width="900"/>
   <figcaption>Agregar un nuevo Bosque.</figcaption>
 </figure>
 
-<p>A continuación, nos aparece información sobre el nivel funcional del nuevo bosque. Según el nivel funcional que
-establezcamos, implementaremos un directorio activo compatible con versiones anteriores de Windows Server, pero más
-limitado en cuanto a funciones, o menos compatible con versiones antiguas, pero con mayores funcionalidades. </p>
+<ul>
+<li>A continuación, aparece información sobre el nivel funcional del nuevo bosque. Según el nivel funcional que se establezca, se implementa un directorio activo compatible con versiones anteriores de Windows Server, pero más limitado en cuanto a funciones, o menos compatible con versiones antiguas, pero con mayores funcionalidades. </li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>En nuestro caso, seleccionaremos el mayor nivel funcional (<strong>Windows Server 2016</strong>) ya que todos los controladores del dominio tendrán instalado, al menos, <strong>Windows Server 2016</strong>. También añadiremos la contraseña para la restauración de nuestro dominio, por defecto la misma que la del administrador.</p>
+<p>En nuestro caso, seleccionaremos el mayor nivel funcional (<strong>Windows Server 2016</strong>) ya que todos los controladores del dominio tendrán instalado, al menos, <strong>Windows Server 2016</strong>. También se añade la contraseña para la restauración del dominio, por defecto la misma que la del administrador.</p>
 </div>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/011.png" width="900"/>
   <figcaption>Creación de un dominio X.</figcaption>
 </figure>
 
-<p>La siguiente tarea que llevará a cabo el asistente para la creación del dominio, será preguntar por ciertas opciones adicionales
-del servidor, como por ejemplo la <strong>configuración del servicio DNS</strong>. Como en nuestro caso no tenemos DNS, dejaremos que el
-asistente cree una zona de DNS para que nuestro dominio pueda funcionar.</p>
+<ul>
+<li>La siguiente tarea que llevará a cabo el asistente para la creación del dominio, será preguntar por ciertas opciones adicionales del servidor, como por ejemplo la <strong>configuración del servicio DNS</strong>. Como en nuestro caso no se tiene DNS, dejaremos que el asistente cree una zona de DNS para que nuestro dominio pueda funcionar.</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/012.png" width="900"/>
   <figcaption>Creación de un dominio XI.</figcaption>
 </figure>
 
-<p>A continuación nos aparece la ubicación donde se guardará los objetos de nuestro AD, es decir, <strong>la base de datos</strong>:</p>
+<ul>
+<li>A continuación aparece la ubicación donde se guardará los objetos del <strong>AD</strong>, es decir, <strong>la base de datos</strong>:</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/013.png" width="900"/>
   <figcaption>Creación de un dominio XII.</figcaption>
@@ -1054,7 +1065,7 @@ asistente cree una zona de DNS para que nuestro dominio pueda funcionar.</p>
 <p>Seguidamente nos muestra las configuraciones que se van a realizar. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Como podéis observar también se puede exportar el script para poder ejecutar los mismos comandos a través de <strong>PowerShell</strong>:</p>
+<p>Como se puede observar también se puede exportar el script para poder ejecutar los mismos comandos a través de <strong>PowerShell</strong>:</p>
 </div>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/014.png" width="900"/>
@@ -1067,8 +1078,9 @@ asistente cree una zona de DNS para que nuestro dominio pueda funcionar.</p>
   <figcaption>Comprobación de requisitos previos.</figcaption>
 </figure>
 
-<p>Y finalmente realizaríamos la instalación. Nuestra pantalla de inicio de sesión, ahora será diferente, ya que nos aparece el
-dominio al que vamos a iniciar la sesión del usuario:</p>
+<ul>
+<li>Y finalmente se realiza la instalación. La pantalla de inicio de sesión, ahora será diferente, ya que aparece el dominio al que se va a iniciar la sesión del usuario:</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Nos aparecerá <strong>SOR</strong> en lugar de <strong>CEFIRE2019</strong></p>
@@ -1078,8 +1090,9 @@ dominio al que vamos a iniciar la sesión del usuario:</p>
   <figcaption>Nueva pantalla inicio de sesión con Dominio.</figcaption>
 </figure>
 
-<p>Una vez instalado, podemos iniciar sesión con el Administrador del dominio. Podemos comprobar que en el panel de
-Administrador de Servidor aparece nuestro dominio configurado <strong>SOR.LOCAL</strong> en lugar de <strong>CEFIRE2019.LOCAL</strong></p>
+<ul>
+<li>Una vez instalado, podemos iniciar sesión con el Administrador del dominio. Podemos comprobar que en el panel de Administrador de Servidor aparece nuestro dominio configurado <strong>sor.com</strong> en lugar de <strong>CEFIRE2019.LOCAL</strong></li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/017.png" width="900"/>
   <figcaption>Comprobación Dominio en el Administrador del Servidor.</figcaption>
@@ -1164,7 +1177,7 @@ Al ejecutarlo mostraría por pantalla:
 </figure>
 
 Finalmente reiniciamos la máquina y ya tenemos instalado nuestro controlador de dominio en una máquina core con
-powershell. Notad que el inicio de sesión ahora ya es es SOR.LOCAL.
+powershell. Notad que el inicio de sesión ahora ya es es sor.com.
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/021.png" width="900"/>
   <figcaption>Nuevo Inicio Sesión en Server Core.</figcaption>
@@ -1190,7 +1203,7 @@ de las máquinas que vamos a unir al dominio, teniendo en cuenta que:</p>
 <div class="admonition note">
 <p class="admonition-title"><strong>Nota</strong></p>
 <ul>
-<li>La dirección del controlador de dominio (que implementa funciones de <strong>DNS</strong>) en este ejemplo es la <strong>192.168.5.1X</strong>, en tu caso será la IP de la máquina que le ha asignado el DHCP configurado en la red NAT. </li>
+<li>La dirección del controlador de dominio (que implementa funciones de <strong>DNS</strong>) en este ejemplo es la <strong>192.168.5.1X</strong>, en tu caso será la IP fija de la máquina que le hayas asignado. </li>
 <li>Además, en la red que se ha montado <strong>como ejemplo</strong> hay un elemento de interconexión con <strong>IP 192.168.100.1</strong> que implementa las funciones de puerta de enlace y de DNS, por ese motivo se ha incluido como puerta de enlace predeterminada y como DNS secundario, sin embargo estos dos campos no son necesarios si únicamente queremos trabajar en el interior de una única red. 
 <!-- Más adelante veremos instalación de un **servicio de DHCP** y el enrutamiento, para que nuestro servidor pueda ofrecer a los clientes de la red interna una dirección de manera dinámica. --></li>
 </ul>
@@ -1204,12 +1217,12 @@ de las máquinas que vamos a unir al dominio, teniendo en cuenta que:</p>
 <div class="admonition warning">
 <p class="admonition-title"><strong>Advertencia</strong></p>
 <ul>
-<li>La figura anterior es un ejemplo de configuración, habrá que adapatar la configuración al rango utilizado en las máquinas virtuales en <strong>Red NAT</strong>.</li>
+<li>La figura anterior es un ejemplo de configuración, habrá que adaptar la configuración al rango utilizado en las máquinas virtuales en <strong>Red NAT</strong>.</li>
 <li>Además la máquina cliente utilizada es <strong>Windows 11</strong> en lugar de <strong>windows 10</strong>.</li>
 </ul>
 </div>
 <ul>
-<li>Se comprueba también que desde la máquina cliente podamos hacer ping a nuestro dominio, esto es al dominio <strong>SOR.LOCAL</strong>. Para ello abrimos una terminal en la máquina <strong>Windows 10 (Tecla Windows + R y luego cmd)</strong> y se comprueba que el ping al dominio funcione. </li>
+<li>Se comprueba también que desde la máquina cliente podamos hacer ping a nuestro dominio, esto es al dominio <strong>sor.com</strong>. Para ello abrimos una terminal en la máquina <strong>Windows 10 (Tecla Windows + R y luego cmd)</strong> y se comprueba que el ping al dominio funcione. </li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1254,7 +1267,7 @@ introducir el nombre de dominio al que se debe conectar:</li>
   <figcaption>Unir cliente windows 10 a dominio IV.</figcaption>
 </figure>
 
-<p>En este caso, se introduce el nombre de nominio, <strong>SOR.LOCAL</strong> en lugar de <strong>CEFIRE2019.LOCAL</strong>:</p>
+<p>En este caso, se introduce el nombre de dominio, <strong>sor.com</strong> en lugar de <strong>CEFIRE2019.LOCAL</strong>:</p>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/029.png" width="900"/>
   <figcaption>Unir cliente windows 10 a dominio V.</figcaption>
@@ -1262,23 +1275,23 @@ introducir el nombre de dominio al que se debe conectar:</li>
 
 <div class="admonition warning">
 <p class="admonition-title"><strong>Advertencia</strong></p>
-<p>Para poder realizar la validación, hay que introducir la cuenta del Administrador del dominio y su contraseña, importante que recuerdes esta contraseña, la cual puedes realizar según consideres.</p>
+<p>Para poder realizar la validación, hay que introducir la cuenta del Administrador del dominio y su contraseña, importante que recuerdes esta contraseña.</p>
 </div>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/030.png" width="900"/>
   <figcaption>Unir cliente windows 10 a dominio VI.</figcaption>
 </figure>
 
-<p>Seleccionamos que nuestro administrador tenga los privilegios de administrador en la máquina cliente, para ello selecionamos
-Tipo Cuenta y marcamos la opción de Administrador. Reiniciamos la máquina y ya tenemos nuestro cliente Windows 10
-validado en el dominio.</p>
+<ul>
+<li>Se selecciona que el administrador tenga los privilegios propios de administrador en la máquina cliente, para ello se selecciona <strong>Tipo Cuenta</strong> y se marca la opción de Administrador. Se reinicia la máquina y ya tenemos el cliente Windows 10 validado en el dominio.</li>
+</ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/030.png" width="900"/>
   <figcaption>Unir cliente windows 10 a dominio VI.</figcaption>
 </figure>
 
 <ul>
-<li>A partir de este momento, ya se puede iniciar sesión con cualquier usuario del dominio. </li>
+<li>A partir de este momento, ya se puede iniciar sesión con cualquier usuario del dominio.</li>
 </ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/031.png" width="900"/>
@@ -1294,7 +1307,7 @@ validado en el dominio.</p>
 </figure>
 
 <ul>
-<li>Se selecciona el dominio <strong>SOR.LOCAL</strong> y luego Computers. Aparecerá la máquina cliente "NombreMáquina", si se selecciona, con el botón de la derecha del ratón --&gt; propiedades. Aquí se puede ver alguna información relativa a la máquina conectada.</li>
+<li>Se selecciona el dominio <strong>sor.com</strong> y luego Computers. Aparecerá la máquina cliente "NombreMáquina", si se selecciona, con el botón de la derecha del ratón --&gt; propiedades. Aquí se puede ver alguna información relativa a la máquina conectada.</li>
 </ul>
 <figure>
   <img src="./imagenes/02/PracticasAD/PR04/033.png" width="900"/>
@@ -1308,7 +1321,7 @@ aspectos:
 
 - La configuración de la interfaz de red está en modo 'Adaptador puente', no en 'NAT'.
 - El equipo cliente y el equipo servidor se hallan en la misma red.
-- El nombre del dominio puede resolverse desde el equipo cliente (ping SOR.LOCAL )
+- El nombre del dominio puede resolverse desde el equipo cliente (ping sor.com )
 - La dirección del servidor **DNS** está correctamente configurada en el equipo cliente. -->
 
 <h2 id="pt62-instalacion-de-active-directory">PT62. Instalación de Active Directory<a class="headerlink" href="#pt62-instalacion-de-active-directory" title="Permanent link">&para;</a></h2>
@@ -1326,7 +1339,7 @@ aspectos:
 </div>
 <ol>
 <li>Instalar y promocionar un servidor a controlador de dominio, en el Windows Server.</li>
-<li>Unir un equipo cliente al dominio.</li>
+<li>Unir un equipo cliente al dominio con usuario de administrador.</li>
 </ol>
 
 
