@@ -1,0 +1,1456 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Programación de Aula de Sistemas Operativos en red de Francisco Javier Hernández Illán. Muestra de las sesiones y planificación de la programación de aula de sistemas operativos en red (SOR).">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/ProgramacionAula.html">
+      
+      <link rel="icon" href="imagenes/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Programación de Aula - Sistemas Operativos en Red</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-0CPJP88MBF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#programacion-de-aula" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Sistemas Operativos en Red" class="md-header__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+      
+  <img src="imagenes/SOR_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sistemas Operativos en Red
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programación de Aula
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="" data-md-color-accent=""  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Sistemas Operativos en Red" class="md-nav__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+      
+  <img src="imagenes/SOR_logo.png" alt="logo">
+
+    </a>
+    Sistemas Operativos en Red
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SituacionAprendizaje.html" class="md-nav__link">
+        Situación de Aprendizaje
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Programación de Aula
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ProgramacionAula.html" class="md-nav__link md-nav__link--active">
+        Programación de Aula
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planificacion-de-sesiones" class="md-nav__link">
+    Planificación de Sesiones
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Evaluacion.html" class="md-nav__link">
+        Evaluación
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          1.- Introducción
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.- Introducción" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          1.- Introducción
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_INTRO_SOR/001_IntroSOR.html" class="md-nav__link">
+        1.1- Introducción SOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_INTRO_SOR/002_Virtualizaci%C3%B3n.html" class="md-nav__link">
+        1.2- Virtualización
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_INTRO_SOR/003_Docker.html" class="md-nav__link">
+        1.3- Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_INTRO_SOR/004_PracticaNextCloud.html" class="md-nav__link">
+        1.4- Práctica NextCloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_INTRO_SOR/005_RefuerzoAmpliacion.html" class="md-nav__link">
+        Refuerzo y Ampliación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          2.- Introducción Samba
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.- Introducción Samba" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          2.- Introducción Samba
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_INTRO_SAMBA/021_IntroSamba.html" class="md-nav__link">
+        2.1- Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_INTRO_SAMBA/022_InstalacionSamba.html" class="md-nav__link">
+        2.2- Instalación y configuración inicial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_INTRO_SAMBA/023_DockerComposeSamba.html" class="md-nav__link">
+        2.3- Docker Compose con Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_INTRO_SAMBA/024_RefuerzoAmpliacion.html" class="md-nav__link">
+        Refuerzo y Ampliación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          3.- Gestión Usuarios y grupos Samba
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.- Gestión Usuarios y grupos Samba" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          3.- Gestión Usuarios y grupos Samba
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_USERS_SAMBA/031_SambaSecUsers.html" class="md-nav__link">
+        3.1- Secciones y Usuarios Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_USERS_SAMBA/032_CreacionUsersSamba.html" class="md-nav__link">
+        3.2- Creación de Usuarios y grupos en Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_USERS_SAMBA/033_GestionUsersSamba.html" class="md-nav__link">
+        3.3- Gestión de Usuarios y grupos en Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_USERS_SAMBA/034_RefuerzoAmpliacion.html" class="md-nav__link">
+        Refuerzo y Ampliación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          4.- Gestión recursos compartidos en Samba
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.- Gestión recursos compartidos en Samba" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          4.- Gestión recursos compartidos en Samba
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_SAMBA_DC/041_Introduccion_SambaDC.html" class="md-nav__link">
+        4.1- Introducción Samba DC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_SAMBA_DC/042_InstallConfigSambaDC.html" class="md-nav__link">
+        4.2- Instalación y Configuración Samba DC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_SAMBA_DC/043_GestionRecursosSambaDC.html" class="md-nav__link">
+        4.3- Gestión de recursos compartidos en Samba DC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_SAMBA_DC/044_RefuerzoAmpliacion.html" class="md-nav__link">
+        Refuerzo y Ampliación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          5.- Entornos de desarrollo virtualizados con Vagrant
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.- Entornos de desarrollo virtualizados con Vagrant" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          5.- Entornos de desarrollo virtualizados con Vagrant
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_VAGRANT/051_VagrantIntro.html" class="md-nav__link">
+        5.1- Introducción Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_VAGRANT/052_VagrantConfig.html" class="md-nav__link">
+        5.2- Configuración Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_VAGRANT/053_VagrantAprov.html" class="md-nav__link">
+        5.3- Aprovisionamiento Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          6.- Directorio Activo en Windows Server
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6.- Directorio Activo en Windows Server" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          6.- Directorio Activo en Windows Server
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_AD1/061_AD_Intro.html" class="md-nav__link">
+        6.1- Introducción Active Directory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_AD1/062_WS_Config.html" class="md-nav__link">
+        6.2- Configuración Windows Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_AD1/063_AD_Install.html" class="md-nav__link">
+        6.3- Instalación Active Directory
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          7.- Administración de Dominios en Active Directory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="7.- Administración de Dominios en Active Directory" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          7.- Administración de Dominios en Active Directory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07_DOMINIO_AD/071_DominioAD.html" class="md-nav__link">
+        7.1- Administración de Dominios en Active Directory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07_DOMINIO_AD/072_GestionDominioI.html" class="md-nav__link">
+        7.2- Administración de usuarios y grupos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07_DOMINIO_AD/073_GestionDominioII.html" class="md-nav__link">
+        7.3- Gestión de Dominio en Active Directory
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          8.- Gestión de recursos compartidos en Active Directory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="8.- Gestión de recursos compartidos en Active Directory" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          8.- Gestión de recursos compartidos en Active Directory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08_RECURSOS_AD/081_CarpetasPerfilesAD.html" class="md-nav__link">
+        8.1- Compartir recursos y perfiles móviles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08_RECURSOS_AD/082_PermisosGPOs.html" class="md-nav__link">
+        8.2- Permisos y directivas de grupo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08_RECURSOS_AD/083_EstructuraAD.html" class="md-nav__link">
+        8.3- Estructura de empresa en AD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Proyecto Final de Módulo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Proyecto Final de Módulo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Proyecto Final de Módulo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09_PT_FINAL/ProyectoFinal.html" class="md-nav__link">
+        1- PT- Final Módulo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="programacion-de-aula">Programación de Aula<a class="headerlink" href="#programacion-de-aula" title="Permanent link">&para;</a></h1>
+<p>Las <strong>unidades de trabajo (UT)</strong> se han temporalizado siguiendo la distribución en quincenas para las <strong>UTs</strong> indicada en la <a href="https://dogv.gva.es/datos/2022/05/18/pdf/2022_4219.pdf">ORDEN 30/2002, de 12 de mayo</a>, con el resultado a nivel de centro publicado en el <a href="https://portal.edu.gva.es/03013224/wp-content/uploads/sites/231/2023/09/Calendario-semipresencial-2324.pdf">calendario escolar 2023/2024</a>.</p>
+<p>Teniendo en cuenta esta temporalización inicial se han planificado las siguientes sesiones para el módulo de SOR:</p>
+<!-- Por lo tanto la temporalización de las **UTs de SOR** se organiza de la siguiente forma:
+
+
+### Calendario y Planificación inicial
+
+- Calendario:
+
+<figure>
+  <img src="imagenes/Calendario1Trimestre.png"/>
+  <figcaption>Temporalización UTs 1º Trimestre.</figcaption>
+</figure>
+
+- Planificación general inicial: 
+
+1. **[Introducción SOR. Docker. NextCloud.](https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/001_IntroSOR.html) (16 horas, del 25/09/23 al 06/10/23)**
+    * Introducción a los sistemas operativos en red.
+    * Virtualización.
+    * Contenedores. Docker
+    * NextCloud.
+2. **[Introducción Samba.](https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/021_IntroSamba.html) (16 horas, del 10/10/23 al 20/10/23)**
+    * Instalación Samba.
+    * Fichero configuración, Creación directorio compartido.
+    * Docker Compose Samba.
+3. **[Gestión Usuarios y grupos Samba](https://fjavier-hernandez.github.io/sor/03_USERS_SAMBA/031_SambaSecUsers.html). (16 horas, del 23/10/23 al 3/11/23)**
+    * Perfiles de usuario y grupos.
+    * Integración de permisos.
+4. **[Gestión de recursos compartidos en Samba.](https://fjavier-hernandez.github.io/sor/04_SAMBA_DC/041_Introduccion_SambaDC.html) (16 horas, del 7/11/23 al 18/11/23)**
+    * Creación de de recursos compartidos.
+    * Monitorización de incidencias. 
+5. **Entornos de desarrollo virtualizados. Vagrant. (16 horas, del 21/11/23 al 2/12/23)**
+    * Escenarios heterogéneos, Protocolos para redes heterogéneas, servicios de recursos compartidos.
+    * creación de entornos de desarrollo virtualizados mediante Vagrant.   -->
+
+<h2 id="planificacion-de-sesiones">Planificación de Sesiones<a class="headerlink" href="#planificacion-de-sesiones" title="Permanent link">&para;</a></h2>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;width="100%";overflow-x: auto}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-mxcs{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-3nxc{background-color:#4051B5;border-color:inherit;color:#FFF;text-align:left;vertical-align:top}
+.tg .tg-vov5{border-color:inherit;color:#C00000;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-3nxc"><span style="color:white">Sesión</span></th>
+    <th class="tg-3nxc"><span style="color:white">Tipo</span></th>
+    <th class="tg-3nxc"><span style="color:white">Fechas</span></th>
+    <th class="tg-3nxc"><span style="color:white">Descripción</span></th>
+    <th class="tg-3nxc"><span style="color:white">Actividades/Recursos</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th class="tg-vov5" colspan="5">PRIMERA EVALUACIÓN</span></th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-fymr">Teórica: Explicativa.<br> </td>
+    <td class="tg-mxcs"><b>25/09/23(Mañana)</b><br> <br><b>28/09/23(Tarde)</b></td>
+    <td class="tg-0pky">Presentación del módulo e introducción a los sistemas operativos en red <br>destacando herramientas de virtualización innovadoras como Docker.</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/001_IntroSOR.html">1.1.Introducción SOR.</a><br><a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/002_Virtualización.html">1.2.Virtualización.</a><br><a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/003_Docker.html">1.3.Docker.</a><br><a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/004_PracticaNextCloud.html">1.4.NextCloud.</a><br>- Vídeo: explicación módulo.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-fymr">Práctica:<br>Resolución actividades <br>y dudas.</td>
+    <td class="tg-mxcs"><b>02/10/23(Mañana)</b><br> <br><b>05/10/23(Tarde)</b></td>
+    <td class="tg-0pky">Realización guiada de la práctica de NextCloud. <br>Se comenta el vídeo-guía de la práctica para dar la facilidad al alumnado </td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/004_PracticaNextCloud.html#pt11-instalacion-y-configuracion-de-nextcloud-mediante-docker">PT11. NextCloud mediante Docker</a><br><a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/005_RefuerzoAmpliacion.html#pt12-instalacion-y-configuracion-de-owncloud-mediante-docker">PT12. (Refuerzo) OwnCloud mediante Docker.</a><br><a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/005_RefuerzoAmpliacion.html#pt13-instalacion-aplicaciones-cloud">PT13. (Ampliación) Instalación aplicaciones Cloud.</a><br>Test/cuestionario Docker en Aules.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-fymr">Teórica: Explicativa.<br> </td>
+    <td class="tg-mxcs"><b>16/10/23(Mañana)</b><br> <br><b>19/10/23(Tarde)</b></td>
+    <td class="tg-0pky">Introducción al servicio Samba para compartir carpetas <br>y explicación de Docker Compose.</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/021_IntroSamba.html">2.1.Introducción Samba.</a><br><a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/022_InstalacionSamba.html">2.2.Instalación y configuración inicial.</a><br><a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/023_DockerComposeSamba.html">2.3.Docker Compose Samba.</a></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">4</td>
+    <td class="tg-fymr">Práctica:<br>Resolución actividades <br>y dudas.</td>
+    <td class="tg-mxcs"><b>23/10/23(Mañana)</b><br> <br><b>26/10/23(Tarde)</b></td>
+    <td class="tg-0pky">Revisión del vídeo-guía de la práctica de instalación de Samba. <br>Realización de muestras de accesos permitidos y denegados a las carpetas según se indica en la práctica.<br>Realización y revisión del vídeo de Docker compose Samba.</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/022_InstalacionSamba.html#pt21-practica-instalacion-y-configuracion-inicial-de-samba">PT21. Práctica Instalación y configuración inicial de Samba</a><br><a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/023_DockerComposeSamba.html#pt22-samba-mediante-docker-compose">PT22. Samba mediante Docker compose.</a><br><a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/024_RefuerzoAmpliacion.html#pt23-generar-carpeta-compartida-con-acceso-total">PT23. (Refuerzo) Generar carpeta compartida con acceso total.</a><br><a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/024_RefuerzoAmpliacion.html#pt24-instalacion-aplicaciones-cloud">PT24. (Ampliación) Generar carpeta con permisos desde Docker Compose Samba.</a><br>- Vídeo: Instalación Samba y permisos.<br>- Vídeo: Docker Compose Samba</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">5</td>
+    <td class="tg-fymr">Teórica y Práctica</td>
+    <td class="tg-mxcs"><b>31/10/23(Mañana)</b><br></td>
+    <td class="tg-0pky">Explicación de la creación de usuarios, grupos y secciones en Samba.<br>Realización guiada de la práctica de NextCloud. Se comenta el vídeo-guía de la práctica para dar la facilidad al alumnado</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/03_USERS_SAMBA/031_SambaSecUsers.html">3.1.Introducción Secciones y usuarios Samba.</a><br>- Vídeo: usuarios y grupos.<br><a href="https://fjavier-hernandez.github.io/sor/03_USERS_SAMBA/032_CreacionUsersSamba.html#pt31-creacion-de-usuarios-y-grupos">PT31.Creación de usuarios y grupos en Samba.</a><br><a href="https://fjavier-hernandez.github.io/sor/03_USERS_SAMBA/033_GestionUsersSamba.html#pt32-gestion-de-secciones-y-usuarios-en-samba">PT32.Gestión usuarios y secciones Samba.</a><br><a href="https://fjavier-hernandez.github.io/sor/03_USERS_SAMBA/034_RefuerzoAmpliacion.html#pt33-configuracion-usuarios-y-grupos">PT33.(Refuerzo) Configuración Usuarios y grupos.</a><br><a href="https://fjavier-hernandez.github.io/sor/03_USERS_SAMBA/034_RefuerzoAmpliacion.html#pt_34-creacion-usuarios-shellscripting">PT34. (Ampliación) Creación usuarios Shellscripting.</a><br>- Vídeo: secciones.</td>
+  </tr>
+  <tr>
+    <td class="tg-vov5" colspan="5"> <br> <br><span style="color:#C00000">Permiso Paternidad del 02/11/23 hasta 04/12/23</b><br> <br> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">6</td>
+    <td class="tg-fymr">Teórica: Explicativa.<br> </td>
+    <td class="tg-mxcs"><b>11/12/23(Mañana)</b><br> <br><b>14/12/23(Tarde)</b></td>
+    <td class="tg-0pky">Presentación de Servicios de directorio y de sus elementos principales.<br>Explicación de Samba Domain Controller y Práctica Guiada.<br> </td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/04_SAMBA_DC/041_Introduccion_SambaDC.html">4.1.Introducción Samba DC.</a><br><a href="https://fjavier-hernandez.github.io/sor/04_SAMBA_DC/042_InstallConfigSambaDC.html">4.2.Instalación y configuración de Samba DC.</a></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">7</td>
+    <td class="tg-fymr">Práctica:<br>Resolución actividades y dudas.</td>
+    <td class="tg-mxcs"><b>18/12/23(Mañana)</b><br> <br><b>21/10/23(Tarde)</b></td>
+    <td class="tg-0pky">Realización guiada de la práctica de Samba Domain Controller. <br> </td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/04_SAMBA_DC/043_GestionRecursosSambaDC.html#pt41-gestion-de-recursos-compartidos-en-samba-dc">PT41. Gestión de recursos compartidos en Samba DC</a><br><a href="https://fjavier-hernandez.github.io/sor/04_SAMBA_DC/044_RefuerzoAmpliacion.html#pt42-samba-dc-directorios">PT42. (Refuerzo) Samba DC directorios</a><br><a href="https://fjavier-hernandez.github.io/sor/04_SAMBA_DC/044_RefuerzoAmpliacion.html#pt43-samba-dc-con-docker-compose">PT43. (Ampliación) Samba DC con Docker Compose</a> </td>
+  </tr>
+  <tr>
+    <th class="tg-vov5" colspan="5">SEGUNDA EVALUACIÓN</span></th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">8</td>
+    <td class="tg-fymr">Teórica: <br>Explicativa.<br> </td>
+    <td class="tg-mxcs"><b>08/01/24(Mañana)</b><br> <br><b>11/01/24(Tarde)</b></td>
+    <td class="tg-0pky">Introducción a Windows server y su configuración básica.<br>Introducción e instalación de Active Directory</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/06_AD1/061_AD_Intro.html">6.1.Introducción Active Directory.</a><br><a href="https://fjavier-hernandez.github.io/sor/06_AD1/062_WS_Config.html">6.2.Configuración Windows Server.</a><br><a href="https://fjavier-hernandez.github.io/sor/06_AD1/063_AD_Install.html">6.3.Instalación de Active Directory.</a></a><br><a href="https://www.youtube.com/watch?v=nA1jYIvBFBU">Vídeo: explicación configuración WS.</a></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">9</td>
+    <td class="tg-fymr">Práctica:<br>Resolución actividades <br>y dudas.</td>
+    <td class="tg-mxcs"><b>15/01/24(Mañana)</b><br> <br><b>18/01/24(Tarde)</b></td>
+    <td class="tg-0pky">Realización guiada de la Instalación de Active Directory.</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/06_AD1/062_WS_Config.html#pt61-configuracion-windows-server">PT61. Configuración Windows Server</a><br><a href="https://fjavier-hernandez.github.io/sor/06_AD1/063_AD_Install.html#pt62-instalacion-de-active-directory">PT62. Instalación programada de Active Directory.</a><br>- Vídeo: Realización guiada de PT62</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">10</td>
+    <td class="tg-fymr">Teórica: <br>Explicativa.<br> </td>
+    <td class="tg-mxcs"><b>22/01/24(Mañana)</b><br> <br><b>25/01/24(Tarde)</b></td>
+    <td class="tg-0pky">Administración de dominios en Active Directory.<br>creación de usuarios y grupos, la degradación de un dominio, y eliminación de usuarios.</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/07_DOMINIO_AD/071_DominioAD.html">7.1.Administración de dominios en Active Directory.</a><br><a href="https://fjavier-hernandez.github.io/sor/07_DOMINIO_AD/072_GestionDominioI.html">7.2.Administración de Usuarios y Grupos.</a><br><a href="https://fjavier-hernandez.github.io/sor/07_DOMINIO_AD/073_GestionDominioII.html">7.3.Gestión de dominio en Active Directory.</a></a></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">11</td>
+    <td class="tg-fymr">Práctica:<br>Resolución actividades <br>y dudas.</td>
+    <td class="tg-mxcs"><b>29/01/24(Mañana)</b><br> <br><b>01/02/24(Tarde)</b></td>
+    <td class="tg-0pky">Realización guiada de la gestión de dominios en Active Directory.</td>
+    <td class="tg-fymr"><a href="https://fjavier-hernandez.github.io/sor/07_DOMINIO_AD/072_GestionDominioI.html#pt71-administracion-de-usuarios-y-grupos">PT71.Administración de usuarios y grupos</a><br><a href="https://fjavier-hernandez.github.io/sor/07_DOMINIO_AD/073_GestionDominioII.html#pt72-gestion-de-dominios-en-active-directory">PT72. Gestión de Dominios en Active Directory.</a><br>- Vídeos: de creación y gestión de usuarios, grupos y Unidades organizativas. </td>
+  </tr>
+</tbody>
+</table>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="SituacionAprendizaje.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Situación de Aprendizaje" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Situación de Aprendizaje
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="Evaluacion.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Evaluación" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Evaluación
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2023-2024 Francisco Javier Hernández Illán - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
