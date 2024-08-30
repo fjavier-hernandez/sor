@@ -10,8 +10,11 @@
       
         <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/ayudaASO/068_DockerIntroNextCloud.html">
       
+      
+      
+      
       <link rel="icon" href="../../imagenes/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
@@ -19,15 +22,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -48,9 +53,7 @@
   
   
 
-
-  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-0CPJP88MBF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-0CPJP88MBF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -68,11 +71,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -92,7 +92,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../../index.html" title="Sistemas Operativos en Red" class="md-header__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
       
@@ -100,6 +102,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -119,33 +122,39 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="" data-md-color-accent=""  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -154,24 +163,27 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -201,6 +213,7 @@
                     
 
 
+
   
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
@@ -217,14 +230,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../index.html" class="md-nav__link">
-        Inicio
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
       </a>
     </li>
   
@@ -232,14 +250,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../SituacionAprendizaje.html" class="md-nav__link">
-        Situación de Aprendizaje
+        
+  
+  <span class="md-ellipsis">
+    Situación de Aprendizaje
+  </span>
+  
+
       </a>
     </li>
   
@@ -247,14 +270,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ProgramacionAula.html" class="md-nav__link">
-        Programación de Aula
+        
+  
+  <span class="md-ellipsis">
+    Programación de Aula
+  </span>
+  
+
       </a>
     </li>
   
@@ -262,819 +290,20 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Evaluacion.html" class="md-nav__link">
-        Evaluación
+        
+  
+  <span class="md-ellipsis">
+    Evaluación
+  </span>
+  
+
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          1.- Introducción
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="1.- Introducción" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          1.- Introducción
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../001_IntroSOR.html" class="md-nav__link">
-        1.1- Introducción SOR
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../002_Virtualizaci%C3%B3n.html" class="md-nav__link">
-        1.2- Virtualización
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../003_Docker.html" class="md-nav__link">
-        1.3- Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../004_PracticaNextCloud.html" class="md-nav__link">
-        1.4- Práctica NextCloud
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../005_RefuerzoAmpliacion.html" class="md-nav__link">
-        Refuerzo y Ampliación
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          2.- Introducción Samba
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="2.- Introducción Samba" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          2.- Introducción Samba
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02_INTRO_SAMBA/021_IntroSamba.html" class="md-nav__link">
-        2.1- Samba
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02_INTRO_SAMBA/022_InstalacionSamba.html" class="md-nav__link">
-        2.2- Instalación y configuración inicial
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02_INTRO_SAMBA/023_DockerComposeSamba.html" class="md-nav__link">
-        2.3- Docker Compose con Samba
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02_INTRO_SAMBA/024_RefuerzoAmpliacion.html" class="md-nav__link">
-        Refuerzo y Ampliación
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          3.- Gestión Usuarios y grupos Samba
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="3.- Gestión Usuarios y grupos Samba" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          3.- Gestión Usuarios y grupos Samba
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../03_USERS_SAMBA/031_SambaSecUsers.html" class="md-nav__link">
-        3.1- Secciones y Usuarios Samba
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../03_USERS_SAMBA/032_CreacionUsersSamba.html" class="md-nav__link">
-        3.2- Creación de Usuarios y grupos en Samba
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../03_USERS_SAMBA/033_GestionUsersSamba.html" class="md-nav__link">
-        3.3- Gestión de Usuarios y grupos en Samba
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../03_USERS_SAMBA/034_RefuerzoAmpliacion.html" class="md-nav__link">
-        Refuerzo y Ampliación
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_8">
-          4.- Gestión recursos compartidos en Samba
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="4.- Gestión recursos compartidos en Samba" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          4.- Gestión recursos compartidos en Samba
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04_SAMBA_DC/041_Introduccion_SambaDC.html" class="md-nav__link">
-        4.1- Introducción Samba DC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04_SAMBA_DC/042_InstallConfigSambaDC.html" class="md-nav__link">
-        4.2- Instalación y Configuración Samba DC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04_SAMBA_DC/043_GestionRecursosSambaDC.html" class="md-nav__link">
-        4.3- Gestión de recursos compartidos en Samba DC
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04_SAMBA_DC/044_RefuerzoAmpliacion.html" class="md-nav__link">
-        Refuerzo y Ampliación
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_9">
-          5.- Entornos de desarrollo virtualizados con Vagrant
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="5.- Entornos de desarrollo virtualizados con Vagrant" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
-          <span class="md-nav__icon md-icon"></span>
-          5.- Entornos de desarrollo virtualizados con Vagrant
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../05_VAGRANT/051_VagrantIntro.html" class="md-nav__link">
-        5.1- Introducción Vagrant
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../05_VAGRANT/052_VagrantConfig.html" class="md-nav__link">
-        5.2- Configuración Vagrant
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../05_VAGRANT/053_VagrantAprov.html" class="md-nav__link">
-        5.3- Aprovisionamiento Vagrant
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_10">
-          6.- Directorio Activo en Windows Server
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="6.- Directorio Activo en Windows Server" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          6.- Directorio Activo en Windows Server
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../06_AD1/061_AD_Intro.html" class="md-nav__link">
-        6.1- Introducción Active Directory
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../06_AD1/062_WS_Config.html" class="md-nav__link">
-        6.2- Configuración Windows Server
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../06_AD1/063_AD_Install.html" class="md-nav__link">
-        6.3- Instalación Active Directory
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_11">
-          7.- Administración de Dominios en Active Directory
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="7.- Administración de Dominios en Active Directory" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
-          <span class="md-nav__icon md-icon"></span>
-          7.- Administración de Dominios en Active Directory
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../07_DOMINIO_AD/071_DominioAD.html" class="md-nav__link">
-        7.1- Administración de Dominios en Active Directory
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../07_DOMINIO_AD/072_GestionDominioI.html" class="md-nav__link">
-        7.2- Administración de usuarios y grupos
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../07_DOMINIO_AD/073_GestionDominioII.html" class="md-nav__link">
-        7.3- Gestión de Dominio en Active Directory
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_12">
-          8.- Gestión de recursos compartidos en Active Directory
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="8.- Gestión de recursos compartidos en Active Directory" data-md-level="1">
-        <label class="md-nav__title" for="__nav_12">
-          <span class="md-nav__icon md-icon"></span>
-          8.- Gestión de recursos compartidos en Active Directory
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../08_RECURSOS_AD/081_CarpetasPerfilesAD.html" class="md-nav__link">
-        8.1- Compartir recursos y perfiles móviles
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../08_RECURSOS_AD/082_PermisosGPOs.html" class="md-nav__link">
-        8.2- Permisos y directivas de grupo
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../08_RECURSOS_AD/083_EstructuraAD.html" class="md-nav__link">
-        8.3- Estructura de empresa en AD
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_13">
-          Proyecto Final de Módulo
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Proyecto Final de Módulo" data-md-level="1">
-        <label class="md-nav__title" for="__nav_13">
-          <span class="md-nav__icon md-icon"></span>
-          Proyecto Final de Módulo
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../09_PT_FINAL/ProyectoFinal.html" class="md-nav__link">
-        1- PT- Final Módulo
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1291,34 +520,34 @@
 <ol>
 <li>En primer lugar se actualizan los paquetes y se instalan los paquetes para utilizar el repositorio sobre HTTPS:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo apt-get update
-<span class="linenos" data-linenos="2 "></span>apt-get install ca-certificates curl gnupg lsb-release
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="linenos" data-linenos="2 "></span>apt-get<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg<span class="w"> </span>lsb-release
 </code></pre></div>
 <ol start="2">
 <li>Se añade la clave GPG oficial de Docker:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir -p /etc/apt/keyrings
-<span class="linenos" data-linenos="2 "></span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/apt/keyrings
+<span class="linenos" data-linenos="2 "></span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.gpg
 </code></pre></div>
 <ol start="3">
 <li>Se configura el repositorio:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 <ul>
 <li>Se realiza de nuevo una actualización.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo apt-get update
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 </code></pre></div>
 <ol start="4">
 <li>Instalación propia del Engine de Docker y Docker Compose:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-compose-plugin
 </code></pre></div>
 <ol start="5">
 <li>Comprobamos que está correctamente bien instalado ejecutando el contenedor "Hello World"</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker run hello-world
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </code></pre></div>
 <h2 id="principales-comandos">Principales Comandos<a class="headerlink" href="#principales-comandos" title="Permanent link">&para;</a></h2>
 <p>A continuación se muestran los comandos más utilizados:</p>
@@ -1383,15 +612,15 @@
 <ol>
 <li>Comprobación que inicialmente no hay ningún contenedor creado (la opción <code>-a</code> hace que se muestren también los contenedores detenidos, sin ella se muestran sólo los contenedor que estén en marcha):</li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker ps -a
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
 </code></pre></div>
 o también</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker container ls -a
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>-a
 </code></pre></div>
 <ol start="2">
 <li>Compruebe que inicialmente tampoco disponemos de ninguna imagen:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker image ls
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>ls
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1400,11 +629,11 @@ o también</p>
 <ol start="3">
 <li>La orden más simple para crear un contenedor sigue esta estructura:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker run IMAGEN
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>IMAGEN
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker run hello-world
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </code></pre></div>
 </div>
 <div class="admonition note">
@@ -1431,7 +660,7 @@ o también</p>
 <p>Además podemos dar nombre a los contenedores al crearlos:</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo docker run -d --name<span class="o">=</span>hola-1 hello-world
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>hola-1<span class="w"> </span>hello-world
 </code></pre></div>
 <h2 id="volumenes">Volúmenes<a class="headerlink" href="#volumenes" title="Permanent link">&para;</a></h2>
 <p>Docker simplifica enormemente la creación de contenedores, y eso lleva a tratar los contenedores como un <strong>elemento efímero</strong>, que se crea cuando se necesita y que no importa que se destruya puesto que puede ser reconstruido una y otra vez a partir de su imagen.</p>
@@ -1488,7 +717,7 @@ o también</p>
 <ul>
 <li>Opciones:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="sb">`</span>Docker volume <span class="o">(</span>create<span class="p">|</span>Is<span class="p">|</span>inspect<span class="p">|</span>rm<span class="o">)</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="sb">`</span>Docker<span class="w"> </span>volume<span class="w"> </span><span class="o">(</span>create<span class="p">|</span>Is<span class="p">|</span>inspect<span class="p">|</span>rm<span class="o">)</span><span class="sb">`</span>
 </code></pre></div>
 <ul>
 <li>para crear el volumen a la vez que creamos y ejecutamos un contenedor se utilzan las opciones <code>v</code> o <code>--mount</code></li>
@@ -1523,9 +752,9 @@ o también</p>
 <p>A continuación se muestra un ejemplo de creación del servidor web NGINX.</p>
 <div class="admonition example volumen">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker run -d <span class="se">\</span>
-<span class="linenos" data-linenos="2 "></span>--name nginx1 -p <span class="m">8080</span>:80 <span class="se">\</span>
-<span class="linenos" data-linenos="3 "></span>--mount <span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>myvol1,target<span class="o">=</span>/usr/share/nginx/html <span class="se">\</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="2 "></span>--name<span class="w"> </span>nginx1<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="3 "></span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>myvol1,target<span class="o">=</span>/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
 <span class="linenos" data-linenos="4 "></span>nginx:latest
 </code></pre></div>
 </div>
@@ -1538,28 +767,28 @@ o también</p>
 <ul>
 <li>Si se creara una página de incio del apache diferente a la de defecto podríamos copiarla en el volumen y esta cambiaría:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>nano index.html
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>nano<span class="w"> </span>index.html
 </code></pre></div>
 <ul>
 <li>Nueva página de inicio:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;!DOCTYPE html&gt;
-<span class="linenos" data-linenos=" 2 "></span>&lt;html <span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;es&quot;</span>&gt;
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;!DOCTYPE<span class="w"> </span>html&gt;
+<span class="linenos" data-linenos=" 2 "></span>&lt;html<span class="w"> </span><span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;es&quot;</span>&gt;
 <span class="linenos" data-linenos=" 3 "></span>&lt;head&gt;
-<span class="linenos" data-linenos=" 4 "></span>  &lt;meta <span class="nv">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span>&gt;
-<span class="linenos" data-linenos=" 5 "></span>  &lt;title&gt;Apache en Docker&lt;/title&gt;
-<span class="linenos" data-linenos=" 6 "></span>  &lt;meta <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;viewport&quot;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;
+<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span>&lt;meta<span class="w"> </span><span class="nv">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span>&gt;
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span>&lt;title&gt;Apache<span class="w"> </span>en<span class="w"> </span>Docker&lt;/title&gt;
+<span class="linenos" data-linenos=" 6 "></span><span class="w">  </span>&lt;meta<span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;viewport&quot;</span><span class="w"> </span><span class="nv">content</span><span class="o">=</span><span class="s2">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;
 <span class="linenos" data-linenos=" 7 "></span>&lt;/head&gt;
 <span class="linenos" data-linenos=" 8 "></span>
 <span class="linenos" data-linenos=" 9 "></span>&lt;body&gt;
-<span class="linenos" data-linenos="10 "></span>  &lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;
+<span class="linenos" data-linenos="10 "></span><span class="w">  </span>&lt;h1&gt;¡Hola<span class="w"> </span>Mundo!&lt;/h1&gt;
 <span class="linenos" data-linenos="11 "></span>&lt;/body&gt;
 <span class="linenos" data-linenos="12 "></span>&lt;/html&gt;
 </code></pre></div>
 <ul>
 <li>
 <p>Para cambiar la página de inicio del apache se debe copiar dentro del volumen creado.
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker cp index.html nginx1:/usr/share/nginx/html
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>cp<span class="w"> </span>index.html<span class="w"> </span>nginx1:/usr/share/nginx/html
 </code></pre></div></p>
 </li>
 <li>
@@ -1570,18 +799,18 @@ o también</p>
 <p class="admonition-title">Warning</p>
 <p>Si aparece el error forbiden 403, es debido a permisos del index.html, debemos entrar en container y cambiar los permisos.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker <span class="nb">exec</span> -it nginx1 /bin/bash
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>nginx1<span class="w"> </span>/bin/bash
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">cd</span> /usr/share/nginx/html
-<span class="linenos" data-linenos="2 "></span>chown -R root:root index.html
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">cd</span><span class="w"> </span>/usr/share/nginx/html
+<span class="linenos" data-linenos="2 "></span>chown<span class="w"> </span>-R<span class="w"> </span>root:root<span class="w"> </span>index.html
 </code></pre></div>
 <ul>
 <li>
 <p>Además podemos crear un nuevo contenedor con este volumen:
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker run -d <span class="se">\</span>
-<span class="linenos" data-linenos="2 "></span>    --name nginx2 -p <span class="m">8080</span>:80 <span class="se">\</span>
-<span class="linenos" data-linenos="3 "></span>    --mount <span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>myvol1,target<span class="o">=</span>/usr/share/nginx/html <span class="se">\</span>
-<span class="linenos" data-linenos="4 "></span>    nginx:latest
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span>--name<span class="w"> </span>nginx2<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>myvol1,target<span class="o">=</span>/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="4 "></span><span class="w">    </span>nginx:latest
 </code></pre></div></p>
 </li>
 <li>
@@ -1626,15 +855,15 @@ o también</p>
 <ul>
 <li>
 <p>Por ejemplo:
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker network create mired
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>mired
 </code></pre></div></p>
 </li>
 <li>
 <p>Se crean los contenedores conectados a dicha red:
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker run -d --name servidor_mysql --network mired <span class="se">\</span>
-<span class="linenos" data-linenos="2 "></span>-e <span class="nv">MYSQL_DATABASE</span><span class="o">=</span>bd_wp -e <span class="nv">MYSQL_USER</span><span class="o">=</span>user_wp -e <span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>asdasd <span class="se">\</span>
-<span class="linenos" data-linenos="3 "></span>-e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>asdasd mariadb
-<span class="linenos" data-linenos="4 "></span>docker run -d --name servidor --network mired javierhernandez/aplicacionweb:v1
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>servidor_mysql<span class="w"> </span>--network<span class="w"> </span>mired<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="2 "></span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>bd_wp<span class="w"> </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span>user_wp<span class="w"> </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>asdasd<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="3 "></span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>asdasd<span class="w"> </span>mariadb
+<span class="linenos" data-linenos="4 "></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>servidor<span class="w"> </span>--network<span class="w"> </span>mired<span class="w"> </span>javierhernandez/aplicacionweb:v1
 </code></pre></div></p>
 </li>
 </ul>
@@ -1672,25 +901,25 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
 1. **Primer paso**: generar imagen con un **Dockerfile**.
 
 * Se crea el archivo de texto dockerfile.
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir docker
-<span class="linenos" data-linenos="2 "></span>touch dockerfile
-<span class="linenos" data-linenos="3 "></span>nano dockerfile
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir<span class="w"> </span>docker
+<span class="linenos" data-linenos="2 "></span>touch<span class="w"> </span>dockerfile
+<span class="linenos" data-linenos="3 "></span>nano<span class="w"> </span>dockerfile
 </code></pre></div>
 
 * Ejemplo edición Dockerfile.
 
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># syntax=docker/dockerfile:1</span>
-<span class="linenos" data-linenos="2 "></span>FROM nginx:alpine
-<span class="linenos" data-linenos="3 "></span>RUN apk update
-<span class="linenos" data-linenos="4 "></span>COPY index.html/ /usr/share/nginx/html/
+<span class="linenos" data-linenos="2 "></span>FROM<span class="w"> </span>nginx:alpine
+<span class="linenos" data-linenos="3 "></span>RUN<span class="w"> </span>apk<span class="w"> </span>update
+<span class="linenos" data-linenos="4 "></span>COPY<span class="w"> </span>index.html/<span class="w"> </span>/usr/share/nginx/html/
 </code></pre></div>
 
 !!! Nota
     Se puede probar a introducir el volumen en el docker file: `VOLUME /myvol1`
 
 * Se crea la imagen y el contenedor.
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker build -t franciscojav1981/my-nginx .
-<span class="linenos" data-linenos="2 "></span>docker run -dit --name my-nginx -p <span class="m">8081</span>:80 franciscojav1981/my-nginx
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>franciscojav1981/my-nginx<span class="w"> </span>.
+<span class="linenos" data-linenos="2 "></span>docker<span class="w"> </span>run<span class="w"> </span>-dit<span class="w"> </span>--name<span class="w"> </span>my-nginx<span class="w"> </span>-p<span class="w"> </span><span class="m">8081</span>:80<span class="w"> </span>franciscojav1981/my-nginx
 </code></pre></div>
 
 !!! Warning
@@ -1701,12 +930,12 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
 
 * Se debe generar una cuenta de Docker Hub con la cuenta corporativa de Office 365: [Sign Up](https://hub.docker.com/signup)
 * Con el comando `docker login`, se realiza el acceso a la plataforma desde el terminal, introduciendo usuario y contraseña.
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker login
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>login
 </code></pre></div>
 
 * Con el comando `docker push`, se realiza el "Upload" de la imagen.
 
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker push franciscojav1981/my-nginx
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>push<span class="w"> </span>franciscojav1981/my-nginx
 </code></pre></div>
 
 * Por último Se debe comprobar accediendo a la platadorma de Docker Hub.
@@ -1733,48 +962,48 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
 
 2. **Segundo paso**: Crear directorio del proyecto y dentro el archivo `bash`.
 
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir my_wordpress
-<span class="linenos" data-linenos="2 "></span>touch docker-compose.yml
-<span class="linenos" data-linenos="3 "></span>nano docker-compose.yml
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir<span class="w"> </span>my_wordpress
+<span class="linenos" data-linenos="2 "></span>touch<span class="w"> </span>docker-compose.yml
+<span class="linenos" data-linenos="3 "></span>nano<span class="w"> </span>docker-compose.yml
 </code></pre></div>
 3. **Tercer paso**: se edita el `bash`.
 
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>version: <span class="s2">&quot;3.9&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>version:<span class="w"> </span><span class="s2">&quot;3.9&quot;</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span>services:
-<span class="linenos" data-linenos=" 4 "></span>  db:
-<span class="linenos" data-linenos=" 5 "></span>    image: mysql:5.7
-<span class="linenos" data-linenos=" 6 "></span>    volumes:
-<span class="linenos" data-linenos=" 7 "></span>      - db_data:/var/lib/mysql
-<span class="linenos" data-linenos=" 8 "></span>    restart: always
-<span class="linenos" data-linenos=" 9 "></span>    environment:
-<span class="linenos" data-linenos="10 "></span>      MYSQL_ROOT_PASSWORD: somewordpress
-<span class="linenos" data-linenos="11 "></span>      MYSQL_DATABASE: wordpress
-<span class="linenos" data-linenos="12 "></span>      MYSQL_USER: wordpress
-<span class="linenos" data-linenos="13 "></span>      MYSQL_PASSWORD: wordpress
+<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span>db:
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span>image:<span class="w"> </span>mysql:5.7
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span>volumes:
+<span class="linenos" data-linenos=" 7 "></span><span class="w">      </span>-<span class="w"> </span>db_data:/var/lib/mysql
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span>restart:<span class="w"> </span>always
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span>environment:
+<span class="linenos" data-linenos="10 "></span><span class="w">      </span>MYSQL_ROOT_PASSWORD:<span class="w"> </span>somewordpress
+<span class="linenos" data-linenos="11 "></span><span class="w">      </span>MYSQL_DATABASE:<span class="w"> </span>wordpress
+<span class="linenos" data-linenos="12 "></span><span class="w">      </span>MYSQL_USER:<span class="w"> </span>wordpress
+<span class="linenos" data-linenos="13 "></span><span class="w">      </span>MYSQL_PASSWORD:<span class="w"> </span>wordpress
 <span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>  wordpress:
-<span class="linenos" data-linenos="16 "></span>    depends_on:
-<span class="linenos" data-linenos="17 "></span>      - db
-<span class="linenos" data-linenos="18 "></span>    image: wordpress:latest
-<span class="linenos" data-linenos="19 "></span>    volumes:
-<span class="linenos" data-linenos="20 "></span>      - wordpress_data:/var/www/html
-<span class="linenos" data-linenos="21 "></span>    ports:
-<span class="linenos" data-linenos="22 "></span>      - <span class="s2">&quot;8000:80&quot;</span>
-<span class="linenos" data-linenos="23 "></span>    restart: always
-<span class="linenos" data-linenos="24 "></span>    environment:
-<span class="linenos" data-linenos="25 "></span>      WORDPRESS_DB_HOST: db:3306
-<span class="linenos" data-linenos="26 "></span>      WORDPRESS_DB_USER: wordpress
-<span class="linenos" data-linenos="27 "></span>      WORDPRESS_DB_PASSWORD: wordpress
-<span class="linenos" data-linenos="28 "></span>      WORDPRESS_DB_NAME: wordpress
+<span class="linenos" data-linenos="15 "></span><span class="w">  </span>wordpress:
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span>depends_on:
+<span class="linenos" data-linenos="17 "></span><span class="w">      </span>-<span class="w"> </span>db
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span>image:<span class="w"> </span>wordpress:latest
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span>volumes:
+<span class="linenos" data-linenos="20 "></span><span class="w">      </span>-<span class="w"> </span>wordpress_data:/var/www/html
+<span class="linenos" data-linenos="21 "></span><span class="w">    </span>ports:
+<span class="linenos" data-linenos="22 "></span><span class="w">      </span>-<span class="w"> </span><span class="s2">&quot;8000:80&quot;</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span>restart:<span class="w"> </span>always
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span>environment:
+<span class="linenos" data-linenos="25 "></span><span class="w">      </span>WORDPRESS_DB_HOST:<span class="w"> </span>db:3306
+<span class="linenos" data-linenos="26 "></span><span class="w">      </span>WORDPRESS_DB_USER:<span class="w"> </span>wordpress
+<span class="linenos" data-linenos="27 "></span><span class="w">      </span>WORDPRESS_DB_PASSWORD:<span class="w"> </span>wordpress
+<span class="linenos" data-linenos="28 "></span><span class="w">      </span>WORDPRESS_DB_NAME:<span class="w"> </span>wordpress
 <span class="linenos" data-linenos="29 "></span>volumes:
-<span class="linenos" data-linenos="30 "></span>  db_data: <span class="o">{}</span>
-<span class="linenos" data-linenos="31 "></span>  wordpress_data: <span class="o">{}</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">  </span>db_data:<span class="w"> </span><span class="o">{}</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">  </span>wordpress_data:<span class="w"> </span><span class="o">{}</span>
 </code></pre></div>
 
 4. **Cuarto paso**: en la carpeta creada del proyecto se ejecuta el comando de `docker-compose up -d`
 
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker-compose up -d
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 
 * Por último Se comprueba que se ha creado el contenedor. -->
@@ -1831,6 +1060,13 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
 <p><a href="NextCloudDockerSolucion.md">Solución Práctica NextCloud-Docker</a></p>
 
 
+
+
+
+
+
+
+
   
 
 
@@ -1841,12 +1077,14 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Volver al principio
-          </a>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
         
       </main>
       
@@ -1872,17 +1110,21 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
   
     
     
+    
+    
     <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
     </a>
   
+    
+    
     
     
       
       
     
     <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
     </a>
   
 </div>
@@ -1895,6 +1137,7 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    
     
       <div class="md-consent" data-md-component="consent" id="__consent" hidden>
         <div class="md-consent__overlay"></div>
@@ -1928,7 +1171,7 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
           <input type="checkbox" name="analytics" checked>
           <span class="task-list-indicator"></span>
           Google Analytics
-        <label>
+        </label>
       </li>
     
   </ul>
@@ -1953,12 +1196,11 @@ Las instrucciones principales que pueden utilizarse en un Dockerfile son:
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-    
     
   </body>
 </html>

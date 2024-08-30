@@ -7,46 +7,46 @@ nav:
   - "Situación de Aprendizaje": "SituacionAprendizaje.md"  
   - "Programación de Aula": "ProgramacionAula.md"
   - "Evaluación": "Evaluacion.md"
-  - "1.- Introducción": 
-    - "1.1- Introducción SOR": "01_INTRO_SOR/001_IntroSOR.md"
-    - "1.2- Virtualización": "01_INTRO_SOR/002_Virtualización.md"
-    - "1.3- Docker": "01_INTRO_SOR/003_Docker.md"
-    - "1.4- Práctica NextCloud": "01_INTRO_SOR/004_PracticaNextCloud.md"
-    - "Refuerzo y Ampliación": "01_INTRO_SOR/005_RefuerzoAmpliacion.md"
-  - "2.- Introducción Samba":
-    - "2.1- Samba": "02_INTRO_SAMBA/021_IntroSamba.md"
-    - "2.2- Instalación y configuración inicial": "02_INTRO_SAMBA/022_InstalacionSamba.md"
-    - "2.3- Docker Compose con Samba": "02_INTRO_SAMBA/023_DockerComposeSamba.md"
-    - "Refuerzo y Ampliación": "02_INTRO_SAMBA/024_RefuerzoAmpliacion.md"
-  - "3.- Gestión Usuarios y grupos Samba":
-    - "3.1- Secciones y Usuarios Samba": "03_USERS_SAMBA/031_SambaSecUsers.md"
-    - "3.2- Creación de Usuarios y grupos en Samba": "03_USERS_SAMBA/032_CreacionUsersSamba.md"
-    - "3.3- Gestión de Usuarios y grupos en Samba": "03_USERS_SAMBA/033_GestionUsersSamba.md"
-    - "Refuerzo y Ampliación": "03_USERS_SAMBA/034_RefuerzoAmpliacion.md"
-  - "4.- Gestión recursos compartidos en Samba":
-    - "4.1- Introducción Samba DC": "04_SAMBA_DC/041_Introduccion_SambaDC.md"
-    - "4.2- Instalación y Configuración Samba DC": "04_SAMBA_DC/042_InstallConfigSambaDC.md"
-    - "4.3- Gestión de recursos compartidos en Samba DC": "04_SAMBA_DC/043_GestionRecursosSambaDC.md"
-    - "Refuerzo y Ampliación": "04_SAMBA_DC/044_RefuerzoAmpliacion.md"
-  - "5.- Entornos de desarrollo virtualizados con Vagrant":
-    - "5.1- Introducción Vagrant": "05_VAGRANT/051_VagrantIntro.md"
-    - "5.2- Configuración Vagrant": "05_VAGRANT/052_VagrantConfig.md"
-    - "5.3- Aprovisionamiento Vagrant": "05_VAGRANT/053_VagrantAprov.md"
-  - "6.- Directorio Activo en Windows Server":
-    - "6.1- Introducción Active Directory": "06_AD1/061_AD_Intro.md"
-    - "6.2- Configuración Windows Server": "06_AD1/062_WS_Config.md"
-    - "6.3- Instalación Active Directory": "06_AD1/063_AD_Install.md"
-  - "7.- Administración de Dominios en Active Directory":
-    - "7.1- Administración de Dominios en Active Directory": "07_DOMINIO_AD/071_DominioAD.md"
-    - "7.2- Administración de usuarios y grupos": "07_DOMINIO_AD/072_GestionDominioI.md"
-    - "7.3- Gestión de Dominio en Active Directory": "07_DOMINIO_AD/073_GestionDominioII.md"
-  - "8.- Gestión de recursos compartidos en Active Directory":
-    - "8.1- Compartir recursos y perfiles móviles": "08_RECURSOS_AD/081_CarpetasPerfilesAD.md"
-    - "8.2- Permisos y directivas de grupo": "08_RECURSOS_AD/082_PermisosGPOs.md"
-    - "8.3- Estructura de empresa en AD": "08_RECURSOS_AD/083_EstructuraAD.md"
+  # - "1.- Introducción": 
+  #   - "1.1- Introducción SOR": "01_INTRO_SOR/001_IntroSOR.md"
+  #   - "1.2- Virtualización": "01_INTRO_SOR/002_Virtualización.md"
+  #   - "1.3- Docker": "01_INTRO_SOR/003_Docker.md"
+  #   - "1.4- Práctica NextCloud": "01_INTRO_SOR/004_PracticaNextCloud.md"
+  #   - "Refuerzo y Ampliación": "01_INTRO_SOR/005_RefuerzoAmpliacion.md"
+  # - "2.- Introducción Samba":
+  #   - "2.1- Samba": "02_INTRO_SAMBA/021_IntroSamba.md"
+  #   - "2.2- Instalación y configuración inicial": "02_INTRO_SAMBA/022_InstalacionSamba.md"
+  #   - "2.3- Docker Compose con Samba": "02_INTRO_SAMBA/023_DockerComposeSamba.md"
+  #   - "Refuerzo y Ampliación": "02_INTRO_SAMBA/024_RefuerzoAmpliacion.md"
+  # - "3.- Gestión Usuarios y grupos Samba":
+  #   - "3.1- Secciones y Usuarios Samba": "03_USERS_SAMBA/031_SambaSecUsers.md"
+  #   - "3.2- Creación de Usuarios y grupos en Samba": "03_USERS_SAMBA/032_CreacionUsersSamba.md"
+  #   - "3.3- Gestión de Usuarios y grupos en Samba": "03_USERS_SAMBA/033_GestionUsersSamba.md"
+  #   - "Refuerzo y Ampliación": "03_USERS_SAMBA/034_RefuerzoAmpliacion.md"
+  # - "4.- Gestión recursos compartidos en Samba":
+  #   - "4.1- Introducción Samba DC": "04_SAMBA_DC/041_Introduccion_SambaDC.md"
+  #   - "4.2- Instalación y Configuración Samba DC": "04_SAMBA_DC/042_InstallConfigSambaDC.md"
+  #   - "4.3- Gestión de recursos compartidos en Samba DC": "04_SAMBA_DC/043_GestionRecursosSambaDC.md"
+  #   - "Refuerzo y Ampliación": "04_SAMBA_DC/044_RefuerzoAmpliacion.md"
+  # - "5.- Entornos de desarrollo virtualizados con Vagrant":
+  #   - "5.1- Introducción Vagrant": "05_VAGRANT/051_VagrantIntro.md"
+  #   - "5.2- Configuración Vagrant": "05_VAGRANT/052_VagrantConfig.md"
+  #   - "5.3- Aprovisionamiento Vagrant": "05_VAGRANT/053_VagrantAprov.md"
+  # - "6.- Directorio Activo en Windows Server":
+  #   - "6.1- Introducción Active Directory": "06_AD1/061_AD_Intro.md"
+  #   - "6.2- Configuración Windows Server": "06_AD1/062_WS_Config.md"
+  #   - "6.3- Instalación Active Directory": "06_AD1/063_AD_Install.md"
+  # - "7.- Administración de Dominios en Active Directory":
+  #   - "7.1- Administración de Dominios en Active Directory": "07_DOMINIO_AD/071_DominioAD.md"
+  #   - "7.2- Administración de usuarios y grupos": "07_DOMINIO_AD/072_GestionDominioI.md"
+  #   - "7.3- Gestión de Dominio en Active Directory": "07_DOMINIO_AD/073_GestionDominioII.md"
+  # - "8.- Gestión de recursos compartidos en Active Directory":
+  #   - "8.1- Compartir recursos y perfiles móviles": "08_RECURSOS_AD/081_CarpetasPerfilesAD.md"
+  #   - "8.2- Permisos y directivas de grupo": "08_RECURSOS_AD/082_PermisosGPOs.md"
+  #   - "8.3- Estructura de empresa en AD": "08_RECURSOS_AD/083_EstructuraAD.md"
 
-  - "Proyecto Final de Módulo":
-    - "1- PT- Final Módulo": "09_PT_FINAL/ProyectoFinal.md"
+  # - "Proyecto Final de Módulo":
+  #   - "1- PT- Final Módulo": "09_PT_FINAL/ProyectoFinal.md"
 
 
 theme:
