@@ -1,0 +1,852 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introducción a Docker por Francisco Javier Hernández Illán. Explicación de las principales características de Docker, su instalación y principales comandos de uso.">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/01_INTRO_SOR/003_Docker.html">
+      
+      
+      
+      
+      <link rel="icon" href="../imagenes/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Introducción Docker - Sistemas Operativos en Red</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-0CPJP88MBF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Sistemas Operativos en Red" class="md-header__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+      
+  <img src="../imagenes/SOR_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sistemas Operativos en Red
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción Docker
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Sistemas Operativos en Red" class="md-nav__button md-logo" aria-label="Sistemas Operativos en Red" data-md-component="logo">
+      
+  <img src="../imagenes/SOR_logo.png" alt="logo">
+
+    </a>
+    Sistemas Operativos en Red
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SituacionAprendizaje.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Situación de Aprendizaje
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Evaluacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="docker">DOCKER<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
+<figure style="float: right;">
+    <img src="imagenes/DockerImage.png" width="350"/>
+    <figcaption><b>Figura 1:</b> Logo Docker.</figcaption>
+</figure>
+
+<p><strong>Docker</strong> (estibador en inglés) es un <strong>Sistema de Virtualización de Aplicaciones mediante contenedores</strong>, creado por <em>Solomon Hykes</em> y su equipo de ingenieros.</p>
+<ul>
+<li>En <strong>2013</strong> se convirtió en un proyecto de <strong>software libre (licencia Apache)</strong> en el que participan cada vez más empresas. </li>
+<li>La <strong>versión 1.0</strong> se publicó en <strong>junio de 2014</strong> y ha tenido un desarrollo muy rápido.</li>
+<li>En marzo de <strong>2017</strong>, Docker anunció un desarrollo todavía más rápido, <strong>pasando a publicar una nueva versión cada mes</strong>. La numeración de las versiones adoptó al formato AA.MM (la primera fue <strong>Docker 17.03</strong>).</li>
+<li>En <strong>julio de 2018</strong>, Docker anunció que volvían a un desarrollo más pausado. A partir de <strong>Docker 18.09</strong> habría una versión "estable" cada seis meses.</li>
+</ul>
+<h2 id="caracteristicas-principales-de-docker">Características principales de Docker<a class="headerlink" href="#caracteristicas-principales-de-docker" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Por lo tanto se define Docker como...</p>
+<p>Un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.​</p>
+</div>
+<p>Sus principales características son:</p>
+<ul>
+<li>Docker es una API amigable del tipo <strong>Open Source</strong>.</li>
+<li>Genera un <strong>proceso aislado</strong> del resto de los procesos de la máquina gracias a: Ejecutar sobre su propio sistema de ficheros, con su propio espacio de usuarios y procesos, y sus propias interfaces de red... </li>
+<li>Es <strong>Modular</strong> ya que esta dividido en varios componentes.</li>
+<li>Es <strong>portable e inmutable</strong> utilizando la plataforma <strong>DockerHub</strong>.</li>
+<li>Su es lema <strong><em>“Build, Ship and Run, any app,”</em></strong>.</li>
+</ul>
+<figure>
+    <img src="imagenes/DockerLema.png" width="700"/>
+    <figcaption>Lema Docker.</figcaption>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Aunque un contenedor puede incluir cualquier número de aplicaciones, lo habitual es que un contenedor <strong>contenga una sola aplicación</strong> (y los programas necesarios para ponerse en marcha). </p>
+</div>
+<h2 id="arquitectura-docker">Arquitectura Docker<a class="headerlink" href="#arquitectura-docker" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Docker Engine ("Motor" del Gestor Docker)</strong>: el cual basado en la arquitectura de <strong>Cliente-Servidor</strong> (que pueden estar en la misma máquina, o en distintas), y realizada por mediante una <strong>API de REST</strong> que utiliza <strong>HTTP</strong>.<ul>
+<li><strong>API REST</strong>: interfaz de programación con un estilo de arquitectura software para sistemas hipermedia distribuidos como la <em>World Wide Web</em>.</li>
+</ul>
+</li>
+<li><strong>"Daemon Docker" (Servicio)</strong>: lleva a cabo Gestión y enlace de los componentes del gestor.</li>
+<li><strong>Imágenes</strong>: Las imágenes son una especie de plantillas que contienen como mínimo todo el software que necesita la aplicación para ponerse en marcha. están formadas por una colección ordenada de: <em>Sistemas Archivos</em>, <em>Repositorios</em>, <em>Comandos</em>, <em>Parámetros</em>, <em>Aplicaciones</em>.</li>
+<li><strong>Contenedores</strong>: son el conjunto de procesos que encapsulan e identifican a una Imagen. Pueden ser:<ul>
+<li>Creado, inicializado, parado, vuelto a ejecutar y destruido.</li>
+</ul>
+</li>
+<li><strong>Registros</strong> son imágenes guardadas en repositorios para: Almacenar o Distribuir.<ul>
+<li>Se almacenan en <strong>Docker Hub</strong> y pueden ser  Públicos o Privados.</li>
+</ul>
+</li>
+</ol>
+<figure>
+    <img src="imagenes/ComponentesDocker.png"/>
+    <figcaption>Componentes de Docker.</figcaption>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul>
+<li>El componente básico de Docker es el <strong>Docker Engine</strong>, pero Docker ofrece también una serie de herramientas para administrar, distribuir e instalar contenedores: <strong>Docker Compose</strong>, <strong>Docker Swarm</strong>.</li>
+<li>Las <strong>imágenes</strong> se pueden crear a partir de otras imágenes más básicas incluyendo software adicional en forma de capas. Todos los contenedores creados a partir de una imagen contienen el mismo software, aunque en el momento de su creación se pueden personalizar algunos detalles</li>
+</ul>
+</div>
+<h2 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
+<p>Para la Instalación de <strong>Docker</strong> es recomendable seguir la documentación oficial. Además se recomienda Instalar máquina Ubuntu Server última versión e instalar Docker en ella.</p>
+<ul>
+<li>Docker for Mac:<ul>
+<li><strong><a href="https://docs.docker.com/docker-for-mac/install/">Instalación Mac</a></strong></li>
+</ul>
+</li>
+<li>Docker for Windows:<ul>
+<li><strong><a href="https://docs.docker.com/docker-for-windows/install/">Instalación Windows</a></strong></li>
+</ul>
+</li>
+<li>Docker for ubuntu:<ul>
+<li><strong><a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">Instalación Ubuntu</a></strong></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<ul>
+<li><strong>Docker</strong> empezó estando disponible solamente para distribuciones GNU/Linux, pero desde <strong>junio de 2016</strong> también está disponible como aplicación nativa en Windows Server 2016 y Windows 10.</li>
+<li><strong>Docker</strong> utiliza la virtualización ofrecida por el sistema operativo. En el caso de Windows 10, eso significa que para usar Docker de forma nativa hay que activar <strong>Hyper-V</strong> que, por desgracia, es incompatible con VirtualBox. Para poder utilizar Docker en Windows 7 o en Windows 10 sin <strong>Hyper-V</strong>, Docker ofrece desde agosto de 2015 <strong><a href="https://github.com/docker-archive/toolbox">Docker Toolbox</a></strong>, que realmente es una máquina virtual (que se ejecuta en VirtualBox) que contiene Docker.</li>
+<li>Otra opción sería utilizar <a href="https://podman.io">Podman</a></li>
+</ul>
+</div>
+<h3 id="ejemplo-instalacion-en-ubuntu-server">Ejemplo Instalación en Ubuntu server<a class="headerlink" href="#ejemplo-instalacion-en-ubuntu-server" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A continuación se muestra la instalación aconsejada para Ubuntu Server utilizando el método de repositorios:</li>
+</ul>
+<ol>
+<li>En primer lugar se actualizan los paquetes y se instalan los paquetes para utilizar el repositorio sobre HTTPS:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="linenos" data-linenos="2 "></span>apt-get<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg<span class="w"> </span>lsb-release
+</code></pre></div>
+<ol start="2">
+<li>Se añade la clave GPG oficial de Docker:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/apt/keyrings
+<span class="linenos" data-linenos="2 "></span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.gpg
+</code></pre></div>
+<ol start="3">
+<li>Se configura el repositorio:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div>
+<ul>
+<li>Se realiza de nuevo una actualización.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</code></pre></div>
+<ol start="4">
+<li>Instalación propia del Engine de Docker y Docker Compose:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-compose-plugin
+</code></pre></div>
+<ol start="5">
+<li>Comprobamos que está correctamente bien instalado ejecutando el contenedor "Hello World"</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<h2 id="principales-comandos">Principales Comandos<a class="headerlink" href="#principales-comandos" title="Permanent link">&para;</a></h2>
+<p>A continuación se muestran los comandos más utilizados:</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Acción</th>
+<th>Comando</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker info</code></td>
+<td>obtener información relativa a docker</td>
+<td><code>docker start</code></td>
+<td>(docker container start) inicia la ejecución</td>
+</tr>
+<tr>
+<td><code>docker run</code></td>
+<td>(docker container run) crea y ejecuta el contenedor</td>
+<td><code>docker rm</code></td>
+<td>(docker container eliminar) elimina el contenedor</td>
+</tr>
+<tr>
+<td><code>docker build</code></td>
+<td>crea una imagen</td>
+<td><code>docker cp</code></td>
+<td>(docker container copiar)</td>
+</tr>
+<tr>
+<td><code>docker ps</code></td>
+<td>muestra la lista de contenedores creados</td>
+<td><code>docker logs</code></td>
+<td>(docker container logs) muestra los errores</td>
+</tr>
+<tr>
+<td><code>docker inspect</code></td>
+<td>(docker container inspect) información detallada de los contenedores</td>
+<td><code>docker stats</code></td>
+<td>(docker container stats) muestra el estado</td>
+</tr>
+<tr>
+<td><code>docker stop</code></td>
+<td>(docker container stop) detiene la ejecución del contenedor</td>
+<td><code>docker system prune</code></td>
+<td>limpiar todo el sistena de contenedores imágenes y volumenes</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><a href="https://github.com/sergarb1/CursoIntroduccionADocker/raw/main/FuentesCurso/Docker%20CheatSheet%20COMPLETA.pdf">Chuleta de Comandos</a></strong></li>
+</ul>
+<figure>
+    <img src="imagenes/ChuletaComandos.png"/>
+    <figcaption>Chuleta Docker.</figcaption>
+</figure>
+
+<h2 id="primer-contenedor">Primer Contenedor<a class="headerlink" href="#primer-contenedor" title="Permanent link">&para;</a></h2>
+<p>A continuación se muestra un ejemplo guiado de la creación del contenedor <strong>"Hello World"</strong></p>
+<ol>
+<li>Comprobación que inicialmente no hay ningún contenedor creado (la opción <code>-a</code> hace que se muestren también los contenedores detenidos, sin ella se muestran sólo los contenedor que estén en marcha):</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
+</code></pre></div>
+o también</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>-a
+</code></pre></div>
+<ol start="2">
+<li>Compruebe que inicialmente tampoco disponemos de ninguna imagen:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>ls
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><strong>Docker</strong> crea los contenedores a partir de imágenes locales (ya descargadas), pero si al crear el contenedor no se dispone de la imagen local, Docker descarga la imagen de su repositorio.</p>
+</div>
+<ol start="3">
+<li>La orden más simple para crear un contenedor sigue esta estructura:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>IMAGEN
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Como no tenemos todavía la imagen en nuestro ordenador, <strong>Docker</strong> descarga la imagen, crea el contenedor y lo pone en marcha. En este caso, la aplicación que contiene el contenedor <strong>hello-world</strong> simplemente escribe un mensaje de salida al arrancar e inmediatamente se detiene el contenedor.</p>
+</div>
+<p>Si listamos de nuevo imagenes y contenedores, las veremos creadas.</p>
+<ul>
+<li>Cada contenedor tiene un <strong>identificador (ID)</strong> y un nombre distinto. Docker "bautiza" los contenedores con un "<strong>nombre peculiar</strong>", compuesto de un adjetivo y un apellido.</li>
+<li>Podemos crear <strong>tantos contenedores como queramos</strong> a partir de una imagen. Una vez la imagen está disponible localmente, Docker no necesita descargarla y el proceso de creación del contenedor es inmediato (aunque en el caso de <strong>hello-world</strong> la descarga es rápida, con imágenes más grandes la descarga inicial puede tardar un rato).</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Normalmente se aconseja usar siempre la opción <code>-d</code>, que arranca el contenedor en segundo plano (<strong>detached</strong>) y permite seguir teniendo acceso a la shell (aunque con hello-world no es estrictamente necesario porque el contenedor hello-world se detiene automáticamente tras mostrar el mensaje).</li>
+<li>Al crear el contenedor hello-world con la opción <code>-d</code> no se muestra el mensaje, simplemente muestra el identificador completo del contenedor.</li>
+</ul>
+</div>
+<ul>
+<li>
+<p>Los contenedores se pueden destruir mediante el comando rm, haciendo referencia a ellos mediante su nombre o su id. <strong>No es necesario indicar el id completo</strong>, basta con escribir los primeros caracteres (de manera que no haya ambigüedades).</p>
+</li>
+<li>
+<p>Además podemos dar nombre a los contenedores al crearlos:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>hola-1<span class="w"> </span>hello-world
+</code></pre></div>
+<h2 id="volumenes">Volúmenes<a class="headerlink" href="#volumenes" title="Permanent link">&para;</a></h2>
+<p>Docker simplifica enormemente la creación de contenedores, y eso lleva a tratar los contenedores como un <strong>elemento efímero</strong>, que se crea cuando se necesita y que no importa que se destruya puesto que puede ser reconstruido una y otra vez a partir de su imagen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Pero si la aplicación o aplicaciones incluidas en el contenedor generan datos y esos datos se guardan en el propio contenedor, en el <strong>momento en que se destruyera el contenedor perderíamos esos datos</strong>.</p>
+</div>
+<ul>
+<li>
+<p><strong>El objetivo principal</strong> de los volumenes es <strong>no perder datos si borro el contenedor y mejorar rendimiento del Docker</strong>.  Para conseguir la persistencia de los datos, se pueden emplear dos técnicas:</p>
+<ol>
+<li>
+<p><strong>Los directorios enlazados (bind)</strong>, en la que la información se guarda fuera de Docker, en la máquina host (por ejemplo si lo ejecutamos en la máquina virtual de Ubuntu o la máquina física de Lliurex en clase).</p>
+</li>
+<li>
+<p><strong>Los volúmenes</strong>, en la que la información se guarda mediante Docker, pero en unos elementos llamados <strong><em>volúmenes</em></strong>, independientes de las imágenes y los contenedores. Además los volúmenes se pueden catalogar en dos tipos.</p>
+<ol>
+<li><strong>Volúmenes de Datos</strong>: es como si montará un disco en el contenedor y por defecto se realizan en un path temporal.</li>
+<li><strong>Volúmenes de Host</strong>: Mismo concepto pero indicándole el path.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Aconsejable utilizar la técnica de <strong><em>volumenes</em></strong>, ya que, La ventaja frente a los directorios enlazados es que pueden ser gestionados por Docker. Otro detalle importante es que el acceso al contenido de los volúmenes sólo se puede hacer a través de algún contenedor que utilice el volumen.</p>
+</div>
+<h3 id="ventajas-volumenes">Ventajas Volúmenes<a class="headerlink" href="#ventajas-volumenes" title="Permanent link">&para;</a></h3>
+<p>Los volúmenes tienen varias ventajas sobre los directorios enlazados:</p>
+<ul>
+<li>Los volúmenes son más fáciles de respaldar o migrar que enlazar montajes.</li>
+<li>Puede administrar volúmenes mediante los comandos de la CLI de Docker o la API de Docker.</li>
+<li>Los volúmenes funcionan tanto en contenedores de Linux como de Windows.</li>
+<li>Los volúmenes se pueden compartir de forma más segura entre varios contenedores.</li>
+<li>Los controladores de volumen le permiten almacenar volúmenes en hosts remotos o proveedores en la nube, para cifrar el contenido de los volúmenes o para agregar otras funciones.</li>
+<li>Los nuevos volúmenes pueden tener su contenido precargado por un contenedor.</li>
+<li>Los volúmenes en Docker Desktop tienen un rendimiento mucho mayor que los directorios enlazados de hosts de Mac y Windows.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Además, los volúmenes suelen ser una mejor opción que los datos persistentes en la capa de escritura de un contenedor, porque un volumen no aumenta el tamaño de los contenedores que lo usan y el contenido del volumen existe fuera del ciclo de vida de un contenedor determinado.</p>
+</div>
+<figure>
+    <img src="imagenes/VolumeDocker.png"/>
+    <figcaption>Gráfico técnicas de persistencia de datos.</figcaption>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los volúmenes son independientes de los contenedores, por lo que también podemos conservar los datos aunque se destruya el contenedor, reutilizarlos con otro contenedor, etc.</p>
+</div>
+<h3 id="opciones">Opciones<a class="headerlink" href="#opciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Opciones:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="sb">`</span>Docker<span class="w"> </span>volume<span class="w"> </span><span class="o">(</span>create<span class="p">|</span>Is<span class="p">|</span>inspect<span class="p">|</span>rm<span class="o">)</span><span class="sb">`</span>
+</code></pre></div>
+<ul>
+<li>para crear el volumen a la vez que creamos y ejecutamos un contenedor se utilzan las opciones <code>v</code> o <code>--mount</code></li>
+</ul>
+<p>En general, <code>--mount</code> más explícito y detallado. La mayor diferencia es que la sintaxis de <code>-v</code> combina todas las opciones juntas en un campo, mientras que la sintaxis <code>--mount</code>  las separa. A continuación se muestra una comparación de la sintaxis de cada "flag".</p>
+<ul>
+<li>
+<p><code>-v</code> o <code>--volume</code> : consta de tres campos, separados por dos puntos ( :). Los campos deben estar en el orden correcto y el significado de cada campo no es inmediatamente obvio.</p>
+<ul>
+<li>En el caso de volúmenes con nombre, el primer campo es el nombre del volumen y es único en una máquina host determinada. Para volúmenes anónimos, se omite el primer campo.</li>
+<li>El segundo campo es la ruta donde se monta el archivo o directorio en el contenedor.</li>
+<li>El tercer campo es opcional y es una lista de opciones separadas por comas, como <code>ro</code> (readonly). </li>
+</ul>
+</li>
+<li>
+<p><code>--mount</code>: Consta de varios pares clave-valor, separados por comas (cada uno formado por una <key>=<value> dupla). La sintaxis de <code>--mount</code> es más detallada que <code>-v</code> o <code>--volume</code>; además el orden de las claves no es significativo, por lo tanto el valor de las "flags" son más fáciles de entender. </p>
+</li>
+<li>Valores de las duplas:<ul>
+<li><strong>type</strong>: puede ser <code>bind</code>, <code>volume</code> o <code>tmpfs</code>.</li>
+<li><strong>source</strong>: Para volúmenes con nombre, este es el nombre del volumen. Para volúmenes anónimos, este campo se omite. Puede especificarse como source o src.</li>
+<li><strong>destination</strong>: toma como valor de la ruta en el archivo o directorio está montado en el contenedor. Puede ser especificado como destination, <code>dst</code> o <code>target</code>.</li>
+<li><strong>readonly</strong>: si está presente, hace que el montaje de enlace se monte en el contenedor como de solo lectura. Puede especificarse como <code>readonly</code> o <code>ro</code>.</li>
+<li><strong>volume-opt</strong> se puede especificar más de una vez, toma un par clave-valor que consta del nombre de la opción y su valor. Ejemplo: <code>volume-opt=type=nfs</code></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Todas las opciones de volúmenes están disponibles para los indicadores <code>--mount</code> y <code>-v</code>, por que a la hora de elegir uno u otro depende del técnico para su facilidad de configuración donde por su sintaxis a priori sería mejor <code>--mount</code>.</p>
+</div>
+<h3 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h3>
+<p>A continuación se muestra un ejemplo de creación del servidor web NGINX.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="2 "></span>--name<span class="w"> </span>nginx1<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="3 "></span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>myvol1,target<span class="o">=</span>/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="4 "></span>nginx:latest
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul>
+<li>Si en lugar de la opción <code>-p 8080:80</code> se utiliza la opción <code>-P</code> hace que Docker asigne de forma aleatoria un puerto de la máquina virtual al puerto asignado a Nginx en el contenedor.</li>
+</ul>
+</div>
+<ul>
+<li>Si se creara una página de incio del apache diferente a la de defecto podríamos copiarla en el volumen y esta cambiaría:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>nano<span class="w"> </span>index.html
+</code></pre></div>
+<ul>
+<li>Nueva página de inicio:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;!DOCTYPE<span class="w"> </span>html&gt;
+<span class="linenos" data-linenos=" 2 "></span>&lt;html<span class="w"> </span><span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;es&quot;</span>&gt;
+<span class="linenos" data-linenos=" 3 "></span>&lt;head&gt;
+<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span>&lt;meta<span class="w"> </span><span class="nv">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span>&gt;
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span>&lt;title&gt;Apache<span class="w"> </span>en<span class="w"> </span>Docker&lt;/title&gt;
+<span class="linenos" data-linenos=" 6 "></span><span class="w">  </span>&lt;meta<span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;viewport&quot;</span><span class="w"> </span><span class="nv">content</span><span class="o">=</span><span class="s2">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;
+<span class="linenos" data-linenos=" 7 "></span>&lt;/head&gt;
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>&lt;body&gt;
+<span class="linenos" data-linenos="10 "></span><span class="w">  </span>&lt;h1&gt;¡Hola<span class="w"> </span>Mundo!&lt;/h1&gt;
+<span class="linenos" data-linenos="11 "></span>&lt;/body&gt;
+<span class="linenos" data-linenos="12 "></span>&lt;/html&gt;
+</code></pre></div>
+<ul>
+<li>
+<p>Para cambiar la página de inicio del apache se debe copiar dentro del volumen creado.
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>cp<span class="w"> </span>index.html<span class="w"> </span>nginx1:/usr/share/nginx/html
+</code></pre></div></p>
+</li>
+<li>
+<p>Si accedemos al servidor apache aparecerá la nueva página. </p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Si aparece el error forbiden 403, es debido a permisos del index.html, debemos entrar en container y cambiar los permisos.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>nginx1<span class="w"> </span>/bin/bash
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">cd</span><span class="w"> </span>/usr/share/nginx/html
+<span class="linenos" data-linenos="2 "></span>chown<span class="w"> </span>-R<span class="w"> </span>root:root<span class="w"> </span>index.html
+</code></pre></div>
+<ul>
+<li>
+<p>Además podemos crear un nuevo contenedor con este volumen:
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span>--name<span class="w"> </span>nginx2<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>myvol1,target<span class="o">=</span>/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
+<span class="linenos" data-linenos="4 "></span><span class="w">    </span>nginx:latest
+</code></pre></div></p>
+</li>
+<li>
+<p>Se comprueba que el nuevo contenedor muestra la nueva página index.html</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Si se intenta borrar el volumen del ejemplo anterior mientras los contenedores están en marcha, Docker muestra un <strong>mensaje de error que indica los contenedores afectados</strong>.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2023-2024 Francisco Javier Hernández Illán - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
