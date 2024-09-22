@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Explicación de la virtualización, hipervisor y sus ventajas por Javier Hernández Illán. Explicación de contenedores comparándolos con la virtualización">
+        <meta name="description" content="Explicación de la virtualización, hipervisor y sus ventajas. Explicación de creación de máquinas virtuales y red NAT en VirtualBox  por Javier Hernández Illán.">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>Virtualización/Contenedores - Sistemas Operativos en Red</title>
+        <title>Virtualización - Sistemas Operativos en Red</title>
       
     
     
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtualización/Contenedores
+              Virtualización
             
           </span>
         </div>
@@ -311,6 +311,8 @@
       
         
       
+        
+      
     
     
     
@@ -470,7 +472,7 @@
           <li class="md-nav__item">
   <a href="#modo-red-nat" class="md-nav__link">
     <span class="md-ellipsis">
-      Modo: Red Nat
+      Modo: Red NAT
     </span>
   </a>
   
@@ -502,6 +504,27 @@
   
   <span class="md-ellipsis">
     1.3- Instalación de Sistemas Operativos en Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="007_Practica.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4- Actividades
   </span>
   
 
@@ -584,7 +607,13 @@
 <p>Los pasos contenidos en este apartado son válidos para cualquier sistema de virtualización de nivel 2, pero se va a centrar los ejemplos en la solución <strong>Oracle VM VirtualBox</strong>. Esta plataforma permite la creación de máquinas virtuales y una red virtual para conectar estas máquinas sin ocasionar interferencias con las máquinas o redes físicas en las que se encuentre el equipo anfitrión.</p>
 <h3 id="creacion-de-una-maquina-virtual">Creación de una máquina virtual<a class="headerlink" href="#creacion-de-una-maquina-virtual" title="Permanent link">&para;</a></h3>
 <p>A la hora de crear una máquina virtual, <strong>Oracle VM VirtualBox</strong> ofrece un asistente que guiará a través de todo el proceso. Una vez lanzado el asistente ahorraremos tiempo si se usa el botón de <strong>Modo Experto</strong> el cual mostrará en una sola ventana las opciones de creación de nuestra máquina.</p>
-<p><img alt="Asistente en modo experto." src="imagenes/virtualizacion/img2.jpg" /></p>
+<figure>
+  <img src="imagenes/virtualizacion/img2.jpg"/>
+  <figcaption>Asistente Creación de Máquina Virtual.</figcaption>
+</figure>
+
+<!-- ![Asistente en modo experto.](imagenes/virtualizacion/img2.jpg) -->
+
 <p>Tres son los elementos que se deben configurar como mínimo para la creación de una máquina virtual:</p>
 <ul>
 <li>El tipo de <strong>sistema operativo</strong> que contendrá la máquina y su arquitectura,</li>
@@ -612,7 +641,13 @@
 <p>La creación del disco duro virtual lleva consigo la asignación de un identificador unívoco basado en <strong>UUID (Universal Unique Identifier)</strong>. Se trata de un número de 128 bits separado en cinco grupos por guiones. <strong>Esta identificación única evita que el mismo disco duro virtual sea asignado a varias máquinas virtuales de forma simultánea</strong>.</p>
 <p>Además, al crear una máquina se le asocia un disco duro nuevo o bien uno ya existente. <strong>Mientras este disco esté asignado a una máquina virtual se encuentra en estado ligado y tan solo esa máquina será capaz de escribir en él</strong>. Esto quiere decir también que no se puede asignar a ninguna otra.</p>
 <p>Si fuera necesario realizar esta asignación, antes se debe liberar ese disco a través del administrador de medios virtuales. De esta forma simulamos el funcionamiento físico de los discos duros y, además, dotamos de más seguridad al sistema virtualizado.</p>
-<p><img alt="Menú de copia del administrador de medios virtuales" src="imagenes/virtualizacion/img3.jpg" /></p>
+<figure>
+  <img src="imagenes/virtualizacion/img3.jpg"/>
+  <figcaption>Liberar vdi.</figcaption>
+</figure>
+
+<!-- ![Menú de copia del administrador de medios virtuales](imagenes/virtualizacion/img3.jpg) -->
+
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Desde este mismo menú podremos realizar una <strong>copia de un disco duro virtual</strong>. Una vez realizada, el disco duro copiado habrá generado un <strong>nuevo UUID</strong>, indicando que, a pesar de ser una copia exacta del primero, en realidad <strong>Oracle VM VirtualBox lo tratará como un disco duro diferente</strong>. Este disco recién creado se le puede asignar a cualquier máquina virtual disponible, incluso la que contiene el disco original.</p>
@@ -635,7 +670,13 @@
 <p><strong>multiconexión</strong>, básicamente se trata de un medio inmutable con conexión de varias máquinas simultáneamente. Además, el disco de diferenciación que crea cada máquina conectada a este disco duro, no se borra al reiniciar o apagar el sistema virtual.</p>
 </li>
 </ul>
-<p><img alt="Menú de modificación de atributos del medio" src="imagenes/virtualizacion/img4.jpg" /></p>
+<figure>
+  <img src="imagenes/virtualizacion/img4.jpg"/>
+  <figcaption>Funcionalidades especiales.</figcaption>
+</figure>
+
+<!-- ![Menú de modificación de atributos del medio](imagenes/virtualizacion/img4.jpg) -->
+
 <p>Este administrador también gestiona los discos ópticos y los discos flexibles, indicando a qué máquina virtual están conectados y permitiendo conectarlos a otra máquina si así se requiere. Estos dispositivos funcionan de igual forma que los discos duros virtuales en modo normal, pudiendo estar conectados a una única máquina virtual de forma simultánea.</p>
 <h3 id="configurar-redes-virtuales">Configurar redes virtuales<a class="headerlink" href="#configurar-redes-virtuales" title="Permanent link">&para;</a></h3>
 <p>Una de las ventajas de trabajar con <strong>máquinas virtuales (MVs)</strong>, es que desde el punto de vista de una <strong>red local</strong>, podemos tratarla de igual forma que si de un equipo físico se tratase, configurando diferentes opciones de conexión con el resto de MVs en el adaptador de red virtual que tenga asinado, que será el encargado de gestionar la conexión de la máquina.</p>
@@ -648,10 +689,30 @@
 <li><strong>red interna</strong>, se crea una red virtual visible entre las máquinas virtuales, pero invisible al anfitrión y a máquinas externas a la red. Cada red virtual creada se identifica mediante un nombre. Para conectar a los huéspedes en la misma red virtual, será necesario que sus controladoras de red se sitúen en la red con el mismo nombre.</li>
 <li><strong>adaptador sólo-anﬁtrión:</strong> en este modo se crea una tarjeta de red virtual en el anfitrión que puede conectarse con las máquinas virtuales sin necesitar que el anfitrión tenga una tarjeta destinada a esta tarea.</li>
 </ul>
-<p><img alt="Alt text" src="imagenes/virtualizacion/img5.png" /></p>
-<h3 id="modo-red-nat">Modo: Red Nat<a class="headerlink" href="#modo-red-nat" title="Permanent link">&para;</a></h3>
-<p><strong>En nuestras prácticas debemos trabajar en red nat</strong>, A partir de la versión 4.3 de VB y de forma experimental, se ha añadido el modo <em><strong>Red NAT</strong></em>, el cual funciona como el router de nuestra casa, es decir, los equipos que estén dentro de la misma red NAT podrán comunicarse entre sí, y es aquí donde radica la diferencia con el modo <em>NAT</em> el cual siempre constituye una red con un único equipo y no de varios como ahora es el caso.</p>
+<figure>
+  <img src="imagenes/virtualizacion/img5.png"/>
+  <figcaption>Red NAT.</figcaption>
+</figure>
+
+<!-- ![Alt text](imagenes/virtualizacion/img5.png) -->
+
+<h3 id="modo-red-nat">Modo: Red NAT<a class="headerlink" href="#modo-red-nat" title="Permanent link">&para;</a></h3>
+<p>En <strong>"Red NAT"</strong> las máquinas virtuales están en una misma subred NAT y se podrán comunicar entre sí, con el añadido que todas las máquinas tendrán acceso a internet, mediante el router virtual que genera VirtualBox para este modo.</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Indicación</strong></p>
+<p><strong>En nuestras prácticas debemos trabajar en red nat</strong></p>
+</div>
+<figure>
+  <img src="https://www.fpgenred.es/VirtualBox/RedNat5.png"/>
+  <figcaption>Diagrama Red NAT.</figcaption>
+</figure>
+
+<p>A partir de la versión 4.3 de VB y de forma experimental, se ha añadido el modo <em><strong>Red NAT</strong></em>, el cual funciona como el router de nuestra casa, es decir, los equipos que estén dentro de la misma red NAT podrán comunicarse entre sí, y es aquí donde radica la diferencia con el modo <em>NAT</em> el cual siempre constituye una red con un único equipo y no de varios como ahora es el caso.</p>
 <p>El primer paso que debemos realizar es la creación de una red NAT y esto puede hacerse, de dos formas:</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Cabe destacar</strong></p>
+<p>Según la versión del VB el acceso a la creación de la red NAT a través de GUI puede cambiar, a nivel de comandos no varia.</p>
+</div>
 <ul>
 <li>Desde el intérprete de comandos debemos utilizar el comando <strong><em>vboxmanage</em></strong> de la siguiente manera:</li>
 </ul>
@@ -661,17 +722,33 @@
 <ul>
 <li>Desde el menú <em>Archivo -&gt; Preferencias -&gt; Red -&gt; Redes NAT</em>.</li>
 </ul>
-<p><img alt="Red NAT" src="https://www.fpgenred.es/VirtualBox/RedNat1.png" title="Red NAT" /></p>
-<div class="admonition tip">
-<p class="admonition-title"><strong>Cabe destacar</strong></p>
-<p>Según la versión del VB el acceso a la creación de la red NAT puede cambiar, a nivel de comandos no varia.</p>
-</div>
+<figure>
+  <img src="https://www.fpgenred.es/VirtualBox/RedNat1.png"/>
+  <figcaption>Red NAT.</figcaption>
+</figure>
+
+<!-- ![Red NAT](https://www.fpgenred.es/VirtualBox/RedNat1.png "Red NAT") -->
+
 <p>Pulsando sobre el icono verde con el signo + de la derecha se añade por defecto una red NAT de nombre <strong><em>NatNetwork</em></strong>:</p>
-<p><img alt="Red NAT" src="https://www.fpgenred.es/VirtualBox/RedNat2.png" title="Red NAT" /></p>
+<figure>
+  <img src="https://www.fpgenred.es/VirtualBox/RedNat2.png"/>
+  <figcaption>Red NAT.</figcaption>
+</figure>
+
+<!-- ![Red NAT](https://www.fpgenred.es/VirtualBox/RedNat2.png "Red NAT") -->
+
 <p>La seleccionamos y pulsamos sobre el icono del destornillador para personalizarla:</p>
-<p><img alt="Red NAT" src="https://www.fpgenred.es/VirtualBox/RedNat3.png" title="Red NAT" /></p>
-<p>En este punto podríamos configurar el reenvío de puertos, de la misma forma que se explicó en el apartado anterior <em>"<a href="https://www.fpgenred.es/VirtualBox/modo_nat.html">Modo: NAT</a>"</em>.</p>
-<p><img alt="Reenvío de puertos" src="https://www.fpgenred.es/VirtualBox/RedNat-ReenvioPuertos.png" title="Reenvío de puertos" /></p>
+<figure>
+  <img src="https://www.fpgenred.es/VirtualBox/RedNat3.png"/>
+  <figcaption>Red NAT.</figcaption>
+</figure>
+
+<!-- ![Red NAT](https://www.fpgenred.es/VirtualBox/RedNat3.png "Red NAT") -->
+
+<!-- En este punto podríamos configurar el reenvío de puertos, de la misma forma que se explicó en el apartado anterior _"[Modo: NAT](https://www.fpgenred.es/VirtualBox/modo_nat.html)"_. -->
+
+<!-- ![Reenvío de puertos](https://www.fpgenred.es/VirtualBox/RedNat-ReenvioPuertos.png "Reenvío de puertos") -->
+
 <p>Podemos listar la información de las redes NAT disponibles y así comprobamos los parámetros de la que acabamos de crear:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ vboxmanage list natnets
 <span class="linenos" data-linenos=" 2 "></span>NetworkName:    red-nat-1
@@ -690,14 +767,12 @@
 <li>Esta red NAT tiene el servidor DHCP activado.</li>
 <li>La red NAT está activada.</li>
 </ul>
-<p>El servidor DHCP puede detenerse o activarse de forma independiente, para ello usaríamos los siguientes comandos:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork modify --netname red-nat-1 --dhcp off
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork modify --netname red-nat-1 --dhcp on
-</code></pre></div>
-<p>También podríamos haber manipulado el servidor DHCP en el momento de la creación de la red NAT, por ejemplo, si hubiésemos querido empezar con el servidor DHCP apagado, deberíamos haber ejecutado el siguiente comando:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork add --netname red-nat-1 --network 172.20.0.0/16 --dhcp off
-</code></pre></div>
+<p>Cuando la red NAT está creada simplemente hay que seleccionarla en la sección Red de la MV:</p>
+<figure>
+  <img src="https://www.fpgenred.es/VirtualBox/RedNat4.png"/>
+  <figcaption>Modo Red NAT.</figcaption>
+</figure>
+
 <p>La red NAT puede detenerse y sería como apagar el router, es decir, la red se quedaría sin salida al exterior aunque habría conexión entre los equipos conectados a la misma red NAT. Los comandos a utilizar son los siguientes:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork stop --netname red-nat-1
 </code></pre></div>
@@ -708,15 +783,36 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork remove --netname red-nat-1
 </code></pre></div>
 <p>O bien desde la misma ventana anterior pulsando sobre el icono que contiene el signo menos.</p>
+<h4 id="configuracion-servidor-dhcp-de-la-red-nat">Configuración servidor DHCP de la Red NAT<a class="headerlink" href="#configuracion-servidor-dhcp-de-la-red-nat" title="Permanent link">&para;</a></h4>
+<p>El servidor DHCP puede detenerse o activarse de forma independiente, para ello usaríamos los siguientes comandos:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork modify --netname red-nat-1 --dhcp off
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork modify --netname red-nat-1 --dhcp on
+</code></pre></div>
+<p>También podríamos haber manipulado el servidor DHCP en el momento de la creación de la red NAT, por ejemplo, si hubiésemos querido empezar con el servidor DHCP apagado, deberíamos haber ejecutado el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork add --netname red-nat-1 --network 172.20.0.0/16 --dhcp off
+</code></pre></div>
+<h4 id="reenvio-de-puertos">Reenvio de puertos<a class="headerlink" href="#reenvio-de-puertos" title="Permanent link">&para;</a></h4>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Consejo</strong></p>
+<p>Para trabajar con Ubuntu Server con cli, es muy comodo realizar un ssh a la MV, para ello se necesita el <strong>reenvío de puertos</strong> si se ha configurado la Red NAT.</p>
+</div>
+<p>Mediante GUI se realiza en la siguiente pantalla:</p>
+<figure>
+  <img src="https://www.fpgenred.es/VirtualBox/RedNat-ReenvioPuertos.png"/>
+  <figcaption>Reenvío de puertos.</figcaption>
+</figure>
+
 <p>También es posible redireccionar puertos en una red NAT, por ejemplo, para redireccionar el puerto 2222 del equipo anfirión al puerto 22 de un servicio ssh instalado en una MV de la red NAT anterior con IP 172.20.0.5, ejecutaríamos el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork modify -netname red-nat-1 --port-forward-4 &quot;servicio-ssh: tcp: [ ]:2222: [172.20.0.5]:22&quot;
 </code></pre></div>
 <p>Y para eliminar la redirección anterior:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ vboxmanage natnetwork modify -netname red-nat-1 --port-forward-4 delete servicio-ssh
 </code></pre></div>
-<p>Cuando la red NAT está creada simplemente hay que seleccionarla en la sección Red de la MV:</p>
-<p><img alt="Modo Red NAT" src="https://www.fpgenred.es/VirtualBox/RedNat4.png" title="Modo Red NAT" /></p>
-<p><img alt="Modo Red NAT" src="https://www.fpgenred.es/VirtualBox/RedNat5.png" title="Modo Red NAT" /></p>
+<!-- ![Modo Red NAT](https://www.fpgenred.es/VirtualBox/RedNat4.png "Modo Red NAT")
+
+![Modo Red NAT](https://www.fpgenred.es/VirtualBox/RedNat5.png "Modo Red NAT") -->
+
 <!-- ## Contenedores
 
 El problema de los hipervisores y las máquinas virtuales es que cada máquina virtual es independiente de las demás. Al no reutilizarse ningún componente, se ocupa **mucho espacio tanto en disco como en memoria** y el **tiempo de ejecución siempre será mayor** que si sólo hubiera un sistema operativo (sobre todo en el caso de **hipervisores de tipo 2**).

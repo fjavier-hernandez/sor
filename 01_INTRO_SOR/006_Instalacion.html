@@ -16,6 +16,8 @@
         <link rel="prev" href="002_Virtualizaci%C3%B3n.html">
       
       
+        <link rel="next" href="007_Practica.html">
+      
       
       <link rel="icon" href="../imagenes/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
@@ -309,6 +311,8 @@
       
         
       
+        
+      
     
     
     
@@ -509,6 +513,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="007_Practica.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4- Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -533,18 +558,19 @@
 
 <h1 id="instalacion-de-sistemas-operativos">Instalación de sistemas operativos.<a class="headerlink" href="#instalacion-de-sistemas-operativos" title="Permanent link">&para;</a></h1>
 <h2 id="requisitos-y-configuracion-previa">Requisitos y configuración previa<a class="headerlink" href="#requisitos-y-configuracion-previa" title="Permanent link">&para;</a></h2>
-<p>Una de las primera tareas que se deben realizar para la instalación de un sistema operativo, es confirmar que efectivamente se puede instalar.<strong> Para ello es necesario comprobar los requisitos mínimos de hardware que se deben cumplir para que el sistema operativo se instale y funcione correctamente</strong>.</p>
+<p>Una de las primera tareas que se deben realizar para la instalación de un sistema operativo, es confirmar que efectivamente se puede instalar. Para ello es necesario comprobar <strong>los requisitos mínimos de hardware</strong> que se deben cumplir para que el sistema operativo se instale y funcione correctamente.</p>
 <p>A continuación se detallan los principales requisitos a revisar:</p>
-<ul>
-<li>Requerimientos en la velocidad del procesador.</li>
-<li>Cantidad de memoria principal. </li>
-<li>CHIPSET de la placa base. </li>
-<li>Es muy importante comprobar que el fabricante del hardware dispone de los controladores para la versión del sistema operativo. La inexistencia de ellos no impide la instalación, pero afectará al rendimiento general del ordenador.</li>
-</ul>
-<!-- * En la actualidad las tarjetas gráficas y la memoria secundaria son requisitos que se cumplen con relativa facilidad. -->
-<ul>
-<li>Arquitectura del procesador. Un procesador con una arquitectura de 32 bits será incapaz de manejar un sistema operativo de una arquitectura diferente. Además, en la medida de lo posible se ha de elegir la arquitectura de 64 bits para contener los sistemas operativos, ya que la anterior posee ciertas limitaciones que supondrían un lastre en el sistema.</li>
-</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Requerimientos en la velocidad del procesador.
+<span class="linenos" data-linenos="2 "></span>Cantidad de memoria principal. 
+<span class="linenos" data-linenos="3 "></span>CHIPSET de la placa base. 
+<span class="linenos" data-linenos="4 "></span>Controladores para la versión del sistema operativo.
+<span class="linenos" data-linenos="5 "></span>Arquitectura del procesador.
+</code></pre></div>
+<figure>
+  <img src="imagenes/inst/RequiHW.png"/>
+  <figcaption>Requisitos HW Windows 11.</figcaption>
+</figure>
+
 <p>En la actualidad, la instalación de un sistema operativo es un proceso completamente guiado y trivial, por lo que no se ahondará mucho en este proceso. Será con posterioridad cuando se configuren muchos de los aspectos que se han configurado de forma automática. Pero antes será necesario realizar ciertas comprobaciones:</p>
 <ul>
 <li>Revisar la compatibilidad y requerimientos del hardware.</li>
@@ -553,14 +579,15 @@
 <li>Asignar particiones de forma adecuada a los discos duros, proceso que se realizará de forma automática en este apartado.</li>
 <li>Tras la copia de ficheros, realizar configuraciones iniciales en cada sistema operativo.</li>
 </ul>
-<p>No existen muchas diferencias entre el proceso de instalación de un sistema operativo cliente y uno de red, al menos en sistemas operativos de Microsoft. Por lo que respecta a distribuciones basadas en GNU/Linux usadas en este manual, sí existen algunas diferencias entre instalar un sistema operativo cliente o uno de red. Las diferencias se ilustran en el siguiente apartado.</p>
+<p>No existen muchas diferencias entre el proceso de instalación de un sistema operativo cliente y un servidor, al menos en sistemas operativos de Microsoft. Por lo que respecta a distribuciones basadas en GNU/Linux usadas en este manual, sí existen algunas diferencias entre instalar un sistema operativo cliente o uno de red. Las diferencias se ilustran en el siguiente apartado.</p>
 <h2 id="instalacion-de-ubuntu-server">Instalación de Ubuntu Server<a class="headerlink" href="#instalacion-de-ubuntu-server" title="Permanent link">&para;</a></h2>
-<p>El proceso de instalación de Ubuntu Server no es muy diferente del de Ubuntu Desktop pero al contrario que éste, necesita instalar ciertas características que todavía no se ha tratado. Por este motivo se realizará una pequeña guía de instalación destacando las configuraciones que son requeridas durante el proceso y propias de un servicio de directorio, como el servicio de DNS:</p>
+<p>El proceso de instalación de Ubuntu Server no es muy diferente del de Ubuntu Desktop pero al contrario que éste, necesita instalar ciertas características que todavía no se han tratado. Por este motivo se realizará una pequeña guía de instalación destacando las configuraciones que son requeridas durante el proceso y propias de un servicio de directorio, como el servicio de DNS:</p>
 <ul>
 <li>Tras elegir el idioma y configuración del teclado, procederá a detectar el hardware del sistema y configurarlo, entre ellos, los dispositivos de red. Turno para la configuración predeterminada de red y el nombre de la máquina.</li>
 <li>Turno de los usuarios. Configurará un usuario para usar en lugar de la cuenta de superusuario. El asistente es autoexplicativo: nombre del usuario, nombre de la cuenta, contraseña, ubicación y cifrado de la cuenta.</li>
 <li>La instalación seguirá con el particionado del disco y la copia de ficheros en el disco duro. Como de costumbre, ofrecerá un particionado automático y otro manual. En cada ocasión se procederá según requerimientos.</li>
-<li>Una vez copiados los datos, se descargarán las actualizaciones necesarias, se configurará el gestor de paquetes así como las actualizaciones del sistema operativo. En el siguiente paso es dónde se encuentra la diferencia a la que se hacía referencia. Ubuntu Server permite instalar diferentes servicios durante el proceso de instalación del sistema operativo. Se seleccionará la opción “Herramientas estándar del sistema” y se instalarán los servicios necesarios de forma manual a medida que sean necesarios tras la instalación.</li>
+<li>Una vez copiados los datos, se descargarán las actualizaciones necesarias, se configurará el gestor de paquetes así como las actualizaciones del sistema operativo. </li>
+<li>En el siguiente paso es dónde se encuentra la diferencia a la que se hacía referencia. Ubuntu Server permite instalar diferentes servicios durante el proceso de instalación del sistema operativo. Se seleccionará la opción “Herramientas estándar del sistema” y se instalarán los servicios necesarios de forma manual a medida que sean necesarios tras la instalación.</li>
 </ul>
 <p><img alt="Alt text" src="imagenes/virtualizacion/img10.jpg" /></p>
 <p>La instalación de <strong>Microsoft Windows Server</strong> no ofrece esta posibilidad, siendo con posterioridad cuando el SOR sea promocionado a servidor y dotado de estas herramientas, tema que se abordará en la unidad de trabajo número 5.</p>
@@ -579,13 +606,13 @@ En la máquina anfitrión se crea una carpeta a la que los huéspedes pueden acc
 <p>Otra forma rápida de compartir ficheros es el uso de dispositivos de almacenamiento USB. Conseguiremos conectar un dispositivo USB a la máquina virtual siguiendo estos pasos:</p>
 <ul>
 <li>conecta el USB a la máquina anfitrión.</li>
-<li>en la máquina huésped <span class="menu">Dispositivos</span>→ <span class="menu">USB</span> y aparecerá un listado de los dispositivos que se encuentran conectados.</li>
+<li>en la máquina huésped <strong><span class="menu">Dispositivos</span>→ <span class="menu">USB</span></strong> y aparecerá un listado de los dispositivos que se encuentran conectados.</li>
 <li>pulsamos sobre alguno de ellos, el control de éste pasará a manos de la máquina virtual.</li>
 <li>para liberar el dispositivo USB, pulsamos sobre el dispositivo que queramos liberar, el anfitrión retomará el control sobre él.</li>
 </ul>
 <p>Hay que tener en cuenta que esta acción desconectará la el dispositivo USB de la máquina anfitrión. Si en ese momento existe algún fichero abierto en él, es posible la pérdida de información. Esta situación se repite cuando queremos liberar el dispositivo desde la máquina huésped.</p>
 <h3 id="arrastrar-y-soltar">Arrastrar y soltar<a class="headerlink" href="#arrastrar-y-soltar" title="Permanent link">&para;</a></h3>
-<p>Oracle VirtualBox permite con este método arrastrar archivos entre anfitrión-cliente como si de una carpeta se tratase. Para habilitarlo hay que ir al menú a Dispositivos → Arrastrar y soltar. Se puede elegir el sentido de la copia de ficheros, desactivarlo o configurarlos como bidireccional.</p>
+<p>Oracle VirtualBox permite con este método arrastrar archivos entre anfitrión-cliente como si de una carpeta se tratase. Para habilitarlo hay que ir al menú a <strong>Dispositivos → Arrastrar y soltar</strong>. Se puede elegir el sentido de la copia de ficheros, desactivarlo o configurarlos como bidireccional.</p>
 <p><img alt="Menú Arrastrar y soltar." src="imagenes/virtualizacion/img6.jpg" /></p>
 <h3 id="portapapeles">Portapapeles<a class="headerlink" href="#portapapeles" title="Permanent link">&para;</a></h3>
 <p>También es posible compartir el portapapeles entre los sistemas anfitrión-huésped a través del menú <strong><span class="menu">Dispositivos</span> → <span class="menu">Portapapeles compartido</span></strong>. De igual forma que en el caso anterior, es posible configurar la dirección o deshabilitar esta característica.</p>
