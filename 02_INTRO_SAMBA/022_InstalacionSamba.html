@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/022_InstalacionSamba.html">
       
       
+        <link rel="prev" href="021_IntroSamba.html">
+      
+      
+        <link rel="next" href="025_Actividades.html">
       
       
       <link rel="icon" href="../imagenes/favicon.ico">
@@ -426,6 +430,220 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.- Introducción a Servicio de directorio y Samba.
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            2.- Introducción a Servicio de directorio y Samba.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="020_Introduccion_SD.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1- Introducción Servicio de directorio.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="021_IntroSamba.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2- Introducción Samba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.3- Instalación y configuración inicial Samba
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="022_InstalacionSamba.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2.3- Instalación y configuración inicial Samba
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-ubuntu-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación Ubuntu Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-carpetas-compartidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de carpetas compartidas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-desde-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso desde Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-desde-cliente-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso desde Cliente Windows
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="025_Actividades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4- Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -442,29 +660,23 @@
 
 
 <h1 id="instalacion-y-configuracion-inicial-de-samba">Instalación y configuración inicial de Samba<a class="headerlink" href="#instalacion-y-configuracion-inicial-de-samba" title="Permanent link">&para;</a></h1>
-<p>Partiendo de la <strong>situación de aprendizaje</strong>, desde el departamento TIC de <strong>NetOS</strong> nos encargan una instalación y configuración de una carpeta compartida en las aulas del <strong>IES Severo Ochoa d'Elx</strong>, la carpeta debe estar compartida en el ordenador del profesor compartiendo acceso los ordenadores de los alumnos, los cuales tienen una distribución dual de Windows y linux.</p>
-<ul>
-<li>Es la primera vez que utilizas <strong>Samba</strong> y decides realizar unos pasos previos siguiendo la guía adjunta a continuación:</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Requisitos</p>
-<p>Se necesitan tres máquinas virtuales: </p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Información de las Máquinas Virtuales</p>
-<ul>
-<li>El <strong>Ubuntu Server</strong> del enlace de one drive de Aules, se descarga y se importa a Virtualbox. Si ya lo tienes de la UT anterior se debe utilizar la instantánea limpia de la MV</li>
-<li><strong>Microsoft Windows 11 Professional</strong> con el mismo procedimiento, que actuará como cliente. Es buena idea que realices instantáneas de las máquinas para tener copias de seguridad en caso de emergencia.</li>
-<li><strong>Linux Lite</strong> también como cliente y se obtiene con el mismo procedimiento.</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Configuración de red</p>
-<ul>
-<li>Crea una <a href="https://www.fpgenred.es/VirtualBox/modo_red_nat.html">Red NAT</a> en VirtualBox e introduce en ella las tres máquinas que has creado. Como nombre ponle tu segundo apellido.</li>
-<li>Para acceder a las MVs por ssh se debe hacer un túnel con <a href="https://nsrc.org/activities/agendas/en/cloud-virtualization/cloud-virt/en/intro-virtualization/ex-virtualbox-portforward-ssh/ex-virtualbox-portforward-ssh.html#:~:text=To%20enable%20port%20forwarding%2C%20open%20the%20settings%20for%20your%20virtual%20machine.&amp;text=Verify%20that%20NAT%20is%20selected,you%20can%20add%20new%20forwardings.">redirección puertos</a>.</li>
-</ul>
-</div>
+<!-- Partiendo de la **situación de aprendizaje**, desde el departamento TIC de **NetOS** nos encargan una instalación y configuración de una carpeta compartida en las aulas del **IES Severo Ochoa d'Elx**, la carpeta debe estar compartida en el ordenador del profesor compartiendo acceso los ordenadores de los alumnos, los cuales tienen una distribución dual de Windows y linux.
+
+- Es la primera vez que utilizas **Samba** y decides realizar unos pasos previos siguiendo la guía adjunta a continuación:
+
+!!! warning "Requisitos"
+    Se necesitan tres máquinas virtuales:  -->
+
+<!-- !!! info "Información de las Máquinas Virtuales"
+    - El **Ubuntu Server** del enlace de one drive de Aules, se descarga y se importa a Virtualbox. Si ya lo tienes de la UT anterior se debe utilizar la instantánea limpia de la MV
+    - **Microsoft Windows 11 Professional** con el mismo procedimiento, que actuará como cliente. Es buena idea que realices instantáneas de las máquinas para tener copias de seguridad en caso de emergencia.
+    - **Linux Lite** también como cliente y se obtiene con el mismo procedimiento. -->
+
+<!-- !!! warning "Configuración de red"
+    - Crea una [Red NAT](https://www.fpgenred.es/VirtualBox/modo_red_nat.html) en VirtualBox e introduce en ella las tres máquinas que has creado. Como nombre ponle tu segundo apellido.
+    - Para acceder a las MVs por ssh se debe hacer un túnel con [redirección puertos](https://nsrc.org/activities/agendas/en/cloud-virtualization/cloud-virt/en/intro-virtualization/ex-virtualbox-portforward-ssh/ex-virtualbox-portforward-ssh.html#:~:text=To%20enable%20port%20forwarding%2C%20open%20the%20settings%20for%20your%20virtual%20machine.&text=Verify%20that%20NAT%20is%20selected,you%20can%20add%20new%20forwardings.). -->
+
+<p>A continuación se detallan los pasos para la instalación de Samba y su configuración inicial.</p>
 <h2 id="instalacion-ubuntu-server">Instalación Ubuntu Server<a class="headerlink" href="#instalacion-ubuntu-server" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">sudo apt install samba</span>
 </code></pre></div>
@@ -515,32 +727,6 @@
 <figure>
   <img src="./imagenes/005.png"/>
 </figure>
-
-<h2 id="pt21-practica-instalacion-y-configuracion-inicial-de-samba">PT21 Práctica Instalación y configuración inicial de Samba<a class="headerlink" href="#pt21-practica-instalacion-y-configuracion-inicial-de-samba" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Contribución a los CEs (Criterios de Evaluación)</p>
-<p>Estas actividades contribuyen a los criterios de evaluación CE5, CE7 y CE9 del RA1 de SOR.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Advertencia</p>
-<p>Razona todas las respuestas, en caso de que la respuesta sea debido a unos permisos indica que permisos tiene y donde han sido determinados.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Tareas</p>
-<p>A partir de la guía adjunta realiza un video con los pasos realizados y un informe con los siguientes apartados:</p>
-</div>
-<ol>
-<li>Sigue todos los pasos del manual (apartado anterior) para conseguir compartir ficheros. Adjunta una captura de la sección del fichero de configuración de samba donde se muestre la configuración del recurso compartido.</li>
-<li><strong>Desde el servidor</strong>, crea un fichero hola.txt en la carpeta <code>/srv/samba/ejercicio1</code>.</li>
-<li><strong>Desde el cliente windows</strong> accede al servidor mediante un explorador de directorios e intenta abrir el documento ¿Existe algún problema para ello? Razona tu respuesta.</li>
-<li>Seguidamente modifica el fichero e intenta guardarlo. ¿Qué ocurre? ¿Por qué?</li>
-<li>Ahora, desde el cliente Windows, intenta crear un fichero. ¿Te deja? ¿Puedes leer y escribir en él? ¿Por qué?</li>
-<li><strong>Desde el servidor,</strong> modifica los permisos de <code>/srv/samba/ejercicio1/hola.txt</code> para que tenga los siguientes permisos rwxr—rwx, ahora desde el cliente Windows prueba a modificar el contenido de dicho fichero. ¿Qué ocurre y por qué? Si no te deja escribir y guardar los cambios, indica que deberías cambiar para que puedas hacerlo.</li>
-<li>Crea una carpeta en el servidor <code>/srv/samba/ejercicio2</code>. Comparte dicha carpeta, añadiendo una nueva entrada en el fichero de configuración de samba. La carpeta debe ser navegable, se debe poder acceder sin credenciales, debe tener permisos  de lectura/escritura y además los ficheros creados por los clientes podrán ser modificados, leídos y ejecutados por cualquiera. Por otro lado, los directorios creados por los clientes solo podrán ser modificados por el usuario propietario, mientras que el resto de usuarios/grupos no tendrán ningún permiso. Muestra la configuración realizada.</li>
-<li>Desde un cliente Windows (como usuario propietario) intenta acceder a la carpeta ejercicio2 y crear un documento llamado “miSamba.txt”. Acto seguido, vuelve al servidor e intenta modificar el fichero (<strong>SIN SER SUDO</strong>) ¿Existe algún problema? ¿Por qué?</li>
-<li>Ahora desde el cliente (Windows) crea un directorio llamado “SOR”. Vuelve al servidor e intenta crear un fichero “sor.txt” dentro de SOR (<strong>SIN SER SUDO</strong>). ¿Qué ocurre? ¿Qué permisos tiene la carpeta “SOR”?.</li>
-<li>Realiza los mismos acceso desde la máquina <strong>Lubuntu Client</strong>. Demuestra que has realizado dichos accesos.</li>
-</ol>
 
 
 

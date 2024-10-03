@@ -6,13 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introducción Gestión de de recursos compartidos en Samba de Francisco Javier Hernández Illán.">
+        <meta name="description" content="Introducción de Servicio de Directorio de Francisco Javier Hernández Illán.">
       
       
       
-        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/041_Introduccion_SambaDC.html">
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/020_Introduccion_SD.html">
       
       
+        <link rel="prev" href="../01_INTRO_SOR/007_Practica.html">
+      
+      
+        <link rel="next" href="021_IntroSamba.html">
       
       
       <link rel="icon" href="../imagenes/favicon.ico">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Introducción de Samba DC - Sistemas Operativos en Red</title>
+        <title>Introducción de Servicio de Directorio - Sistemas Operativos en Red</title>
       
     
     
@@ -82,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-samba-domain-controller" class="md-skip">
+        <a href="#introduccion-de-servicio-de-directorio" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -117,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducción de Samba DC
+              Introducción de Servicio de Directorio
             
           </span>
         </div>
@@ -430,8 +434,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -446,11 +452,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -464,7 +470,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             2.- Introducción a Servicio de directorio y Samba.
@@ -475,10 +481,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/020_Introduccion_SD.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.1- Introducción Servicio de directorio.
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="020_Introduccion_SD.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -487,6 +513,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de directorio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Servicios de directorio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-servicios-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principales Servicios de Directorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samba-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samba DC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDAP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kerberos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kerberos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -499,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/021_IntroSamba.html" class="md-nav__link">
+      <a href="021_IntroSamba.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/022_InstalacionSamba.html" class="md-nav__link">
+      <a href="022_InstalacionSamba.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/025_Actividades.html" class="md-nav__link">
+      <a href="025_Actividades.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +692,7 @@
                   
 
 
-<h1 id="introduccion-samba-domain-controller">Introducción Samba Domain Controller<a class="headerlink" href="#introduccion-samba-domain-controller" title="Permanent link">&para;</a></h1>
+<h1 id="introduccion-de-servicio-de-directorio">Introducción de Servicio de Directorio<a class="headerlink" href="#introduccion-de-servicio-de-directorio" title="Permanent link">&para;</a></h1>
 <p>La organización de una red de trabajo empresarial supone un reto organizativo que el administrador del sistema debe afrontar con garantías de éxito. </p>
 <div class="admonition abstract">
 <p class="admonition-title"><strong>Principio</strong></p>
@@ -601,13 +716,12 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title"><strong>Nota</strong></p>
-<p>Los recursos pueden ser: volúmenes, carpetas, archivos, impresoras, usuarios, grupos, dispositivos, números de teléfono y un largo etcétera.</p>
+<p>Los recursos pueden ser: <strong>volúmenes, carpetas, archivos, impresoras, usuarios, grupos, dispositivos, números de teléfono y un largo etcétera</strong>.</p>
 </div>
-<div class="admonition absract">
-<p class="admonition-title"><strong>Resumen</strong></p>
-<p>Un servicio de directorio ofrece toda la información de los recursos de la red a través de una única ubicación. Para ello convierte cada recurso en un objeto y almacena su información en una base de datos jerárquica y, opcionalmente, distribuida. La gestión de estos datos se realiza a través de un protocolo determinado por la versión del servicio de directorio escogido.</p>
-</div>
-<h3 id="principales">Principales<a class="headerlink" href="#principales" title="Permanent link">&para;</a></h3>
+<!-- !!! tip "**Resumen**"
+    Un **servicio de directorio** ofrece toda la información de los recursos de la red a través de una única ubicación. Para ello convierte cada recurso en un objeto y almacena su información en una base de datos jerárquica y, opcionalmente, distribuida. La gestión de estos datos se realiza a través de un protocolo determinado por la versión del servicio de directorio escogido. -->
+
+<h3 id="principales-servicios-de-directorio">Principales Servicios de Directorio<a class="headerlink" href="#principales-servicios-de-directorio" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Active Directory</strong>, ideado por Microsoft e implementado desde su versión <em>Microsoft Windows 2000</em> que usaba tecnología propietaria, para más tarde adaptar el protocolo LDAP a su servicio.</li>
 <li><strong>OpenLDAP</strong>, recibe el nombre del protocolo homónimo que gestiona el intercambio de información. Es uno de los más usados en sistemas basados en <em>GNU/Linux</em>.</li>
@@ -714,7 +828,7 @@ otra parte del directorio a la que no pertenece.</li>
 <h2 id="kerberos">Kerberos<a class="headerlink" href="#kerberos" title="Permanent link">&para;</a></h2>
 <p><strong>Kerberos es un protocolo de autenticación</strong> de redes de ordenador creado por el MIT que permite a dos ordenadores en una red insegura demostrar su identidad mutuamente de manera segura.</p>
 <figure>
-  <img src="./imagenes/002.png" width="350"/>
+  <img src="./imagenes/002K.png" width="350"/>
   <figcaption>Logo Kerberos</figcaption>
 </figure>
 

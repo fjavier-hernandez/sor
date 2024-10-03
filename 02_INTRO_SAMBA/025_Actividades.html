@@ -6,12 +6,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introducción Gestión de de recursos compartidos en Samba de Francisco Javier Hernández Illán.">
+        <meta name="description" content="Actividades de Introducción a Servicios de Directorio y Samba de Francisco Javier Hernández Illán.">
       
       
       
-        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/041_Introduccion_SambaDC.html">
+        <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/02_INTRO_SAMBA/025_Actividades.html">
       
+      
+        <link rel="prev" href="022_InstalacionSamba.html">
       
       
       
@@ -20,7 +22,7 @@
     
     
       
-        <title>Introducción de Samba DC - Sistemas Operativos en Red</title>
+        <title>Actividades UT2 SOR - Sistemas Operativos en Red</title>
       
     
     
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-samba-domain-controller" class="md-skip">
+        <a href="#actividades" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -117,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducción de Samba DC
+              Actividades UT2 SOR
             
           </span>
         </div>
@@ -430,8 +432,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -446,11 +450,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -464,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             2.- Introducción a Servicio de directorio y Samba.
@@ -478,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/020_Introduccion_SD.html" class="md-nav__link">
+      <a href="020_Introduccion_SD.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/021_IntroSamba.html" class="md-nav__link">
+      <a href="021_IntroSamba.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/022_InstalacionSamba.html" class="md-nav__link">
+      <a href="022_InstalacionSamba.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,10 +542,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../02_INTRO_SAMBA/025_Actividades.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.4- Actividades
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="025_Actividades.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -550,6 +574,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pt2_1-investigacion-sobre-el-servicio-de-directorio-y-su-nomenclatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      PT2_1 Investigación sobre el Servicio de Directorio y su Nomenclatura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pt2_2-practica-instalacion-y-configuracion-inicial-de-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      PT2_2 Práctica Instalación y configuración inicial de Samba
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -575,155 +637,107 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../tags.html#ra3" class="md-tag">RA3</a>
+    
+  
+</nav>
 
 
-<h1 id="introduccion-samba-domain-controller">Introducción Samba Domain Controller<a class="headerlink" href="#introduccion-samba-domain-controller" title="Permanent link">&para;</a></h1>
-<p>La organización de una red de trabajo empresarial supone un reto organizativo que el administrador del sistema debe afrontar con garantías de éxito. </p>
-<div class="admonition abstract">
-<p class="admonition-title"><strong>Principio</strong></p>
-<p>Si no se concibe un ordenador sin sistema operativo que lo administre, tampoco debe existir una red de cierta entidad sin sistema operativo en red que la gestione.</p>
-</div>
-<ul>
-<li>Para ello se dispone de herramientas organizativas como los <strong>Servicios de Directorio</strong>.</li>
-<li>Entre los principales servicios de directorio destacan <strong>SAMBA Domain Controller</strong> y <strong>Active Directory</strong>, ambos basados en el protocolo <strong>LDAP</strong>, y los cuales ofrecen una amplia gama de herramientas que facilitan la organización de recursos de una red.</li>
-<li>En concreto en esta <strong>Unidad de Trabajo (UT)</strong> se desarrolla <strong>Samba Domain Controller</strong>, el cual emula al controlador de dominio de un dominio Windows, conocido como <strong>Active Directory Domain Services (AD DS)</strong>.</li>
-</ul>
-<h2 id="servicios-de-directorio">Servicios de directorio<a class="headerlink" href="#servicios-de-directorio" title="Permanent link">&para;</a></h2>
+
+<h1 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h1>
+<p>La unidad 2 tiene como objetivo principal adquirir parte del RA3, el cual se define como:</p>
 <div class="admonition tip">
-<p class="admonition-title"><strong>En primer lugar...</strong></p>
-<p>Antes de profundizar en <strong>Samba DC</strong> es importante desarrollar los principales conceptos de los <strong>servicios de directorio</strong>.</p>
-</div>
-<p><strong>Los servicios de directorios</strong>, son un conjunto de aplicaciones que guardan y administran toda la información sobre los elementos de una red.</p>
+<p class="admonition-title"><strong>Resultado de aprendizaje 3 de Sistemas Operativos en Red</strong></p>
 <ul>
-<li>Cada <strong>recurso</strong> de la red se considera como un <strong>objeto</strong>, donde su <strong>información se almacena como atributos</strong>.</li>
-<li>Para la gestión de esta información, el <strong>servicio de directorio</strong> establece una serie de <strong>permisos de acceso y condiciones de seguridad</strong> que la salvaguardan esta información.</li>
-<li>Ofrecen una <strong>infraestructura</strong> para localizar, manejar, administrar, y organizar los componentes y recursos comunes de una red.</li>
+<li><strong>RASOR.3</strong> Realiza tareas de gestión sobre dominios identificando necesidades y aplicando herramientas de administración de dominios.<ul>
+<li><strong>CE3a</strong>: Se ha identificado la función del servicio de directorio, sus elementos y nomenclatura.</li>
+<li><strong>CE3b</strong>: Se ha reconocido el concepto de dominio y sus funciones.</li>
+<li><strong>CE3c</strong>: Se han establecido relaciones de confianza entre dominios.</li>
+<li><strong>CE3d</strong>: Se ha realizado la instalación del servicio de directorio.</li>
+<li><strong>CE3e</strong>: Se ha realizado la configuración básica del servicio de directorio.</li>
+<li><strong>CE3f</strong>: Se han utilizado agrupaciones de elementos para la creación de modelos administrativos. </li>
+<li><strong>CE3g</strong>: Se ha analizado la estructura del servicio de directorio.</li>
+<li><strong>CE3h</strong>: Se han utilizado herramientas de administración de dominios.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title"><strong>Nota</strong></p>
-<p>Los recursos pueden ser: volúmenes, carpetas, archivos, impresoras, usuarios, grupos, dispositivos, números de teléfono y un largo etcétera.</p>
+</li>
+</ul>
 </div>
-<div class="admonition absract">
-<p class="admonition-title"><strong>Resumen</strong></p>
-<p>Un servicio de directorio ofrece toda la información de los recursos de la red a través de una única ubicación. Para ello convierte cada recurso en un objeto y almacena su información en una base de datos jerárquica y, opcionalmente, distribuida. La gestión de estos datos se realiza a través de un protocolo determinado por la versión del servicio de directorio escogido.</p>
-</div>
-<h3 id="principales">Principales<a class="headerlink" href="#principales" title="Permanent link">&para;</a></h3>
+<p>A continuación se van a detallar las actividades de enseñanza aprendizaje que desarrollan los <strong>CEs: CE3a, CE3b, CE3d, CE3e</strong>.</p>
+<h2 id="pt2_1-investigacion-sobre-el-servicio-de-directorio-y-su-nomenclatura">PT2_1 Investigación sobre el Servicio de Directorio y su Nomenclatura<a class="headerlink" href="#pt2_1-investigacion-sobre-el-servicio-de-directorio-y-su-nomenclatura" title="Permanent link">&para;</a></h2>
+<p>Tras tener instalados los SORs solicitados en la práctica inicial, el cordinador TIC de <strong>NetOS</strong> nos encarga la instalación de Samba y su configuración inicial. Antes de proceder decides investigar más sobre Samba y sus principales características descubriendo que es un Servicio de directorio y por lo tanto necesitas ponerte al día al respecto. </p>
+<p>Para ello realizas un informe de <strong>Investigación sobre el Servicio de Directorio y su Nomenclatura</strong>, enfocado en los siguientes puntos clave <strong>(CE3a, CE3b)</strong>:</p>
 <ol>
-<li><strong>Active Directory</strong>, ideado por Microsoft e implementado desde su versión <em>Microsoft Windows 2000</em> que usaba tecnología propietaria, para más tarde adaptar el protocolo LDAP a su servicio.</li>
-<li><strong>OpenLDAP</strong>, recibe el nombre del protocolo homónimo que gestiona el intercambio de información. Es uno de los más usados en sistemas basados en <em>GNU/Linux</em>.</li>
-<li><strong>SambaDC</strong>, un servicio compuesto por un conjunto de protocolos (<em>OpenLDAP</em>, <em>Kerberos</em> y <em>Samba</em>) que permite la fácil coexistencia de entre sistemas operativos diferentes.</li>
-<li>Otros: <strong>Novell Directory Services</strong>, <strong>Red Hat Directory Server</strong> o <strong>Apache Directory Server</strong>.</li>
+<li>Definición del Servicio de Directorio:<ul>
+<li>¿Qué es un servicio de directorio?</li>
+<li>¿Cuáles son sus funciones principales en una red?</li>
+<li>¿Qué tipos de servicios de directorio existen?</li>
+</ul>
+</li>
+<li>Elementos del Servicio de Directorio:<ul>
+<li>¿Qué es un objeto dentro de un directorio?</li>
+<li>¿Cuáles son los principales objetos que se administran (usuarios, grupos, equipos, OUs - Unidades Organizativas)?</li>
+<li>Explicar el concepto de DN (Distinguished Name) y cómo se estructura.</li>
+<li>¿Qué es una Unidad Organizativa (OU) y cuál es su utilidad?</li>
+<li>¿Qué es un Árbol y un Bosque en el contexto de un servicio de directorio?</li>
+</ul>
+</li>
+<li>Dominios y Relaciones de Confianza:<ul>
+<li>¿Qué es un dominio dentro de un servicio de directorio?</li>
+<li>¿Qué significa establecer relaciones de confianza entre dominios?</li>
+</ul>
+</li>
+<li>Nomenclatura y Terminología:<ul>
+<li>Investigar los siguientes términos y proporcionar ejemplos prácticos:</li>
+<li>LDAP (Lightweight Directory Access Protocol).</li>
+<li>Controlador de Dominio.</li>
+<li>Kerberos y su función en la autenticación.</li>
+</ul>
+</li>
 </ol>
-<h3 id="componentes">Componentes<a class="headerlink" href="#componentes" title="Permanent link">&para;</a></h3>
-<p>Los servicios de directorios contienen diferentes objetos relacionados entre sí, y que será conveniente familiarizarse con ellos:</p>
+<!-- GPO (Group Policy Object) y cómo se relaciona con los objetos del directorio. -->
+
+<h2 id="pt2_2-practica-instalacion-y-configuracion-inicial-de-samba">PT2_2 Práctica Instalación y configuración inicial de Samba<a class="headerlink" href="#pt2_2-practica-instalacion-y-configuracion-inicial-de-samba" title="Permanent link">&para;</a></h2>
+<p>Una vez investigado sobre los servicios de directorio procedes a instalar Samba y realizar su configuración inical <strong>(CE3d, CE3e)</strong>. Partiendo del siguiente escenario de red virtualizado en VirtualBox:</p>
+<div class="admonition info">
+<p class="admonition-title">Información de las Máquinas Virtuales en VirtualBox</p>
+<ul>
+<li><strong>Ubuntu Server 24.04.1 LTS</strong> la instantánea limpia de la MV instalada en la UT1.</li>
+<li><strong>Windows 11 Education N</strong> la instantánea limpia de la MV instalada en la UT1. </li>
+<li><strong>Ubuntu Desktop 24.04.1 LTS</strong> también con la instantánea limpia de la MV instalada en la UT1.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Recomendación</strong></p>
+<p>Es buena idea que realices instantáneas de las máquinas en cada paso para tener copias de seguridad en caso de emergencia.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Configuración de red</p>
+<ul>
+<li>Las MVs deben estar conectadas en <a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/002_Virtualización.html#modo-red-nat">Red NAT</a> en VirtualBox e introduce en ella las tres máquinas.</li>
+<li>Para acceder al <strong>Ubunutu server</strong> es aconsejable utilizar <strong>ssh</strong> se debe hacer un túnel con <a href="https://fjavier-hernandez.github.io/sor/01_INTRO_SOR/002_Virtualización.html#reenvio-de-puertos">redirección puertos</a>.</li>
+</ul>
+</div>
+<p>Tras dicho trabajo realizas un informe con las siguientes pruebas: </p>
 <ol>
-<li><strong>Directorio</strong>, es un repositorio único para la información relativa a los objetos de una organización.</li>
-<li><strong>Dominio</strong>, es una colección de objetos dentro de un directorio.</li>
-<li><strong>Objeto</strong>, cualquiera de los elementos que forman parte del directorio. Pueden ser recursos, usuarios, equipos, relaciones de confianza, servidores, unidades organizativas entre otros. En general todos estos objetos se clasifican en tres categorías:<ol>
-<li><strong>usuarios</strong>, identificados a través del binomio <em>nombre/contraseña</em> y que pueden organizarse en grupos.</li>
-<li><strong>recursos</strong>, elementos que los usuarios pueden usar para el correcto desarrollo de su actividad.</li>
-<li><strong>servicios</strong>, que son funciones a los que el usuario tienen acceso como el <em>correo electrónico</em>, <em>copias de seguridad en la nube</em>, <em>conexión Internet entre otros</em>.</li>
+<li>Sigue todos los pasos del manual del aparatdo <strong>2.3_Instalación y configuración inicial de Samba</strong> para conseguir compartir ficheros. Adjunta una captura de la sección del fichero de configuración de samba donde se muestre la configuración del recurso compartido.</li>
+<li><strong>Desde el servidor</strong>, crea un fichero hola.txt en la carpeta <code>/srv/samba/ejercicio1</code>.</li>
+<li><strong>Desde el cliente windows</strong> accede al servidor mediante un explorador de directorios e intenta abrir el documento ¿Existe algún problema para ello? Razona tu respuesta.</li>
+<li>Seguidamente modifica el fichero e intenta guardarlo. ¿Qué ocurre? ¿Por qué?</li>
+<li>Ahora, desde el cliente Windows, intenta crear un fichero. ¿Te deja? ¿Puedes leer y escribir en él? ¿Por qué?</li>
+<li><strong>Desde el servidor,</strong> modifica los permisos de <code>/srv/samba/ejercicio1/hola.txt</code> para que tenga los siguientes permisos rwxr—rwx, ahora desde el cliente Windows prueba a modificar el contenido de dicho fichero. ¿Qué ocurre y por qué? Si no te deja escribir y guardar los cambios, indica que deberías cambiar para que puedas hacerlo.</li>
 </ol>
-</li>
-<li><strong>Unidad organizativa</strong>, es un contendedor de objetos que permite organizarlos en subconjuntos de forma jerárquica. Facilita la organización de los dominios.</li>
+<!-- 7. Crea una carpeta en el servidor `/srv/samba/ejercicio2`. Comparte dicha carpeta, añadiendo una nueva entrada en el fichero de configuración de samba. La carpeta debe ser navegable, se debe poder acceder sin credenciales, debe tener permisos  de lectura/escritura y además los ficheros creados por los clientes podrán ser modificados, leídos y ejecutados por cualquiera. Por otro lado, los directorios creados por los clientes solo podrán ser modificados por el usuario propietario, mientras que el resto de usuarios/grupos no tendrán ningún permiso. Muestra la configuración realizada.
+8. Desde un **cliente Windows** (como usuario propietario) intenta acceder a la carpeta ejercicio2 y crear un documento llamado “miSamba.txt”. Acto seguido, vuelve al servidor e intenta modificar el fichero (**SIN SER SUDO**) ¿Existe algún problema? ¿Por qué?
+9. Ahora desde el **cliente (Windows)** crea un directorio llamado “SOR”. Vuelve al servidor e intenta crear un fichero “sor.txt” dentro de SOR (**SIN SER SUDO**). ¿Qué ocurre? ¿Qué permisos tiene la carpeta “SOR”?. -->
+<ol start="7">
+<li>Realiza los mismos accesos desde la máquina <strong>Ubuntu Desktop</strong> que los realizados en el Windows 11. Demuestra que has realizado dichos accesos.</li>
 </ol>
-<figure>
-  <img src="imagenes/UO_AD.png" width="400"/>
-  <figcaption>Unidades Organizativas en Active Directory</figcaption>
-</figure>
-
-<ol start="5">
-<li><strong>Grupo</strong>, conjunto de objetos usuario. Al igual que las unidades organizativas, facilitan la organización y administración de los objetos, los grupos lo hacen con objetos tipo usuario.</li>
-<li><strong>Controlador de dominio</strong>, equipo que contiene la base de datos de objetos para un determinado dominio, incluida la información de seguridad y la responsabilidad de la autenticación de objetos de su ámbito de gobierno.</li>
-<li><strong>Catálogo global</strong>, base de datos con la información de todos los objetos que contiene el directorio. Esta información habitualmente se divide
-entre los controladores de dominio siendo éstos responsables del mantenimiento de su parte de esta información.</li>
-<li><strong>Maestro de operaciones</strong>, existen un conjunto de operaciones que deben estar centralizadas para mantener la consistencia del sistema. El equipo encargado de esas operaciones obtiene este rol específico. Según el caso puede ser un equipo independiente que controle estas operaciones o asignar estas tareas a un equipo existente.</li>
-<li><strong>Árbol</strong>, un conjunto de dominios dependientes de una raíz común y que tienen una estructura jerárquica. Se caracterizan por tener un espacio de nombres común (un servidor DNS propio). El objetivo de esta fragmentación de la estructura es replicar sólo la información necesaria y disminuir el tráfico de red.</li>
-</ol>
-<figure>
-  <img src="imagenes/DIT_AD.png" width="400"/>
-  <figcaption>Objetos en Active Directory.</figcaption>
-</figure>
-
-<ol start="10">
-<li><strong>Bosque</strong>, se trata del mayor contenedor lógico dentro del directorio, conteniendo a todos los árboles dentro de su ámbito. Cada uno de
-estos contenedores posee su propio espacio de nombres y una forma de relacionarse con el resto de bosques.</li>
-</ol>
-<figure>
-  <img src="imagenes/EjemDIT_AD.png" width="400"/>
-  <figcaption>Ejemplo de Objetos en Active Directory.</figcaption>
-</figure>
-
-<ol start="11">
-<li><strong>Esquema</strong>, se refiere a la estructura de los objetos que forman la base de datos. Usa la técnica clase/objeto para definir la estructura de un
-objeto. Si se crean dos objetos usuarios, ambos tendrán los mismos atributos (estructura), pero diferentes valores de atributos.</li>
-<li><strong>Sitio</strong>, conjunto de <em>objetos equipo</em> que se encuentran relacionados de una forma lógica, geográfica o técnica particular y que necesitan un subconjunto de normas diferentes al resto.</li>
-<li><strong>Relaciones de confianza</strong>, son un método de comunicación segura entre dominios, árboles y bosques, que permiten a los usuarios autentificarse en
-otra parte del directorio a la que no pertenece.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title"><strong>Nota</strong></p>
-<p>Para nombrar a todos estos objetos que componen la red, los servicios de directorio definen un espacio de nombres unívoco, e identifican a cada uno de estos objetos con un nombre único en todo el directorio.</p>
-</div>
-<ul>
-<li>La tecnología utilizada para crear este espacio de nombres es la <strong>DNS (Domain Name Server)</strong>, y su funcionamiento es similar al de Internet. </li>
-<li>Cada uno de los objetos del directorio posee un <strong>DN (Distinguished Name)</strong> que lo identifica de forma unívoca del resto de elementos del directorio.</li>
-</ul>
-<h3 id="ventajas">Ventajas<a class="headerlink" href="#ventajas" title="Permanent link">&para;</a></h3>
-<ul>
-<li>los servicios de directorio, ofrecen una capa de <strong>abstracción</strong> para facilitar el acceso a los objetos. Se debe indicar una única ubicación en donde se dirigirán las peticiones de información. No importa si la información solicitada se encuentra o no en ese emplazamiento.</li>
-<li><strong>Autonomía</strong>, Es posible que toda la información no esté contenida en un único equipo por cuestiones de rendimiento, escalabilidad o idiosincrasia del sistemas informático. En estos casos crear un subconjunto de la información contenida en los servicios de directorio parece una buena opción y dotarlos de las herramientas necesarias para su gestión autónoma.</li>
-</ul>
-<!-- * Si se permite el símil, **es el Google de los sistemas informáticos** que se gestiona. -->
-
-<h2 id="samba-dc">Samba DC<a class="headerlink" href="#samba-dc" title="Permanent link">&para;</a></h2>
-<div class="admonition quote">
-<p class="admonition-title"><strong>Referencia</strong></p>
-<p>Según <a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Introduction">Samba Wiki</a> las principales características de <strong>Samba DC</strong> son:</p>
-</div>
-<ul>
-<li><strong>Samba</strong> puede servir como <strong>controlador de dominio (DC)</strong> de <strong>Active Directory (AD)</strong> a partir de la versión 4.0 (lanzada en 2012).</li>
-<li>Samba opera en el nivel funcional forestal de <strong>Windows Server 2008 R2</strong>, que es más que suficiente para gestionar empresas sofisticadas que utilizan <strong>Windows 10/11</strong> con estrictos requisitos de cumplimiento (incluido el <a href="https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final">NIST 800-171</a>).</li>
-<li>Integra el servidor <strong>LDAP</strong> como back-end de <strong>Active Directory (AD)</strong>.</li>
-<li>Proporciona soporte experimental para el MIT <strong>Kerberos</strong>.</li>
-</ul>
-<p>Dentro del compendio de aplicaciones que en el que se basa <strong>Samba</strong> se destacan <strong>LDAP y Kerberos</strong>, las cuales se definen a continuación.</p>
-<h2 id="ldap">LDAP<a class="headerlink" href="#ldap" title="Permanent link">&para;</a></h2>
-<p>El <strong>LDAP (Lightweight Directory Access Protocol)</strong> es un protocolo a nivel de aplicación que da acceso a un servicio de directorio ordenado y distribuido para la búsqueda de la información de un entrono de red.</p>
-<ul>
-<li>
-<p>En la década de los 80, la especificación de directorio <strong>X.500</strong> vió la luz. El protocolo que daba acceso a la información contenida en él, fue DAP
-(Directory Access Protocol) y estaba basado en la <strong>pila de protocolos OSI (Open Systems Interconexion)</strong>. Gracias al auge de Internet, la pila de protocolos TCP/IP cobraron especial protagonismo y su uso fue generalizado en cualquier infraestructura de red, incluidas las LAN.</p>
-</li>
-<li>
-<p>Ante esta situación, en <strong>1993</strong> se implementó el protocolo <strong>LDAP</strong> que utilizaba la pila de protocolos TCP/IP para el acceso a la información contenido en un servicio de directorio. El funcionamiento de LDAP es <strong>relativamente simple</strong>: un cliente se inicia una sesión en un servidor LDAP solicitando alguna información.</p>
-</li>
-</ul>
-<figure>
-  <img src="imagenes/LDAP.png" width="700"/>
-  <figcaption>Esquema de funcionamiento del protocolo LDAP</figcaption>
-</figure>
-
-<div class="admonition conclusión">
-<p class="admonition-title">Conclusión</p>
-<ul>
-<li><strong>LDAP, es un protocolo que ofrece el acceso a un servicio de directorio</strong> implementado sobre un entorno de red, con el objeto de acceder a una determinada información. Puede ejecutarse sobre TCP/IP o sobre cualquier otro servicio de transferencia orientado a la conexión.</li>
-<li>Podemos considerarlo como un <strong>sistema de almacenamiento de red al que se pueden realizar consultas.</strong></li>
-</ul>
-</div>
-<h2 id="kerberos">Kerberos<a class="headerlink" href="#kerberos" title="Permanent link">&para;</a></h2>
-<p><strong>Kerberos es un protocolo de autenticación</strong> de redes de ordenador creado por el MIT que permite a dos ordenadores en una red insegura demostrar su identidad mutuamente de manera segura.</p>
-<figure>
-  <img src="./imagenes/002.png" width="350"/>
-  <figcaption>Logo Kerberos</figcaption>
-</figure>
-
-<p>Se caracteriza por:</p>
-<ul>
-<li>Se basa en el modelo de <strong>cliente-servidor</strong>.</li>
-<li>Brinda <strong>autenticación mutua:</strong> tanto cliente como servidor verifican la identidad uno del otro. </li>
-<li>Los mensajes de autenticación están protegidos mediante criptografía de <strong>clave simétrica</strong>.</li>
-</ul>
 
 
 
