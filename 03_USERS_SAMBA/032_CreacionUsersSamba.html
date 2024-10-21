@@ -817,23 +817,36 @@
 <span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">:password&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>chpasswd
 <span class="linenos" data-linenos="28 "></span>
 <span class="linenos" data-linenos="29 "></span><span class="w">    </span><span class="c1"># Añadir el usuario a un grupo</span>
-<span class="linenos" data-linenos="30 "></span><span class="w">    </span>usermod<span class="w"> </span>-aG<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">grupos</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># Puedes cambiar el grupo si lo deseas</span>
-<span class="linenos" data-linenos="31 "></span><span class="w">  </span><span class="k">fi</span>
-<span class="linenos" data-linenos="32 "></span>
-<span class="linenos" data-linenos="33 "></span><span class="w">  </span><span class="c1"># Crear el usuario en Samba</span>
-<span class="linenos" data-linenos="34 "></span><span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$samba_passwd</span><span class="s2">\n</span><span class="nv">$samba_passwd</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>smbpasswd<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span>
-<span class="linenos" data-linenos="35 "></span><span class="w">  </span>smbpasswd<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># Habilitar el usuario en Samba</span>
-<span class="linenos" data-linenos="36 "></span><span class="k">done</span>
-<span class="linenos" data-linenos="37 "></span>
-<span class="linenos" data-linenos="38 "></span><span class="c1"># Reiniciar el servicio de Samba para aplicar cambios</span>
-<span class="linenos" data-linenos="39 "></span>systemctl<span class="w"> </span>restart<span class="w"> </span>smbd
-<span class="linenos" data-linenos="40 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Usuarios y grupos creados exitosamente en el sistema y en Samba.&quot;</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span>usermod<span class="w"> </span>-aG<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">grupos</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span><span class="w">  </span>
+<span class="linenos" data-linenos="31 "></span><span class="w">    </span><span class="c1"># ¡¡Cuidado!! Habrá que modificar esta última línea de código </span>
+<span class="linenos" data-linenos="32 "></span><span class="w">    </span><span class="c1"># para asignar el grupo de cada caso en concreto.</span>
+<span class="linenos" data-linenos="33 "></span><span class="w">  </span><span class="k">fi</span>
+<span class="linenos" data-linenos="34 "></span>
+<span class="linenos" data-linenos="35 "></span><span class="w">  </span><span class="c1"># Crear el usuario en Samba</span>
+<span class="linenos" data-linenos="36 "></span><span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$samba_passwd</span><span class="s2">\n</span><span class="nv">$samba_passwd</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>smbpasswd<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="37 "></span><span class="w">  </span>smbpasswd<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># Habilitar el usuario en Samba</span>
+<span class="linenos" data-linenos="38 "></span><span class="k">done</span>
+<span class="linenos" data-linenos="39 "></span>
+<span class="linenos" data-linenos="40 "></span><span class="c1"># Reiniciar el servicio de Samba para aplicar cambios</span>
+<span class="linenos" data-linenos="41 "></span>systemctl<span class="w"> </span>restart<span class="w"> </span>smbd
+<span class="linenos" data-linenos="42 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Usuarios y grupos creados exitosamente en el sistema y en Samba.&quot;</span>
 </code></pre></div>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title"><strong>Tip1</strong></p>
 <ul>
 <li><strong>getent</strong>: El comando <code>getent</code> (abreviatura de "get entries") recupera entradas de bases de datos específicas admitidas por NSS. Esto lo convierte en una herramienta versátil para buscar una amplia gama de información en un sistema Linux, incluidas cuentas de usuario, grupos, hosts, servicios y más.</li>
-<li><strong>NSS</strong>: El Name Service Switch o NSS provee una interfaz para configurar y acceder a diferentes bases de datos de cuentas de usuarios y claves como /etc/passwd, /etc/group, /etc/hosts, LDAP, etc.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Tip2</strong></p>
+<ul>
+<li><strong>NSS</strong>: El Name Service Switch o NSS provee una interfaz para configurar y acceder a diferentes bases de datos de cuentas de usuarios y claves como /etc/passwd, /etc/group, /etc/hosts, LDAP, etc. <a href="https://fjavier-hernandez.github.io/aso/04_LDAP/041_Introduccion_SDyLDAP.html#nss">Apuntes NSS</a></li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Tip3</strong></p>
+<ul>
+<li><strong>"{usuarios[@]}</strong>: son los valores del vector de usuarios separados, ya que tanto <code>$@</code> como <code>$*</code> son variables bash internas que representan todos los parámetros pasados a una función o un script, con una diferencia clave, <code>$@</code> tiene cada parámetro como una cadena con comillas separada, mientras que <code>$*</code> tiene todos los parámetros como una sola cadena. De esta forma podemos tratar cada usuario por separado.</li>
 </ul>
 </div>
 <h2 id="scripting">Scripting<a class="headerlink" href="#scripting" title="Permanent link">&para;</a></h2>
