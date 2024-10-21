@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/03_USERS_SAMBA/032_CreacionUsersSamba.html">
       
       
+        <link rel="prev" href="031_SambaSecUsers.html">
+      
+      
+        <link rel="next" href="035_Actividades.html">
       
       
       <link rel="icon" href="../imagenes/favicon.ico">
@@ -562,6 +566,203 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3.- Gestión Usuarios y grupos Samba
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            3.- Gestión Usuarios y grupos Samba
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="031_SambaSecUsers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1- Secciones y Usuarios Samba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3.2- Creación de Usuarios y grupos en Samba
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="032_CreacionUsersSamba.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3.2- Creación de Usuarios y grupos en Samba
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#automatizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatización
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scripting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-contrasenas-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de contraseñas samba
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de contraseñas samba">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-argumentos-del-comando-chage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principales argumentos del comando chage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="035_Actividades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3- Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -578,137 +779,218 @@
 
 
 <h1 id="creacion-de-usuarios-y-grupos">Creación de usuarios y grupos<a class="headerlink" href="#creacion-de-usuarios-y-grupos" title="Permanent link">&para;</a></h1>
-<h2 id="pt31-creacion-de-usuarios-y-grupos">PT31 Creación de usuarios y grupos<a class="headerlink" href="#pt31-creacion-de-usuarios-y-grupos" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Contribución a los CEs (Criterios de Evaluación)</p>
-<p>Estas actividades contribuyen a los criterios de evaluación CE1, CE2, CE3, CE4, CE5, CE6, CE7, y CE8 del RA2 de SOR.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Advertencia</p>
-<p>Razona todas las respuestas, en caso de que la respuesta sea debido a unos permisos indica que permisos tiene y donde han sido determinados.</p>
-</div>
-<h3 id="enunciado">Enunciado<a class="headerlink" href="#enunciado" title="Permanent link">&para;</a></h3>
-<p>Partiendo de la <strong>situación de aprendizaje</strong>, desde el departamento TIC de <strong>NetOS</strong> nos encargan crear la infraestructura de directorios y usuarios para los diferentes departamentos de una empresa de cría de berberechos salvajes denominada <strong>BerbeWild S.A.</strong> desde un sevidor linux <strong>Ubuntu Server</strong>. </p>
-<div class="admonition note">
-<p class="admonition-title"><strong>Nota</strong></p>
-<p>Cabe destacar que el escenarios de la empresa es heterogéneo ya que existen diferentes tipos de sistemas operativos de propietarios (<strong>Windows</strong>) y libre licencia (<strong>Lubuntu</strong>).</p>
-</div>
-<ul>
-<li>Por estas razones se decide utilizar el servicio <strong>Samba</strong> y realizar unos pasos previos siguiendo la guía adjunta a continuación:</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Requisitos</p>
-<p>Se necesitan las tres máquinas virtuales utilizadas en el apartado <a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/022_InstalacionSamba.html">2.2 Instalación y configuración inicial de Samba</a> en configuración <strong>Red NAT</strong>.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Tareas</p>
-<ul>
-<li>Esta práctica tiene como objetivo la creación de usuarios y grupos por un lado en el sistema y por otro en el servicio de directorio Samba, aunque inicialmente se debe crear la estructura de directorios de la organización.</li>
-<li>A partir de las premisas adjunta realiza un video con los pasos realizados y un informe con los siguientes apartados.</li>
-<li>Haz pruebas de inicio de sesión en al menos un cliente por departamento para comprobar que las cuentas funcionan.</li>
-</ul>
-</div>
-<h3 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Permanent link">&para;</a></h3>
+<p>Como se ha comentado anteriormente es necesario crear los usuarios y los grupos en el sistema para posteriormente crearlos en la base de datos de Samba, cuando se tiene un número elevado de usuarios es necesario disponer de herramientas de automatización del proceso de generación de usuarios que se puede resumir en:</p>
 <ol>
-<li><strong>BerbeWild S.A.</strong> esa posee una estructura en departamentos de esta forma:</li>
+<li><strong>Grupos</strong>: Crear los grupos especificados si no existen.</li>
+<li><strong>Usuarios</strong>: Crear los usuarios, les asigna una contraseña para el sistema, los agrega a un grupo y crea las cuentas correspondientes en Samba.</li>
+<li><strong>Samba</strong>: Añade los usuarios a Samba y les asigna una contraseña.</li>
+<li><strong>Reinicio de Samba</strong>: El servicio <code>smbd</code> de Samba se debe reiniciar para aplicar los cambios.</li>
 </ol>
+<h2 id="automatizacion">Automatización<a class="headerlink" href="#automatizacion" title="Permanent link">&para;</a></h2>
+<p>Para automatizar dichos pasos se aconseja la utilización de scripting, a continuación se muestra un <strong>ejemplo general</strong> de script para realizar el proceso descrito:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="ch">#!/bin/bash</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1"># Listas de usuarios y grupos que deseas crear</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nv">usuarios</span><span class="o">=(</span><span class="s2">&quot;usuario1&quot;</span><span class="w"> </span><span class="s2">&quot;usuario2&quot;</span><span class="w"> </span><span class="s2">&quot;usuario3&quot;</span><span class="o">)</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="nv">grupos</span><span class="o">=(</span><span class="s2">&quot;grupo1&quot;</span><span class="w"> </span><span class="s2">&quot;grupo2&quot;</span><span class="w"> </span><span class="s2">&quot;grupo3&quot;</span><span class="o">)</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1"># Contraseña para los usuarios de Samba</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nv">samba_passwd</span><span class="o">=</span><span class="s2">&quot;Contraseña123&quot;</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="c1"># Crear grupos</span>
+<span class="linenos" data-linenos="11 "></span><span class="k">for</span><span class="w"> </span>grupo<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">grupos</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">  </span><span class="k">if</span><span class="w"> </span>getent<span class="w"> </span>group<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$grupo</span><span class="s2">&quot;</span><span class="w"> </span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;El grupo </span><span class="nv">$grupo</span><span class="s2"> ya existe.&quot;</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">  </span><span class="k">else</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creando grupo </span><span class="nv">$grupo</span><span class="s2">...&quot;</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span>groupadd<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$grupo</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">  </span><span class="k">fi</span>
+<span class="linenos" data-linenos="18 "></span><span class="k">done</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="c1"># Crear usuarios y añadirlos a los grupos</span>
+<span class="linenos" data-linenos="21 "></span><span class="k">for</span><span class="w"> </span>usuario<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">usuarios</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">  </span><span class="k">if</span><span class="w"> </span>id<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">&amp;</span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;El usuario </span><span class="nv">$usuario</span><span class="s2"> ya existe.&quot;</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">  </span><span class="k">else</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creando usuario </span><span class="nv">$usuario</span><span class="s2">...&quot;</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">:password&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>chpasswd
+<span class="linenos" data-linenos="28 "></span>
+<span class="linenos" data-linenos="29 "></span><span class="w">    </span><span class="c1"># Añadir el usuario a un grupo</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span>usermod<span class="w"> </span>-aG<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">grupos</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># Puedes cambiar el grupo si lo deseas</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">  </span><span class="k">fi</span>
+<span class="linenos" data-linenos="32 "></span>
+<span class="linenos" data-linenos="33 "></span><span class="w">  </span><span class="c1"># Crear el usuario en Samba</span>
+<span class="linenos" data-linenos="34 "></span><span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$samba_passwd</span><span class="s2">\n</span><span class="nv">$samba_passwd</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>smbpasswd<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span>
+<span class="linenos" data-linenos="35 "></span><span class="w">  </span>smbpasswd<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usuario</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># Habilitar el usuario en Samba</span>
+<span class="linenos" data-linenos="36 "></span><span class="k">done</span>
+<span class="linenos" data-linenos="37 "></span>
+<span class="linenos" data-linenos="38 "></span><span class="c1"># Reiniciar el servicio de Samba para aplicar cambios</span>
+<span class="linenos" data-linenos="39 "></span>systemctl<span class="w"> </span>restart<span class="w"> </span>smbd
+<span class="linenos" data-linenos="40 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Usuarios y grupos creados exitosamente en el sistema y en Samba.&quot;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
-<li>Un departamento encargado de la <strong>gerencia</strong> de la empresa. El sistema utilizado por este departamento es <strong>Lubuntu 22_04</strong>.</li>
-<li>Otro se encargará de la <strong>administración</strong> de la empresa. Es normal que ante la amplitud de tareas que este departamento posee se divida en varios sub-departamentos: <strong>finanzas</strong>, <strong>nóminas</strong> y <strong>contabilidad.</strong> Este departamento destaca por utilizar el sistema operativo <strong>Windows 11</strong>.</li>
-<li>Otra de las actividades que seguro necesitarás en tu empresa será la gestión de <strong>mercadotécnia</strong> con sistema operativo <strong>Windows 11</strong>.</li>
-<li>Además, debes contar con un buen <strong>servicio técnico</strong> que realice las tareas de diseño, implementación y mantenimiento de la infraestructura informática. El sistema utilizado por este departamento es <strong>Lubuntu 22_04</strong>.</li>
+<li><strong>getent</strong>: El comando <code>getent</code> (abreviatura de "get entries") recupera entradas de bases de datos específicas admitidas por NSS. Esto lo convierte en una herramienta versátil para buscar una amplia gama de información en un sistema Linux, incluidas cuentas de usuario, grupos, hosts, servicios y más.</li>
+<li><strong>NSS</strong>: El Name Service Switch o NSS provee una interfaz para configurar y acceder a diferentes bases de datos de cuentas de usuarios y claves como /etc/passwd, /etc/group, /etc/hosts, LDAP, etc.</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title"><strong>Número de usuarios por departamento y rol</strong></p>
-<p>Cada uno de estos departamentos posee dos empleados, uno de ellos será el responsable.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title"><strong>Nota</strong></p>
-<p>Utiliza datos inventados para la información personal. Puedes usar esta web para obtener datos personales ficticios: <a href="https://www.generatedata.com">GeneraData</a>.</p>
-</div>
-<ol start="2">
-<li>Crea un grupo por cada departamento y sub-departamento e introduce en ellos a cada uno de los usuarios que corresponda.</li>
-</ol>
-<div class="admonition example">
-<p class="admonition-title"><strong>Ejemplo</strong></p>
-<p>Los usuarios de <strong>gerencia</strong> en el grupo <strong>gerencia</strong>.</p>
-</div>
-<ol start="3">
-<li>Los usuarios deben tener estas limitaciones:</li>
-</ol>
+<h2 id="scripting">Scripting<a class="headerlink" href="#scripting" title="Permanent link">&para;</a></h2>
+<p>La creación y generación de scripts o scripting se debe haber adquirido en <strong>Sistemas Operativos Monopuesto</strong>, módulo del primer curso, de todas formas a continuación se adjuntan apuntes de repaso de otros módulos para reforzar la creación de scripts:</p>
 <ul>
-<li>El usuario debe cambiar su contraseña en el siguiente inicio de sesión.</li>
-<li>El usuario no podrá cambiar la contraseña hasta que no transcurran 7 días desde la última vez que la modificó.</li>
-<li>Cualquier usuario debe cambiar su contraseña transcurridos treinta días.</li>
-<li>El sistema avisará con una semana de antelación del cambio de contraseña.</li>
+<li><a href="https://salvasevero.github.io/sor/4_Scripts.html">Scripts SOR profesor Salvador Serrano</a></li>
+<li><a href="https://fjavier-hernandez.github.io/aso/01_ShellScripting/011_ShellScript_Intro.html#shell">Scripting en ASO</a></li>
 </ul>
-<h2 id="guia">Guía<a class="headerlink" href="#guia" title="Permanent link">&para;</a></h2>
-<p>El esquema de la organización es:</p>
+<!-- 
+## PT31 Creación de usuarios y grupos
+
+!!! info "Contribución a los CEs (Criterios de Evaluación)"
+    Estas actividades contribuyen a los criterios de evaluación CE1, CE2, CE3, CE4, CE5, CE6, CE7, y CE8 del RA2 de SOR.
+
+!!! warning "Advertencia"
+    Razona todas las respuestas, en caso de que la respuesta sea debido a unos permisos indica que permisos tiene y donde han sido determinados.
+
+### Enunciado
+
+Partiendo de la **situación de aprendizaje**, desde el departamento TIC de **NetOS** nos encargan crear la infraestructura de directorios y usuarios para los diferentes departamentos de una empresa de cría de berberechos salvajes denominada **BerbeWild S.A.** desde un sevidor linux **Ubuntu Server**. 
+
+!!! note "**Nota**"
+    Cabe destacar que el escenarios de la empresa es heterogéneo ya que existen diferentes tipos de sistemas operativos de propietarios (**Windows**) y libre licencia (**Lubuntu**).
+
+- Por estas razones se decide utilizar el servicio **Samba** y realizar unos pasos previos siguiendo la guía adjunta a continuación:
+
+!!! warning "Requisitos"
+    Se necesitan las tres máquinas virtuales utilizadas en el apartado [2.2 Instalación y configuración inicial de Samba](https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/022_InstalacionSamba.html) en configuración **Red NAT**.
+
+!!! question "Tareas"
+    - Esta práctica tiene como objetivo la creación de usuarios y grupos por un lado en el sistema y por otro en el servicio de directorio Samba, aunque inicialmente se debe crear la estructura de directorios de la organización.
+    - A partir de las premisas adjunta realiza un video con los pasos realizados y un informe con los siguientes apartados.
+    - Haz pruebas de inicio de sesión en al menos un cliente por departamento para comprobar que las cuentas funcionan.
+
+
+### Premisas
+
+1. **BerbeWild S.A.** esa posee una estructura en departamentos de esta forma:
+
+* Un departamento encargado de la **gerencia** de la empresa. El sistema utilizado por este departamento es **Lubuntu 22_04**.
+* Otro se encargará de la **administración** de la empresa. Es normal que ante la amplitud de tareas que este departamento posee se divida en varios sub-departamentos: **finanzas**, **nóminas** y **contabilidad.** Este departamento destaca por utilizar el sistema operativo **Windows 11**.
+* Otra de las actividades que seguro necesitarás en tu empresa será la gestión de **mercadotécnia** con sistema operativo **Windows 11**.
+* Además, debes contar con un buen **servicio técnico** que realice las tareas de diseño, implementación y mantenimiento de la infraestructura informática. El sistema utilizado por este departamento es **Lubuntu 22_04**.
+
+!!! info "**Número de usuarios por departamento y rol**"
+    Cada uno de estos departamentos posee dos empleados, uno de ellos será el responsable.
+
+!!! note "**Nota**"
+    Utiliza datos inventados para la información personal. Puedes usar esta web para obtener datos personales ficticios: [GeneraData](https://www.generatedata.com).
+
+2. Crea un grupo por cada departamento y sub-departamento e introduce en ellos a cada uno de los usuarios que corresponda.
+
+!!! example "**Ejemplo**"
+    Los usuarios de **gerencia** en el grupo **gerencia**.
+
+3. Los usuarios deben tener estas limitaciones:
+
+* El usuario debe cambiar su contraseña en el siguiente inicio de sesión.
+* El usuario no podrá cambiar la contraseña hasta que no transcurran 7 días desde la última vez que la modificó.
+* Cualquier usuario debe cambiar su contraseña transcurridos treinta días.
+* El sistema avisará con una semana de antelación del cambio de contraseña.
+
+## Guía
+
+El esquema de la organización es:
+
 <figure>
   <img src="./imagenes/3001_EsquemaOrg.png"/>
 </figure>
 
-<div class="admonition tip">
-<p class="admonition-title">Consejo</p>
-<p>Genera los directorios para la empresa, podrías utilizar el comando <code>mkdir -p /PATH</code>.</p>
-</div>
-<ol>
-<li>En un primer paso se crean los grupos y usuarios en el sistema para luego tenerlos "agregados también en el servicio de Samba". Se muestra la creación de dos usuarios en el sistema del departamento de servicio técnico a modo de ejemplo:</li>
-</ol>
-<ul>
-<li>Generación de grupo de servicio técnico "TIC":</li>
-</ul>
+!!! tip "Consejo"
+    Genera los directorios para la empresa, podrías utilizar el comando `mkdir -p /PATH`.
+
+1. En un primer paso se crean los grupos y usuarios en el sistema para luego tenerlos "agregados también en el servicio de Samba". Se muestra la creación de dos usuarios en el sistema del departamento de servicio técnico a modo de ejemplo:
+
+- Generación de grupo de servicio técnico "TIC":
+
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>groupadd<span class="w"> </span>TIC
 </code></pre></div>
-<ul>
-<li>Usuario administrador "responsable" debe tener permisos de superusuario:</li>
-</ul>
+
+- Usuario administrador "responsable" debe tener permisos de superusuario:
+
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>useradd<span class="w"> </span>admin<span class="w"> </span>-m<span class="w"> </span>-G<span class="w"> </span>sudo<span class="w"> </span>-s<span class="w"> </span>/bin/bash
 </code></pre></div>
-<ul>
-<li>Usuario "nivel bajo":</li>
-</ul>
+
+- Usuario "nivel bajo":
+
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>useradd<span class="w"> </span>usuario<span class="w"> </span>-m<span class="w"> </span>-g<span class="w"> </span>TIC<span class="w"> </span>-s<span class="w"> </span>/bin/bash
 </code></pre></div>
-<p>Por otro lado, se generan los usuarios en Samba, los cuales se pueden realizar de dos formas:</p>
-<ul>
-<li>Mediante <strong>smbpasswd</strong>:</li>
-</ul>
+
+Por otro lado, se generan los usuarios en Samba, los cuales se pueden realizar de dos formas:
+
+- Mediante **smbpasswd**:
+
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>smbpasswd<span class="w"> </span>-a<span class="w"> </span>admin
 </code></pre></div>
-<ul>
-<li>A través de comandos de <strong>samba-tool</strong>.</li>
-</ul>
+
+- A través de comandos de **samba-tool**.
+
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>samba-tool<span class="w"> </span>user<span class="w"> </span>create<span class="w"> </span>admin
 </code></pre></div>
-<p><strong>Nota</strong>: Este ejemplo se realiza para todos los usuarios planteados en la organización.</p>
-<ol start="2">
-<li>La creación de grupos también se realiza en el servicio samba mediante <strong>samba-tool</strong>.</li>
-</ol>
-<ul>
-<li>En el sistema.</li>
-</ul>
+
+**Nota**: Este ejemplo se realiza para todos los usuarios planteados en la organización.
+
+2. La creación de grupos también se realiza en el servicio samba mediante **samba-tool**.
+
+- En el sistema.
+
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>samba-tool<span class="w"> </span>group<span class="w"> </span>add<span class="w"> </span>admin
 </code></pre></div>
-<ul>
-<li>Se añaden los usuarios al grupo.</li>
-</ul>
+
+- Se añaden los usuarios al grupo.
+
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>samba-tool<span class="w"> </span>group<span class="w"> </span>addmembers<span class="w"> </span>TIC<span class="w"> </span>usuario
 </code></pre></div>
-<ol start="3">
-<li>Para las restricciones de contraseña se puede realizar en un solo comando o en el sistema o por samba, se muestra por sistema:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>chage<span class="w"> </span>-d<span class="w"> </span><span class="m">0</span><span class="w"> </span>-m<span class="w"> </span><span class="m">7</span><span class="w"> </span>-M<span class="w"> </span><span class="m">30</span><span class="w"> </span>-W<span class="w"> </span><span class="m">7</span><span class="w"> </span>usuario
+-->
+
+<h2 id="configuracion-de-contrasenas-samba">Configuración de contraseñas samba<a class="headerlink" href="#configuracion-de-contrasenas-samba" title="Permanent link">&para;</a></h2>
+<p>Para las restricciones de contraseña se puede realizar con el comando <code>chage</code>. El comando <code>chage</code> en Linux se utiliza para cambiar la información relacionada con la expiración de la contraseña de un usuario. Te permite ajustar cuándo caduca una contraseña, cuántos días antes de la expiración se debe advertir al usuario, entre otras configuraciones.</p>
+<p>Sintaxis básica:
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>chage<span class="w"> </span><span class="o">[</span>opciones<span class="o">]</span><span class="w"> </span>usuario
+</code></pre></div></p>
+<h3 id="principales-argumentos-del-comando-chage">Principales argumentos del comando chage<a class="headerlink" href="#principales-argumentos-del-comando-chage" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>-d</code> o <code>--lastday</code>: Establece el último día en que la contraseña fue cambiada. Se debe proporcionar la fecha en formato <strong>YYYY-MM-DD</strong> o en días desde el 1 de enero de 1970 (epoch).</li>
+<li><code>-E</code> o <code>--expiredate</code>: Establece la fecha en la que la cuenta expira. Después de esa fecha, el usuario no podrá acceder al sistema. La fecha se especifica en el formato <strong>YYYY-MM-DD</strong> o con el número de días desde la época. </li>
+<li><code>-I</code> o <code>--inactive</code>: Establece el número de días de inactividad después de la expiración de la contraseña, tras los cuales la cuenta será desactivada.</li>
+<li><code>-m</code> o <code>--mindays</code>: Especifica el número mínimo de días que deben pasar antes de que el usuario pueda cambiar su contraseña nuevamente.</li>
+<li><code>-M</code> o <code>--maxdays</code>: Establece el número máximo de días que puede pasar antes de que se requiera un cambio de contraseña.</li>
+<li><code>-W</code> o <code>--warndays</code>: Define cuántos días antes de que expire la contraseña se advertirá al usuario de la expiración.</li>
+<li><code>-l</code> o <code>--list</code>: Muestra el estado de la cuenta del usuario, incluyendo la fecha del último cambio de contraseña, cuándo expira, cuántos días faltan para el siguiente cambio obligatorio, etc.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title"><strong>Ejemplos</strong></p>
+</div>
+<ul>
+<li>Para configurar una contraseña que expire cada 60 días, avisar con 10 días de anticipación y no permitir que se cambie en menos de 5 días:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">60</span><span class="w"> </span>-W<span class="w"> </span><span class="m">10</span><span class="w"> </span>-m<span class="w"> </span><span class="m">5</span><span class="w"> </span>usuario
 </code></pre></div>
 <ul>
-<li>Para comprobarlo se puede ejecutar:</li>
+<li>
+<p>Para desactivar la cuenta de un usuario en una fecha específica:
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>chage<span class="w"> </span>-E<span class="w"> </span><span class="m">2024</span>-12-31<span class="w"> </span>usuario
+</code></pre></div></p>
+</li>
+<li>
+<p>Para obligar al usuario a cambiar su contraseña en su próximo inicio de sesión, se utiliza <strong>chage -d 0 usuario</strong>.
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>chage<span class="w"> </span>-d<span class="w"> </span><span class="m">0</span><span class="w"> </span>-m<span class="w"> </span><span class="m">7</span><span class="w"> </span>-M<span class="w"> </span><span class="m">30</span><span class="w"> </span>-W<span class="w"> </span><span class="m">7</span><span class="w"> </span>usuario
+</code></pre></div></p>
+</li>
+<li>
+<p>Para comprobar los cambios se puede ejecutar:</p>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>chage<span class="w"> </span>-l<span class="w"> </span>usuario
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title"><strong>Nota</strong></p>
-<p>Investiga los argumentos del comando <code>chage</code> para relacionarlos con las premisas del punto 3.</p>
-</div>
 
 
 
@@ -850,7 +1132,7 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
