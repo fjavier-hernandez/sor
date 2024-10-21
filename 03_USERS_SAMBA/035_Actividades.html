@@ -835,13 +835,20 @@
 <p>Partiendo de la <strong>situación de aprendizaje</strong> inicial y del escenario de máquinas virtuales utilizadas en la práctica <a href="https://fjavier-hernandez.github.io/sor/02_INTRO_SAMBA/025_Actividades.html#pt2_2-practica-instalacion-y-configuracion-inicial-de-samba">PT2_2 Práctica Instalación y configuración inicial de Samba</a>, desde el departamento TIC de <strong>NetOS</strong> nos encargan crear los usuarios y grupos para los diferentes departamentos de una empresa de gestión de ordenadores y sistemas operativos denominada <strong>SysManage</strong> desde un sevidor linux <strong>Ubuntu Server</strong>. </p>
 <p>Cabe destacar que el escenarios de la empresa es heterogéneo ya que existen diferentes tipos de sistemas operativos de propietarios (<strong>Windows</strong>) y libre licencia (<strong>Lubuntu</strong>). Por esta razón se decide utilizar el servicio <strong>Samba</strong>.</p>
 <h3 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Permanent link">&para;</a></h3>
-<p><strong>SysManage</strong> esa posee una estructura en departamentos de esta forma:</p>
+<p><strong>SysManage</strong> posee una estructura en departamentos de esta forma:</p>
 <ul>
 <li>Un departamento encargado de la <strong>gerencia</strong> de la empresa, donde se utiliza el <strong>Ubuntu desktop 22_04</strong>.</li>
 <li>Otro se encargará de la <strong>administración</strong>, utilizando el sistema operativo <strong>Windows 11</strong>.</li>
 <li>Otro departamento es <strong>mercadotécnia</strong> con sistema operativo <strong>Windows 11</strong>.</li>
 <li>Además un <strong>servicio técnico</strong> que realice las tareas de diseño, implementación y mantenimiento de la infraestructura informática. El sistema utilizado por este departamento es <strong>Ubuntu desktop 22_04</strong>.</li>
 <li>Cada uno de estos departamentos posee dos empleados, uno de ellos será el responsable.</li>
+<li>Los usuarios deben tener estas limitaciones en cuanto a su contraseña:<ol>
+<li>El usuario debe cambiar su contraseña en el siguiente inicio de sesión.</li>
+<li>El usuario no podrá cambiar la contraseña hasta que no transcurran 7 días desde la última vez que la modificó.</li>
+<li>Cualquier usuario debe cambiar su contraseña transcurridos treinta días.</li>
+<li>El sistema avisará con una semana de antelación del cambio de contraseña.</li>
+</ol>
+</li>
 </ul>
 <h3 id="tareas">Tareas<a class="headerlink" href="#tareas" title="Permanent link">&para;</a></h3>
 <p>Realiza un informe con los siguientes pasos:</p>
@@ -856,15 +863,6 @@
 <p class="admonition-title"><strong>Nota</strong></p>
 <p>Utiliza datos inventados para la información personal de los usuarios. Puedes usar esta web para obtener datos personales ficticios: <a href="https://www.generatedata.com">GeneraData</a>.</p>
 </div>
-<ol start="2">
-<li>Los usuarios deben tener estas limitaciones:</li>
-</ol>
-<ul>
-<li>El usuario debe cambiar su contraseña en el siguiente inicio de sesión.</li>
-<li>El usuario no podrá cambiar la contraseña hasta que no transcurran 7 días desde la última vez que la modificó.</li>
-<li>Cualquier usuario debe cambiar su contraseña transcurridos treinta días.</li>
-<li>El sistema avisará con una semana de antelación del cambio de contraseña.</li>
-</ul>
 <h2 id="pt32-gestion-de-secciones-y-usuarios-en-samba">PT32 Gestión de secciones y usuarios en Samba<a class="headerlink" href="#pt32-gestion-de-secciones-y-usuarios-en-samba" title="Permanent link">&para;</a></h2>
 <p>A partir de los usuarios de la práctica <strong>PT3_1</strong> desde el departamento TIC de <strong>NetOS</strong> nos encargan gestionar y configurar los elementos creados siguiendo los siguientes apartados, detallando los pasos realizados en un informe. </p>
 <div class="admonition tip">
