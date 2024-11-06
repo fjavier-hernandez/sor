@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/04_SAMBA_DC/042_InstallConfigSambaDC.html">
       
       
+        <link rel="prev" href="041_MonitorizacionSO.html">
+      
+      
+        <link rel="next" href="043_GestionRecursosSambaDC.html">
       
       
       <link rel="icon" href="../imagenes/favicon.ico">
@@ -675,6 +679,304 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4.- Administración y monitorización de recursos compartidos en Samba
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            4.- Administración y monitorización de recursos compartidos en Samba
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="041_MonitorizacionSO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1- Monitorización de Sisyemas Operativos en Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.2- Instalación y Configuración Samba DC
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="042_InstallConfigSambaDC.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.2- Instalación y Configuración Samba DC
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guia-samba-dc-ubuntu-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guía Samba DC Ubuntu Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recordatorio-controlador-de-dominio-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recordatorio Controlador de Dominio (DC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-samba-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación Samba-DC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-samba-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración Samba-DC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobacion-del-samba-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación del Samba Active Directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-y-acceso-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación y acceso de usuarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación y acceso de usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-usuario-con-samba-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear usuario con samba-tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-al-samba-dc-desde-un-windows-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso al Samba-DC desde un Windows Client
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acceso al Samba-DC desde un Windows Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-dns-y-comprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de DNS y comprobación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cliente-al-active-directory-con-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir cliente al Active Directory con PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-samba-dc-desde-un-fedora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso Samba-DC desde un fedora
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="043_GestionRecursosSambaDC.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3- Gestión de recursos compartidos en Samba DC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="044_RefuerzoAmpliacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Refuerzo y Ampliación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -751,7 +1053,7 @@ servicio DNS permite la resolución de ese nombre de dominio al direccionamiento
 <span class="linenos" data-linenos=" 6 "></span><span class="w">      </span>addresses:
 <span class="linenos" data-linenos=" 7 "></span><span class="w">        </span>-<span class="w"> </span><span class="m">192</span>.168.2.2/24
 <span class="linenos" data-linenos=" 8 "></span><span class="w">      </span>nameservers:
-<span class="linenos" data-linenos=" 9 "></span><span class="w">        </span>search:<span class="w"> </span><span class="o">[</span>aso.com<span class="o">]</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">        </span>search:<span class="w"> </span><span class="o">[</span>sor.com<span class="o">]</span>
 <span class="linenos" data-linenos="10 "></span><span class="w">        </span>addresses:<span class="w"> </span><span class="o">[</span><span class="m">8</span>.8.8.8,<span class="w"> </span><span class="m">8</span>.8.4.4<span class="o">]</span>
 <span class="linenos" data-linenos="11 "></span><span class="w">      </span>routes:
 <span class="linenos" data-linenos="12 "></span><span class="w">        </span>-<span class="w"> </span>to:<span class="w"> </span>default
@@ -765,7 +1067,7 @@ servicio DNS permite la resolución de ese nombre de dominio al direccionamiento
 </figure>
 
 !!! tip "A tener en cuenta"
-    - En la configuración del archivo de red se crea un parámetro denominado `search`, el cual se configura para realizar un **dominio de búsqueda** (**Search Domain**), el cual nos va a permitir que si el servidor recibe una búsqueda de petición de un recurso, por ejemplo “maquina03”, automáticamente el servidor va intentar buscar por el nombre de dominio completo: “maquina01.aso.com”. Es decir, intenta resolver una ruta relativa de dominio (`PQDN`) a una ruta absoluta de dominio (`FQDN`).
+    - En la configuración del archivo de red se crea un parámetro denominado `search`, el cual se configura para realizar un **dominio de búsqueda** (**Search Domain**), el cual nos va a permitir que si el servidor recibe una búsqueda de petición de un recurso, por ejemplo “maquina03”, automáticamente el servidor va intentar buscar por el nombre de dominio completo: “maquina01.sor.com”. Es decir, intenta resolver una ruta relativa de dominio (`PQDN`) a una ruta absoluta de dominio (`FQDN`).
     -Recordatorio: se debe de aplicar los cambios con **netplan apply**. -->
 
 <!-- <figure>
@@ -791,13 +1093,12 @@ servicio DNS permite la resolución de ese nombre de dominio al direccionamiento
 </figure> -->
 
 <ol start="3">
-<li>A continuación se establece el nombre de host del servidor este caso <code>profesor.aso.local</code> y se añade el servidor al archivo de hosts.</li>
+<li>A continuación se establece el nombre de host del servidor este casor <code>profesor.sor.local</code> y se añade el servidor al archivo de hosts.</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title"><strong>CUIDADO</strong></p>
 <ul>
 <li><strong>Se debe cambiar profesor por el nombre de la alumna o alumno.</strong></li>
-<li><strong>Se debe cambiar aso por sor.</strong></li>
 </ul>
 </div>
 <p>3.1. Cambio de nombre de hosts a profesor.</p>
@@ -805,17 +1106,17 @@ servicio DNS permite la resolución de ese nombre de dominio al direccionamiento
 </code></pre></div>
 <p>3.2. El fichero <code>/etc/hosts</code> es como un servicio DNS local, es decir, tiene una serie de pares <code>nombres/IP</code> que resuelve localmente.
   1. Realiza una copia de seguridad del fichero <code>/etc/hosts</code>.
-  2. Modifica el fichero original (<code>/etc/hosts</code>) para que resuelva el nombre de tu máquina y tu FQDN en este caso <code>profesor.aso.local</code>.
+  2. Modifica el fichero original (<code>/etc/hosts</code>) para que resuelva el nombre de tu máquina y tu FQDN en este caso <code>profesor.sor.local</code>.
   3. Comprueba con un ping a los nombres que funciona y te contesta con la IP.</p>
 <div class="admonition example">
 <p class="admonition-title">Por ejemplo</p>
-<p>Inicialmente En este caso el servidor se llama aso, por lo tanto si se realiza un ping a <code>aso</code> antes de modificar el /etc/hosts la máquina debe saber resolverlo a la IP <code>127.0.1.1</code> que por defecto en ubuntu se utiliza para determinar la dirección IP que corresponde al nombre de host.</p>
+<p>Inicialmente En este caso el servidor se llama sor, por lo tanto si se realiza un ping a <code>sor</code> antes de modificar el /etc/hosts la máquina debe saber resolverlo a la IP <code>127.0.1.1</code> que por defecto en ubuntu se utiliza para determinar la dirección IP que corresponde al nombre de host.</p>
 </div>
 <ul>
 <li>En este caso el fichero modificado quedaría:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="m">127</span>.0.0.1<span class="w"> </span>localhost
-<span class="linenos" data-linenos="2 "></span><span class="m">192</span>.168.2.4<span class="w"> </span>profesor.aso.local<span class="w"> </span>profesor
+<span class="linenos" data-linenos="2 "></span><span class="m">192</span>.168.2.4<span class="w"> </span>profesor.sor.local<span class="w"> </span>profesor
 <span class="linenos" data-linenos="3 "></span>
 <span class="linenos" data-linenos="4 "></span><span class="c1"># The following lines are desirable for IPv6 capable hosts</span>
 <span class="linenos" data-linenos="5 "></span>::1<span class="w">     </span>ip6-localhost<span class="w"> </span>ip6-loopback
@@ -833,7 +1134,7 @@ servicio DNS permite la resolución de ese nombre de dominio al direccionamiento
 <span class="linenos" data-linenos="2 "></span>hostname<span class="w"> </span>-f
 <span class="linenos" data-linenos="3 "></span>
 <span class="linenos" data-linenos="4 "></span><span class="c1"># verifica FQDN si resuelve a la IP del servidor</span>
-<span class="linenos" data-linenos="5 "></span>ping<span class="w"> </span>-c3<span class="w"> </span>profesor.aso.local
+<span class="linenos" data-linenos="5 "></span>ping<span class="w"> </span>-c3<span class="w"> </span>profesor.sor.local
 </code></pre></div>
 <figure>
   <img src="./imagenes/067/002G.gif"/>
@@ -846,7 +1147,7 @@ servicio DNS permite la resolución de ese nombre de dominio al direccionamiento
 <div class="admonition tip">
 <p class="admonition-title">A tener en cuenta</p>
 <ul>
-<li>Para realizar un <strong>dominio de búsqueda</strong> (<strong>Search Domain</strong>), el cual nos va a permitir que si el servidor recibe una búsqueda de petición de un recurso, por ejemplo “maquina01”, automáticamente el servidor va intentar buscar por el nombre de dominio completo: “maquina01.aso.com”. Es decir, intenta resolver una ruta relativa de dominio (<code>PQDN</code>) a una ruta absoluta de dominio (<code>FQDN</code>).</li>
+<li>Para realizar un <strong>dominio de búsqueda</strong> (<strong>Search Domain</strong>), el cual nos va a permitir que si el servidor recibe una búsqueda de petición de un recurso, por ejemplo “maquina01”, automáticamente el servidor va intentar buscar por el nombre de dominio completo: “maquina01.sor.com”. Es decir, intenta resolver una ruta relativa de dominio (<code>PQDN</code>) a una ruta absoluta de dominio (<code>FQDN</code>).</li>
 <li><strong>Recordatorio</strong>: se debe de aplicar los cambios con <strong>netplan apply</strong>.</li>
 </ul>
 </div>
@@ -869,7 +1170,7 @@ servicio DNS permite la resolución de ese nombre de dominio al direccionamiento
 <span class="linenos" data-linenos="5 "></span>nameserver<span class="w"> </span><span class="m">9</span>.9.9.9
 <span class="linenos" data-linenos="6 "></span>
 <span class="linenos" data-linenos="7 "></span><span class="c1"># Dominio principal de Samba</span>
-<span class="linenos" data-linenos="8 "></span>search<span class="w"> </span>aso.local
+<span class="linenos" data-linenos="8 "></span>search<span class="w"> </span>sor.local
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Cuidado</p>
@@ -1037,7 +1338,7 @@ gestionados a través de Samba. Se paran y se deshabilitan.</li>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Advertencia</p>
-<p>Como <strong>contraseña</strong> de administrador necesita tener una <strong>mayúscula/minúscula/número/longitud de 8</strong>. El usuario por defecto es “administrator”, en este caso se usará <strong>AsoAula5</strong></p>
+<p>Como <strong>contraseña</strong> de administrador necesita tener una <strong>mayúscula/minúscula/número/longitud de 8</strong>. El usuario por defecto es “administrator”, en este caso se usará <strong>sorAula5</strong></p>
 </div>
 <ul>
 <li>Si todo ha salido bien, se creará el fichero <code>smb.conf</code> acorde con la configuración:</li>
@@ -1128,19 +1429,19 @@ de directivas de grupo, todos los cambios y GPOs nuevos son replicados por allí
 <li>Verificaciones del dominio.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># Verifica el Dominio</span>
-<span class="linenos" data-linenos="2 "></span>host<span class="w"> </span>-t<span class="w"> </span>A<span class="w"> </span>aso.local
+<span class="linenos" data-linenos="2 "></span>host<span class="w"> </span>-t<span class="w"> </span>A<span class="w"> </span>sor.local
 <span class="linenos" data-linenos="3 "></span>
 <span class="linenos" data-linenos="4 "></span><span class="c1"># Verifica el FQDN</span>
-<span class="linenos" data-linenos="5 "></span>host<span class="w"> </span>-t<span class="w"> </span>A<span class="w"> </span>profesor.aso.local
+<span class="linenos" data-linenos="5 "></span>host<span class="w"> </span>-t<span class="w"> </span>A<span class="w"> </span>profesor.sor.local
 </code></pre></div>
 <ol start="2">
 <li>Comprobación de <code>Kerberos</code> y <code>ldap</code>.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># Comprobación del registro SRV para _kerberos. </span>
-<span class="linenos" data-linenos="2 "></span>host<span class="w"> </span>-t<span class="w"> </span>SRV<span class="w"> </span>_kerberos._udp.aso.local
+<span class="linenos" data-linenos="2 "></span>host<span class="w"> </span>-t<span class="w"> </span>SRV<span class="w"> </span>_kerberos._udp.sor.local
 <span class="linenos" data-linenos="3 "></span>
 <span class="linenos" data-linenos="4 "></span><span class="c1"># Comprobación del registro SRV para _ldap</span>
-<span class="linenos" data-linenos="5 "></span>host<span class="w"> </span>-t<span class="w"> </span>SRV<span class="w"> </span>_ldap._tcp.aso.local
+<span class="linenos" data-linenos="5 "></span>host<span class="w"> </span>-t<span class="w"> </span>SRV<span class="w"> </span>_ldap._tcp.sor.local
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">NOTA</p>
@@ -1150,7 +1451,7 @@ de directivas de grupo, todos los cambios y GPOs nuevos son replicados por allí
 <li>Comprobar el <code>login</code> con el usuario <code>administrator</code> con el comando <code>kinit</code>.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># Autenticate a Kerberos con el usuario administrator.</span>
-<span class="linenos" data-linenos="2 "></span>kinit<span class="w"> </span>administrator@ASO.LOCAL
+<span class="linenos" data-linenos="2 "></span>kinit<span class="w"> </span>administrator@SOR.LOCAL
 <span class="linenos" data-linenos="3 "></span>
 <span class="linenos" data-linenos="4 "></span><span class="c1"># Verifica la lista de accesos.</span>
 <span class="linenos" data-linenos="5 "></span>klist
@@ -1201,11 +1502,11 @@ de directivas de grupo, todos los cambios y GPOs nuevos son replicados por allí
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c"># En Powershell</span>
 <span class="linenos" data-linenos="2 "></span><span class="nb">Get-DnsClientServerAddress</span>
 <span class="linenos" data-linenos="3 "></span>
-<span class="linenos" data-linenos="4 "></span><span class="c"># ping al AD domain profesor.aso.local</span>
-<span class="linenos" data-linenos="5 "></span><span class="n">ping</span> <span class="n">profesor</span><span class="p">.</span><span class="n">aso</span><span class="p">.</span><span class="n">local</span>
+<span class="linenos" data-linenos="4 "></span><span class="c"># ping al AD domain profesor.sor.local</span>
+<span class="linenos" data-linenos="5 "></span><span class="n">ping</span> <span class="n">profesor</span><span class="p">.</span><span class="n">sor</span><span class="p">.</span><span class="n">local</span>
 <span class="linenos" data-linenos="6 "></span>
-<span class="linenos" data-linenos="7 "></span><span class="c"># ping al AD domain aso.local</span>
-<span class="linenos" data-linenos="8 "></span><span class="n">ping</span> <span class="n">aso</span><span class="p">.</span><span class="n">local</span>
+<span class="linenos" data-linenos="7 "></span><span class="c"># ping al AD domain sor.local</span>
+<span class="linenos" data-linenos="8 "></span><span class="n">ping</span> <span class="n">sor</span><span class="p">.</span><span class="n">local</span>
 </code></pre></div>
 <figure>
   <img src="./imagenes/067/015G.gif"/>
@@ -1214,10 +1515,10 @@ de directivas de grupo, todos los cambios y GPOs nuevos son replicados por allí
 
 <h3 id="anadir-cliente-al-active-directory-con-powershell">Añadir cliente al Active Directory con PowerShell<a class="headerlink" href="#anadir-cliente-al-active-directory-con-powershell" title="Permanent link">&para;</a></h3>
 <ul>
-<li>El siguiente paso es añadir el Cliente al Controlador de Dominio, y en este caso lo vamos a hacer por PowerShell con el siguiente comando:</li>
+<li>El siguiente psor es añadir el Cliente al Controlador de Dominio, y en este caso lo vamos a hacer por PowerShell con el siguiente comando:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c"># Añade Windows 10 al Active Directory usando POWERSHELL</span>
-<span class="linenos" data-linenos="2 "></span><span class="nb">Add-Computer</span> <span class="n">-DomainName</span> <span class="s2">&quot;aso.local&quot;</span> <span class="n">-Restart</span>
+<span class="linenos" data-linenos="2 "></span><span class="nb">Add-Computer</span> <span class="n">-DomainName</span> <span class="s2">&quot;sor.local&quot;</span> <span class="n">-Restart</span>
 </code></pre></div>
 <figure>
   <img src="./imagenes/067/016G.gif"/>
@@ -1284,7 +1585,7 @@ La aplicación se puede descargar del siguiente enlace [RSAT](https://www.micros
 <ol start="2">
 <li>Se Establece nombre de host.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>fedora.aso.local
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>fedora.sor.local
 </code></pre></div>
 <ol start="3">
 <li>En Fedora, se edita la configuración Resolved.</li>
@@ -1314,12 +1615,12 @@ La aplicación se puede descargar del siguiente enlace [RSAT](https://www.micros
 <ol start="5">
 <li>(Opcional) Descubrir dominio.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>realm<span class="w"> </span>discover<span class="w"> </span>aso.local
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>realm<span class="w"> </span>discover<span class="w"> </span>sor.local
 </code></pre></div>
 <ol start="6">
 <li>Se añade al dominio.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>realm<span class="w"> </span>join<span class="w"> </span>-U<span class="w"> </span>Administrator<span class="w"> </span>aso.local
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>realm<span class="w"> </span>join<span class="w"> </span>-U<span class="w"> </span>Administrator<span class="w"> </span>sor.local
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
