@@ -931,7 +931,8 @@
 </div>
 <p>A continuación se van a detallar las actividades de enseñanza aprendizaje que desarrollan todos <strong>CEs</strong> detallados anteriormente.</p>
 <h2 id="pt4_1-gestion-de-recursos-compartidos-en-samba-dc">PT4_1 Gestión de recursos compartidos en Samba DC<a class="headerlink" href="#pt4_1-gestion-de-recursos-compartidos-en-samba-dc" title="Permanent link">&para;</a></h2>
-<p>Tal y como se plantea en la <strong>situación de aprendizaje</strong> trabajas para el departamento TIC de <strong>NetOS</strong>, y acaba de aparecer el siguiente proyecto para la <strong>Instalación y configuración de Samba DC</strong> en un servidor Linux con sistema operativo <code>Ubuntu 22.04.</code> de la empresa dedicada a la venta de material fotográfico <strong>Area Studio</strong>, la cual cuenta con <strong>setenta empleados</strong>, pero durante el proceso de instalación <strong>se crean los usuarios responsables de departamento los indicados en la tabla siguiente:</strong> </p>
+<p>Tal y como se plantea en la <strong>situación de aprendizaje</strong> trabajas para el departamento TIC de <strong>NetOS</strong>, y acaba de aparecer el siguiente proyecto para la <strong>Instalación y configuración de Samba DC</strong> en un servidor Linux con sistema operativo <code>Ubuntu 24.04.</code> </p>
+<p>La empresa dedicada a la venta de material fotográfico <strong>Area Studio</strong> necesita un servicio de directorio para gestionar los recursos compartidos de sus empleados (<strong>setenta en total</strong>), pero inicialmente durante el proceso de instalación <strong>solo se crean los usuarios responsables de departamento, los cuales se indican en la tabla siguiente:</strong> </p>
 <table>
 <thead>
 <tr>
@@ -983,8 +984,29 @@
 <h3 id="pasos-a-realizar">Pasos a realizar<a class="headerlink" href="#pasos-a-realizar" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Instala y configura <strong>Samba DC</strong> apoyándote en la guía de la <code>sección 4.2</code>.</li>
-<li>Crea los usuarios en la empresa con los datos indicados en la tabla. (Puedes ayudarte del script realizado en la UT3)</li>
-<li>Genera una estructura de carpetas de empresa (a desarrollar) de los diferentes departamentos y aplica niveles de seguridad de acceso a los mismos. Recuerda los conocimientos adquiridos en la UT anterior.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title"><strong>NOTA</strong></p>
+<ul>
+<li>Realizar los pasos de la Guía hasta el <strong>Acceso al Samba-DC desde un Windows Client</strong> el acceso con fedora es opcional.</li>
+<li>La guía está realizada con un Ubuntu server 22.04 y Win10, en principio no deben haber problemas a realizarla con UBNT 24.04 y Win11.</li>
+</ul>
+</div>
+<ul>
+<li>Crea los usuarios en la empresa con los datos indicados en la tabla. (Puedes ayudarte del script realizado en la UT3).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title"><strong>NOTA</strong></p>
+<p>No es necesario la restricciones de politica de serguridad de contraseñas.</p>
+</div>
+<ul>
+<li>Genera una estructura de carpetas de empresa (a desarrollar) de los diferentes departamentos y aplica niveles de seguridad de acceso a los mismos. Recuerda los conocimientos adquiridos en la UT anterior. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title"><strong>NOTA</strong></p>
+<p>El path a guardar la estructura puede ser el raiz del UBNT Server.</p>
+</div>
+<ul>
 <li>Comprueba el acceso de dichos usuarios desde un cliente Windows y el acceso adecuado a los directorios creados de cada departamento.</li>
 </ul>
 <div class="admonition tip">
@@ -993,11 +1015,13 @@
 </div>
 <h2 id="pt4_2-monitorizacion-de-samba-dc">PT4_2 Monitorización de Samba DC<a class="headerlink" href="#pt4_2-monitorizacion-de-samba-dc" title="Permanent link">&para;</a></h2>
 <p>A partir de la práctica anterior, escribe un informe en el que se describa el proceso de configuración de Samba para usar <code>syslog</code>, los tipos de registros generados durante las pruebas de conexión y desconexión, y los resultados del análisis de los logs.</p>
-<p>Incluye las respuestas a las siguientes preguntas:
-- ¿Qué tipo de mensajes aparecen cuando un usuario se autentica correctamente?
-- ¿Qué mensajes se registran cuando la autenticación falla?
-- ¿Se registran mensajes si hay problemas con el acceso a los archivos compartidos?
-- ¿Qué información adicional puede ser útil para resolver problemas si Samba no se conecta correctamente?</p>
+<p>Incluye las respuestas a las siguientes preguntas:</p>
+<ul>
+<li>¿Qué tipo de mensajes aparecen cuando un usuario se autentica correctamente?</li>
+<li>¿Qué mensajes se registran cuando la autenticación falla?</li>
+<li>¿Se registran mensajes si hay problemas con el acceso a los archivos compartidos?</li>
+<li>¿Qué información adicional puede ser útil para resolver problemas si Samba no se conecta correctamente?</li>
+</ul>
 
 
 

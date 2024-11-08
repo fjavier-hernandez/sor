@@ -952,7 +952,7 @@
 <h3 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Permanent link">&para;</a></h3>
 <p><strong>SysManage</strong> posee una estructura en departamentos de esta forma:</p>
 <ul>
-<li>Un departamento encargado de la <strong>gerencia</strong> de la empresa, donde se utiliza el <strong>Ubuntu desktop 22_04</strong>.</li>
+<li>Un departamento encargado de la <strong>gerencia</strong> de la empresa, donde se utiliza el <strong>Ubuntu desktop 24_04</strong>.</li>
 <li>Otro se encargará de la <strong>administración</strong>, utilizando el sistema operativo <strong>Windows 11</strong>.</li>
 <li>Otro departamento es <strong>mercadotécnia</strong> con sistema operativo <strong>Windows 11</strong>.</li>
 <li>Además un <strong>servicio técnico</strong> que realice las tareas de diseño, implementación y mantenimiento de la infraestructura informática. El sistema utilizado por este departamento es <strong>Ubuntu desktop 22_04</strong>.</li>
@@ -975,6 +975,24 @@
 </li>
 </ol>
 <div class="admonition note">
+<p class="admonition-title"><strong>NOTA</strong></p>
+<p>Comprueba el grupo prioritario de cada usuario, debería ser el creado para los diferentes departamentos.</p>
+</div>
+<ol start="2">
+<li>Genera una estructura de carpetas de empresa (en el UBNT Server) de los diferentes departamentos y aplica niveles de seguridad de acceso a los mismos, es decir, comprueba  .</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title"><strong>NOTA</strong></p>
+<p>El path a guardar la estructura puede ser el raiz del UBNT Server.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Se aconseja comprobar los grupos propietarios de las carpetas.</p>
+</div>
+<ol start="3">
+<li>Genera secciones con las carpetas generadas para <strong>SysManage</strong> y realiza los permisos necesarios para que solo accedan los usuarios de los grupos correspondientes. Haz pruebas de comprobación de acceso con por lo menos un usuario por departamento, 4 con windows client y 4 con ubuntu desktop.</li>
+</ol>
+<div class="admonition note">
 <p class="admonition-title"><strong>Nota</strong></p>
 <p><strong>De forma opcional</strong>, puedes crear datos inventados para la información personal de los usuarios, usando esta web para obtener datos personales ficticios: <a href="https://www.generatedata.com">GeneraData</a>.</p>
 </div>
@@ -988,6 +1006,10 @@
 <p class="admonition-title">Tip</p>
 <p>Para realizar esta práctica se aconseja el visionado del vídeo adjunto en Aules.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Cuidado con el acceso a los homes de los usuarios cuando se ha cambiado la política de seguridad de inicio de sesión, aconsejable entrar y cambiar la contraseña de los usuarios a probar en el <strong>SISTEMA (en el UBNT SERVER)</strong>.</p>
+</div>
 <h3 id="secciones-samba">Secciones SAMBA<a class="headerlink" href="#secciones-samba" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title"><strong>NOTA:</strong></p>
@@ -996,11 +1018,14 @@
 <li>Estate atento/a para eliminar las líneas comentadas, las cuales comienzan por <code>“#”</code> y <code>“;”</code></li>
 </ul>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Los siguientes pasos solo es necesario probarlos en dos usuarios de los creados  para realizar las pruebas de acceso.</p>
+</div>
 <ol>
 <li>Haz que todos los <code>/homes</code> de los usuarios sean navegables, que cualquiera pueda acceder sin credenciales y que solo tengan permisos de lectura. Recuerda que también deberás tener en cuenta los permisos dentro del servidor Linux. Haz captura de la configuración realizada en <code>smb.conf</code> y del explorador de Windows accediendo al <code>/home</code> de un usuario de Ubuntu client.</li>
 <li>Cambia en el servidor, en la sección [homes], la opción read only a no. Haz una captura de los permisos de tu carpeta <code>/home</code>. Prueba a crear un fichero desde Windows. ¿Qué sucede y por qué?</li>
 <li>Indica la configuración del servicio más adecuada si quisiera permitir únicamente los equipos de la red en la <strong>RED NAT</strong> de tu escenario. ¿Tienes acceso desde el cliente y cualquier usuario? ¿Si configuras un IP fija en el cliente fuera de la IP proporcionada por la RED NAT, sigues teniendo acceso desde el cliente? ¿Por qué?</li>
-<li>Ahora genera secciones con las carpetas generadas para <strong>SysManage</strong> y realiza los permisos necesarios para que solo accedan los usuarios de los grupos correspondientes. Haz pruebas de comprobación de acceso con por lo menos un usuario por departamento.</li>
 </ol>
 <h3 id="usuarios-samba">Usuarios SAMBA<a class="headerlink" href="#usuarios-samba" title="Permanent link">&para;</a></h3>
 <ol start="5">

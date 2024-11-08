@@ -1280,7 +1280,7 @@ El detalle de la información registrada en estos archivos depende del parámetr
 </li>
 </ul>
 <h4 id="4-ejemplo-de-analisis-de-registros-de-samba">4. <strong>Ejemplo de Análisis de Registros de Samba</strong><a class="headerlink" href="#4-ejemplo-de-analisis-de-registros-de-samba" title="Permanent link">&para;</a></h4>
-<p>Supón que tienes un problema de conexión donde un usuario no puede acceder a los recursos compartidos de Samba. Con los registros en syslog, podrías buscar las entradas relevantes:</p>
+<p>Suponiendo que tienes un problema de conexión donde un usuario no puede acceder a los recursos compartidos de Samba. Con los registros en syslog, podrías buscar las entradas relevantes:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>grep<span class="w"> </span><span class="s2">&quot;authentication for user&quot;</span><span class="w"> </span>/var/log/syslog<span class="w">   </span><span class="sb">`</span>
 </code></pre></div>
 <p>Este comando busca problemas de autenticación relacionados con un usuario específico, ayudando a identificar si el problema es debido a credenciales incorrectas o a un problema de configuración en Samba.</p>
