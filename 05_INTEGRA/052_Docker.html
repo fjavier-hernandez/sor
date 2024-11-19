@@ -913,9 +913,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#caracteristicas-principales-de-docker" class="md-nav__link">
+  <a href="#contenedores" class="md-nav__link">
     <span class="md-ellipsis">
-      Características principales de Docker
+      Contenedores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maquinas-virtuales-vs-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Máquinas Virtuales VS Contenedores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microservicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales Contenedores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-y-definicion-de-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características y definición de Docker
     </span>
   </a>
   
@@ -1109,11 +1157,59 @@
 <li>En marzo de <strong>2017</strong>, Docker anunció un desarrollo todavía más rápido, <strong>pasando a publicar una nueva versión cada mes</strong>. La numeración de las versiones adoptó al formato AA.MM (la primera fue <strong>Docker 17.03</strong>).</li>
 <li>En <strong>julio de 2018</strong>, Docker anunció que volvían a un desarrollo más pausado. A partir de <strong>Docker 18.09</strong> habría una versión "estable" cada seis meses.</li>
 </ul>
-<h2 id="caracteristicas-principales-de-docker">Características principales de Docker<a class="headerlink" href="#caracteristicas-principales-de-docker" title="Permanent link">&para;</a></h2>
-<div class="admonition abstract">
-<p class="admonition-title">Por lo tanto se define Docker como...</p>
-<p>Un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.​</p>
+<h2 id="contenedores">Contenedores<a class="headerlink" href="#contenedores" title="Permanent link">&para;</a></h2>
+<p>En virtualización, el principal problema de los hipervisores y las máquinas virtuales es que cada máquina virtual es independiente de las demás. Al no reutilizarse ningún componente, se ocupa <strong>mucho espacio tanto en disco como en memoria</strong> y el <strong>tiempo de ejecución siempre será mayor</strong> que si sólo hubiera un sistema operativo (sobre todo en el caso de <strong>hipervisores de tipo 2</strong>).</p>
+<p>Para resolver este problema se crearon los <strong>contenedores</strong> en los que se <strong>utilizan mecanismos existentes en el sistema operativo para aislar las aplicaciones</strong>, pero compartiendo el mayor número posible de componentes del sistema operativo o incluso de las aplicaciones.</p>
+<ul>
+<li>Como definición, <strong>un contenedor</strong> es el equivalente a una máquina virtual de la virtualización clásica, pero mucho <strong>más ligera porque utiliza recursos del sistema operativo del host</strong>. </li>
+<li>Las aplicaciones de cada contenedor "ven" un sistema operativo, que puede ser diferente en cada contenedor, pero quien <strong>realiza el trabajo es el sistema operativo común que hay por debajo</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><strong>Los contenedores</strong> suelen ser elementos <strong>efímeros</strong>. La facilidad con la que pueden crearse y ponerse en marcha hace más fácil crear un nuevo contenedor que modificar uno ya existente. Por ello, los datos generados por las aplicaciones no se suelen guardar en los contenedores, sino fuera de ellos. </li>
+<li>Su ligereza hace más fácil tener varios contenedores con una aplicación en cada uno de ellos que tener un único contenedor con varias aplicaciones en él. Por ello, un <strong>aspecto importante de los contenedores es su orquestación</strong>, es decir, la administración simultánea de muchos contenedores, una de las herramientas más utilizadas es <strong><a href="https://kubernetes.io/es/">Kubernetes</a></strong>.</li>
+</ul>
 </div>
+<h3 id="maquinas-virtuales-vs-contenedores">Máquinas Virtuales VS Contenedores<a class="headerlink" href="#maquinas-virtuales-vs-contenedores" title="Permanent link">&para;</a></h3>
+<figure>
+  <img src="imagenes/01/ContenedoresVsMaquinaV.png"/>
+  <figcaption>Contenedores Vs Máquinas Virtuales.</figcaption>
+</figure>
+
+<h2 id="microservicios">Microservicios<a class="headerlink" href="#microservicios" title="Permanent link">&para;</a></h2>
+<p>Uno de los objetivos principales de la configuración e implantación de contenedores es solucionar los problemas de:</p>
+<ul>
+<li><strong>Errores de dependencias</strong> entre diferentes Sistemas Operativos de los trabajadores y máquinas de puesta en marcha.</li>
+<li>Evitar la <strong>Elevada carga y capacidad</strong> de las Máquinas Virtuales.</li>
+<li>
+<p>Caída de todos los servicios instalados de forma monolítica en los servidores.</p>
+</li>
+<li>
+<p>Tipos de despliegue:</p>
+<ul>
+<li><strong>SOA (Service Oriented Architecture)</strong> → Diferentes Máquinas una con cada Servicio conectadas.</li>
+<li><strong>Monolítico</strong> → Todos los servicios en la misma máquina.</li>
+<li><strong>MicroServicios</strong> → División más pequeña de los servicios.</li>
+</ul>
+</li>
+</ul>
+<figure>
+    <img src="imagenes/01/Microservicios.png"/>
+    <figcaption>Monolítico Vs Microservicios.</figcaption>
+</figure>
+
+<h3 id="caracteristicas-principales-contenedores">Características principales Contenedores<a class="headerlink" href="#caracteristicas-principales-contenedores" title="Permanent link">&para;</a></h3>
+<p>En resumen los contenedores:</p>
+<ul>
+<li>Consisten en <strong>Agrupar y Aislar Aplicaciones o grupos de aplicaciones que se ejecutan sobre un mismo núcleo de sistema operativo</strong>.</li>
+<li>Su característica principal se basa en su <strong>propio sistema de archivos ejecutable en cualquier Sistema Operativo</strong>.</li>
+<li>No es necesario emular el <em>HW</em> y <em>SW</em> completo como en las máquinas virtuales, por lo tanto son mucho más <strong>ligeros</strong>, comparten el máximo de componentes con el sistema operativo host, y su rapidez, ya que gracias a que apenas añaden capas adicionales consiguen casi velocidades nativas.</li>
+<li>Soluciona problemas de <strong>espacio y compatibilidades a la hora de puesta en marcha</strong> en servidores de producción.</li>
+<li>Los contenedores suelen ser elementos <strong>efímeros</strong>.</li>
+</ul>
+<h2 id="caracteristicas-y-definicion-de-docker">Características y definición de Docker<a class="headerlink" href="#caracteristicas-y-definicion-de-docker" title="Permanent link">&para;</a></h2>
+<p><strong>Docker</strong> se puede definir como un proyecto de <strong>código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software</strong>, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.</p>
 <p>Sus principales características son:</p>
 <ul>
 <li>Docker es una API amigable del tipo <strong>Open Source</strong>.</li>
