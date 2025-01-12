@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/07_DOMINIO_AD/072_GestionDominioI.html">
       
       
+        <link rel="prev" href="071_DominioAD.html">
+      
+      
+        <link rel="next" href="073_GestionDominioII.html">
       
       
       <link rel="icon" href="../imagenes/favicon.ico">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Administración de Usuarios y Grupos - Sistemas Operativos en Red</title>
+        <title>7.2- Administración de usuarios y grupos - Sistemas Operativos en Red</title>
       
     
     
@@ -115,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Administración de Usuarios y Grupos
+              7.2- Administración de usuarios y grupos
             
           </span>
         </div>
@@ -1062,6 +1066,307 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7.- Administración de Dominios en Windows Server
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            7.- Administración de Dominios en Windows Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="071_DominioAD.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1- Administración de Dominios en Windows Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    7.2- Administración de usuarios y grupos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="072_GestionDominioI.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    7.2- Administración de usuarios y grupos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de usuarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eliminacion-y-deshabilitacion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación y deshabilitación de usuarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deshabilitar-cuentas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deshabilitar cuentas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-la-cuenta-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de la cuenta de usuario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-inicio-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de inicio de sesión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de grupos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-que-casos-utilizar-un-ambito-y-otro-de-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿En qué casos utilizar un ámbito y otro de grupo?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grupos-predefinidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grupos predefinidos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-grupos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de grupos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-usuarios-a-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir usuarios a grupos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidades-organizativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unidades Organizativas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unidades Organizativas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-unidades-organizativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Unidades Organizativas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borrar-una-ou" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borrar una OU
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="073_GestionDominioII.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3- Gestión de Dominio en Windows Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="074_Actividades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4- Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -1076,10 +1381,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1090,8 +1395,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Proyecto Final de Módulo
           </label>
@@ -1178,7 +1483,7 @@ Hasta aquí toda esta información es meramente informativa, podría haber, por 
 </li>
 </ul>
 </div>
-<p>Por lo tanto en la segunda parte del cuadro de texto dode se indica '<strong>Nombre de inicio de sesión de usuario</strong>' se introduce el nombre de usuario
+<p>Por lo tanto en la segunda parte del cuadro de texto donde se indica '<strong>Nombre de inicio de sesión de usuario</strong>' se introduce el nombre de usuario
 siguiendo la estructura que haya predefinido el administrador del sistema y como se ha indicado anteriormente, <strong>este nombre debe ser único en todo el dominio</strong>.</p>
 <p>Algunos ejemplos de criterios para la creación del nombre de usuario podrían ser los siguientes:</p>
 <ul>
@@ -1640,29 +1945,6 @@ En PowerShell [New-ADOrganizationalUnit](https://docs.microsoft.com/en-us/previo
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="l l-Scalar l-Scalar-Plain">New-ADOrganizationalUnit [-Name] &lt;string&gt; [-AuthType {&lt;Negotiate&gt; | &lt;Basic&gt;}] [-City &lt;string&gt;] [-Country &lt;string&gt;] [-Credential &lt;PSCredential&gt;] [-Description &lt;string&gt;] [-DisplayName &lt;string&gt;] [-Instance &lt;ADOrganizationalUnit&gt;] [-ManagedBy &lt;ADPrincipal&gt;] [-OtherAttributes &lt;hashtable&gt;] [-PassThru &lt;switch&gt;] [-Path &lt;string&gt;] [-PostalCode &lt;string&gt;] [-ProtectedFromAccidentalDeletion &lt;System.Nullable[bool]&gt;] [-Server &lt;string&gt;] [-State &lt;string&gt;] [-StreetAddress &lt;string&gt;] [-Confirm] [-WhatIf] [&lt;CommonParameters&gt;]</span>
 </code></pre></div>
 -->
-
-<h2 id="pt71-administracion-de-usuarios-y-grupos">PT71 Administración de usuarios y grupos<a class="headerlink" href="#pt71-administracion-de-usuarios-y-grupos" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Contribución a los CEs (Criterios de Evaluación)</p>
-<p>Estas actividades contribuyen a los criterios de evaluación <strong>CE1, CE2, CE5, CE6, CE7, CE8 y CE9</strong> del <strong>RA2</strong> de SOR.</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">Situación de Aprendizaje</p>
-<p>Partiendo de la Situación de aprendizaje de <a href="https://fjavier-hernandez.github.io/sor/06_AD1/062_WS_Config.html#pt61-configuracion-windows-server">PT61</a>, y después de la instalación previa del <strong>Active Directory</strong> realiza las siguientes tareas.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Tarea</p>
-<p>Siguiendo con la configuración del <strong>Active Directory</strong> para <strong>Area Studio</strong>, estas realizando pruebas de creación de usuarios y credenciales debes realizar los siguientes puntos:</p>
-</div>
-<ol>
-<li>Crea dos usuarios con el nombre <strong>usuario1</strong> y <strong>usuario2</strong>. Ponles a ambos la contraseña <code>Abc123!</code> y configura las cuentas de usuario para que no tengan que cambiar la contraseña al iniciar sesión por primera vez.</li>
-<li>Agrega estos usuarios al grupo global <strong>Alumnos</strong> y deshabilita la cuenta de usuario2.</li>
-<li>Adjunta una captura de pantalla del <strong>error</strong> que sale al intentar acceder desde un equipo cliente con el usuario2. Habilita de nuevo la cuenta de usuario2. </li>
-<li>Configura la cuenta <strong>usuario1</strong> para que solamente pueda iniciar sesión desde el equipo <strong>W10</strong>. </li>
-<li>Valida en el dominio otro equipo <strong>Windows 10</strong> y comprueba que el usuario1 no puede iniciar sesión.</li>
-<li>Configura la cuenta de usuario2 para que pueda iniciar sesión en cualquier equipo del dominio <strong>solamente de lunes a viernes de 8.00 a 18.00</strong>. Adjunta una captura de la pantalla de la configuración de los horarios de acceso al sistema del usuario2.</li>
-<li>Intenta iniciar sesión en el equipo controlador de dominio con usuario2. ¿Por qué no puedes?¿Qué podrías hacer para que usuario2 pudiera iniciar sesión en el controlador de dominio?</li>
-</ol>
 
 
 

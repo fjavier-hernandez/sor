@@ -984,17 +984,17 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="PT5_1. Instalación y configuración de NextCloud mediante Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#premisas" class="md-nav__link">
     <span class="md-ellipsis">
       Premisas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Premisas">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#tareas" class="md-nav__link">
@@ -1026,17 +1026,17 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="PT5_2 Despliegue de Samba con docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#premisas_1" class="md-nav__link">
     <span class="md-ellipsis">
       Premisas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Premisas">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#tareas_1" class="md-nav__link">
@@ -1192,6 +1192,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1206,7 +1212,7 @@
             
   
   <span class="md-ellipsis">
-    Proyecto Final de Módulo
+    7.- Administración de Dominios en Windows Server
   </span>
   
 
@@ -1215,6 +1221,136 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            7.- Administración de Dominios en Windows Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_DOMINIO_AD/071_DominioAD.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1- Administración de Dominios en Windows Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_DOMINIO_AD/072_GestionDominioI.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2- Administración de usuarios y grupos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_DOMINIO_AD/073_GestionDominioII.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3- Gestión de Dominio en Windows Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_DOMINIO_AD/074_Actividades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4- Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Final de Módulo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Proyecto Final de Módulo
           </label>
@@ -1297,7 +1433,7 @@
 <h2 id="pt5_1-instalacion-y-configuracion-de-nextcloud-mediante-docker">PT5_1. Instalación y configuración de NextCloud mediante Docker<a class="headerlink" href="#pt5_1-instalacion-y-configuracion-de-nextcloud-mediante-docker" title="Permanent link">&para;</a></h2>
 <p>Partiendo de la <strong>situación de aprendizaje</strong>, estamos trabajando en el departamento TIC de <strong>NetOS</strong> y nos encargan un proyecto para instalar de una empresa líder en el sector hostelero un servicio que cubra la necesidad de compartir recursos (carpetas documentos, imágenes...), tanto entre las personas dentro de la empresa como con clientes fuera de ésta.</p>
 <p>Para hacernos valer dentro de la empresa indicamos que podemos instalar un servidor <strong>NextCloud</strong> en unos pocos minutos para solventar dicho problema. La empresa cuenta con un servidor con <strong>Ubuntu 24.04</strong> para instalar el servicio, por lo tanto decidimos hacer uso de <strong>docker</strong> para desplegar el servicio <strong>NextCloud</strong> de una forma muy rápida y sencilla.</p>
-<h2 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Permanent link">&para;</a></h2>
+<h3 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Permanent link">&para;</a></h3>
 <ul>
 <li>El <strong>servicio de docker</strong> Debe tener la traducción estática del puerto <strong>80</strong> de la máquina anfitriona al puerto <strong>8080</strong> del contenedor.</li>
 <li>Debe tener un volumen asociado llamado <strong>"volNextCloud"</strong>.</li>
@@ -1321,7 +1457,7 @@
 <h2 id="pt5_2-despliegue-de-samba-con-docker-compose">PT5_2 Despliegue de Samba con docker Compose<a class="headerlink" href="#pt5_2-despliegue-de-samba-con-docker-compose" title="Permanent link">&para;</a></h2>
 <p>Siguiendo con el encargo instalación de servicios de directorio par ala empresa del sector hostelero, nos solicitan además de <strong>NextCloud</strong> instalar <strong>Samba</strong>, debido a los proyectos realizados anteriormente conoces que dicha implementación es tediosa y complicada. </p>
 <p>Por esta razón, reflexionas si es posible realizar la instalación de una forma más rápida y sencilla. Para ello, debido a los conocimientos adquiridos recientemente en docker decides utilizar la herramienta <strong>Docker-Compose</strong>, e inicialmente te dispones a realizar una prueba en laboratorio.</p>
-<h2 id="premisas_1">Premisas<a class="headerlink" href="#premisas_1" title="Permanent link">&para;</a></h2>
+<h3 id="premisas_1">Premisas<a class="headerlink" href="#premisas_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Visualiza el video de ayuda al despliegue de Samba con Docker compose subido a aules en el tema 5.</li>
 </ul>
