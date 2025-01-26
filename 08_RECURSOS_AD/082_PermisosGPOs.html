@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://github.com/fjavier-hernandez/sor/08_RECURSOS_AD/082_PermisosGPOs.html">
       
       
+        <link rel="prev" href="081_CarpetasPerfilesAD.html">
+      
+      
+        <link rel="next" href="083_AD_Monitor.html">
       
       
       <link rel="icon" href="../imagenes/favicon.ico">
@@ -1200,6 +1204,415 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8.- Administración y monitorización de recursos compartidos en WS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            8.- Administración y monitorización de recursos compartidos en WS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="081_CarpetasPerfilesAD.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1- Compartir recursos y perfiles móviles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    8.2- Permisos y directivas de grupo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="082_PermisosGPOs.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    8.2- Permisos y directivas de grupo
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permisos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permisos-de-recursos-compartidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos de recursos compartidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#establecer-permisos-en-recursos-compartidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Establecer permisos en recursos compartidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-ntfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos NTFS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permisos NTFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-permisos-ntfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de permisos NTFS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignacion-de-permisos-ntfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignación de permisos NTFS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permisos-implicitos-y-permisos-explicitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos Implícitos y permisos Explícitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herencia-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herencia de permisos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-herencia-del-recurso-de-nivel-superior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación de herencia del recurso de nivel superior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-los-permisos-de-un-objeto-hijo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambio de los permisos de un objeto hijo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directivas-de-grupo-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directivas de Grupo (GPO)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directivas de Grupo (GPO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acumulacion-de-directivas-de-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acumulación de directivas de grupo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directivas-de-usuario-o-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directivas de usuario o equipo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edicion-de-las-directivas-de-grupo-predeterminadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edición de las directivas de grupo predeterminadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloqueo-de-cuenta-al-introducir-una-contrasena-3-veces-una-contrasena-erronea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloqueo de cuenta al introducir una contraseña 3 veces una contraseña errónea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitud-de-la-contrasena" class="md-nav__link">
+    <span class="md-ellipsis">
+      Longitud de la contraseña
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historial-de-contrasenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historial de contraseñas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vigencia-maxima-de-la-contrasena" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vigencia máxima de la contraseña
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-directivas-de-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de directivas de grupo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de directivas de grupo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fondo-de-escritorio-obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fondo de escritorio obligatorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloqueo-de-la-linea-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloqueo de la línea de comandos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-las-directivas-establecidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación de las directivas establecidas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitud-de-la-contrasena_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Longitud de la contraseña
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="083_AD_Monitor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3- Monitorización de WS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="084_Actividades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.4- Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -1214,10 +1627,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1228,8 +1641,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Proyecto Final de Módulo
           </label>
